@@ -23,11 +23,12 @@ A suite of over 20 skills covering the full lifecycle of a federal research gran
 | 14 | `grant-compliance-sections` | Human subjects, vertebrate animals, rigor |
 | 15 | `grant-mock-review` | Red-team study section simulation |
 | 16 | `grant-math-notation` | Math/LaTeX notation audit for math-heavy proposals (per section or whole document) |
-| 17 | `grant-proofread-structure` | High-level flow, missing elements, transitions |
-| 18 | `grant-proofread-detail` | Spelling, grammar, figure/table references |
-| 19 | `grant-references` | Citation completeness and accuracy |
-| 20 | `grant-format-check` | Page limits, fonts, margins, attachments |
-| 21 | `grant-resubmission` | Response to reviews, resubmission intro |
+| 17 | `grant-condense` | Cut an over-length draft to the page limit: structural cuts then sentence tightening |
+| 18 | `grant-proofread-structure` | High-level flow, missing elements, transitions |
+| 19 | `grant-proofread-detail` | Spelling, grammar, figure/table references |
+| 20 | `grant-references` | Citation completeness and accuracy |
+| 21 | `grant-format-check` | Page limits, fonts, margins, attachments |
+| 22 | `grant-resubmission` | Response to reviews, resubmission intro |
 
 Order is a default, not a rule. Budget, letters, and admin documents proceed in parallel with the narrative.
 
