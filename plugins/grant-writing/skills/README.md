@@ -32,6 +32,48 @@ A suite of over 20 skills covering the full lifecycle of a federal research gran
 
 Order is a default, not a rule. Budget, letters, and admin documents proceed in parallel with the narrative.
 
+## Workflow diagram
+
+The same ordering as a figure — solid arrows are the default sequence, dashed arrows are loops and feedback. The Mermaid below is the maintained source; a standalone vector version lives at [`../docs/workflow.svg`](../docs/workflow.svg).
+
+```mermaid
+flowchart TD
+    SETUP[grant-setup] --> AIMS[grant-specific-aims]
+    AIMS --> TITLE[grant-title]
+    AIMS --> SIG
+    AIMS --> BUD
+
+    subgraph NARR ["Narrative (sequential)"]
+        SIG[grant-significance] --> INN[grant-innovation] --> APP[grant-approach]
+        APP -->|audit one experiment| EXP[grant-approach-experiment]
+        EXP -.->|approved revisions| APP
+        APP --> TML[grant-timeline-milestones] --> ABS[grant-abstracts]
+    end
+
+    subgraph SUPP ["Support documents (parallel, any order)"]
+        BUD[grant-budget-justification]
+        LET[grant-letters-of-support]
+        BIO[grant-biosketch-support]
+        FAC[grant-facilities-resources]
+        DMP[grant-data-management-plan]
+        CMP[grant-compliance-sections]
+    end
+
+    NARR --> MOCK[grant-mock-review]
+    SUPP --> MOCK
+    MOCK -.->|revisions| NARR
+    MOCK --> MATH["grant-math-notation<br/>(math-heavy proposals)"]
+    MATH --> CON[grant-condense]
+    CON --> PS[grant-proofread-structure]
+    PS --> PD[grant-proofread-detail]
+    PD --> REF[grant-references]
+    REF --> FMT[grant-format-check]
+    FMT -.->|still over limit| CON
+    FMT --> SUB([submit])
+    SUB -.->|reviews return| RSB[grant-resubmission]
+    RSB -.->|revise & resubmit| AIMS
+```
+
 ## Shared conventions (all skills follow these)
 
 ### 1. Project config contract
