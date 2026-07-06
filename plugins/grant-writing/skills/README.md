@@ -119,6 +119,14 @@ Skills append significant decisions (scope changes, dropped aims, budget changes
 
 Agency rules change. Facts embedded in these skills were verified July 2026 where possible (NSF PAPPG 24-1 + Supplements NSF 26-200/26-202; NIH simplified review framework effective Jan 2025). Every skill instructs the model to verify limits and requirements against the specific FOA/NOFO and current agency guide before relying on them.
 
+## Authoring guidance (for maintaining these skills)
+
+- **Triggering is everything.** The agent sees only each skill's name and description when deciding whether to load it — the body loads afterward. Descriptions must name the phrases users actually type ("biosketch," "pink sheets," "poke holes in this"), not just describe the content. Slightly pushy phrasing ("use whenever the user mentions…") outperforms neutral, because agents under-trigger.
+- **Keep SKILL.md lean; push detail to references.** The body costs context every time the skill fires. Workflow belongs in the body; lookup material (agency criteria, checklists, variants) belongs in `references/` files read only when needed. Explain *why* rules exist rather than stacking MUSTs — models follow reasoning better than commandments.
+- **Shared state, not shared context.** Sessions don't remember each other; `project-config.md`, the decision log, and the notation registry are what carry decisions across sessions. When adding a skill, ask what durable state it should read and write.
+- **Test with realistic prompts.** Run 2–3 prompts phrased the way researchers actually type (typos, shorthand included), compare against no-skill output, and fix what generalizes — not what is specific to one test.
+- **Fold repeated corrections into the skill.** If a user corrects the agent the same way twice, that correction belongs in SKILL.md, not in every future conversation.
+
 ## Testing status
 
 Drafted 2026-07-06. Eval loops (test prompts, baselines, reviewer feedback) deferred to follow-up sessions — recommended first candidates: `grant-specific-aims`, `grant-approach`, `grant-mock-review`.

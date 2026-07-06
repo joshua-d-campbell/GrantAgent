@@ -78,6 +78,24 @@ The best starting point for any new proposal is asking Claude to **set up the pr
 
 ---
 
+## Getting the best results
+
+A few habits make a large difference:
+
+**One document per conversation.** Draft the Approach in one conversation, the budget in another. Long conversations that wander across several documents make Claude drift from the skill's instructions. Starting fresh is cheap — the project's settings file carries your deadline, format, and preferences over, so you never re-explain.
+
+**Put lasting decisions in files, not in chat.** Conversations don't remember each other. Anything that must persist — a dropped aim, a tone preference, a scope change — belongs in the project folder, and the skills record these automatically (in the config file and decision log). If you notice yourself re-explaining the same thing each session, ask Claude to write it into the project config.
+
+**Name the skill when Claude guesses wrong.** Describing your task is usually enough, but you can always be explicit: *"Use grant-mock-review on the current draft."*
+
+**Get critiques from a fresh conversation.** A mock review is most honest when it comes from a conversation that didn't spend hours helping write the text. Start a new conversation for the review, or ask Claude to run it as a separate agent.
+
+**Read before it lands.** The skills are built to show you text before placing it into your documents — take advantage of that rather than waving edits through.
+
+**Corrected Claude the same way twice?** That correction belongs in the skill or the project config, not in every future conversation. Tell Claude to record it.
+
+---
+
 ## Keeping the skills up to date
 
 The skills improve over time. When updates are published to the repository, you'll get them automatically the next time the app refreshes the marketplace — you never re-download or re-copy anything. (In Claude Code, you can force a refresh with `/plugin marketplace update`.)
