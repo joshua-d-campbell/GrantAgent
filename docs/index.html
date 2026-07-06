@@ -95,6 +95,7 @@
       <a href="#install">Install</a>
       <a href="#workflow">Workflow</a>
       <a href="#skills">Skills</a>
+      <a href="#developers">Developers</a>
       <a href="https://github.com/joshua-d-campbell/GrantAgent">GitHub</a>
     </span>
   </div>
@@ -229,6 +230,24 @@
       <div class="prompt">Check that every claim in my Significance section is properly cited.</div>
       <div class="prompt">Draft a letter of support for my collaborator to sign.</div>
     </div>
+  </div>
+</section>
+
+<section class="alt" id="developers">
+  <div class="wrap">
+    <h2>For developers</h2>
+    <p class="lead">Want to extend the suite or write your own skills? These are the principles the suite is built on — the full guidance lives in the <a href="https://github.com/joshua-d-campbell/GrantAgent/blob/main/plugins/grant-writing/skills/README.md">skills README</a>.</p>
+    <div class="cards3">
+      <div class="card"><h3>Triggering is everything</h3><p>The agent sees only a skill's name and description when deciding whether to load it. Descriptions must name the phrases users actually type — a perfectly written skill with a vague description never fires.</p></div>
+      <div class="card"><h3>Lean body, rich references</h3><p>The skill body costs context every time it fires. Keep the workflow in SKILL.md and push lookup material (agency criteria, checklists) into reference files read only when needed.</p></div>
+      <div class="card"><h3>Shared state, not shared context</h3><p>Sessions don't remember each other. Durable decisions live in files — a project config, decision log, and notation registry that every skill reads first.</p></div>
+    </div>
+    <div class="cards3" style="margin-top:18px">
+      <div class="card"><h3>Explain why, not just what</h3><p>Models follow reasoning better than commandments. Rules in these skills state their rationale instead of stacking MUSTs.</p></div>
+      <div class="card"><h3>Test with realistic prompts</h3><p>Run each skill on prompts phrased the way researchers actually type — typos and shorthand included — and fix what generalizes, not what's specific to one test.</p></div>
+      <div class="card"><h3>Fold corrections into the skill</h3><p>If a user corrects the agent the same way twice, that correction belongs in SKILL.md, not in every future conversation.</p></div>
+    </div>
+    <p style="margin-top:22px; color:var(--muted); font-size:0.95rem">See also the <a href="https://github.com/joshua-d-campbell/GrantAgent/blob/main/plugins/grant-writing/skills/README.md#shared-conventions-all-skills-follow-these">shared conventions</a> all 24 skills follow — project config contract, versioning schema, interaction tone, and the reasoning-vs-document-text separation.</p>
   </div>
 </section>
 
