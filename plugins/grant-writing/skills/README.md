@@ -13,6 +13,7 @@ A suite of over 20 skills covering the full lifecycle of a federal research gran
 | 5 | `grant-significance` | Significance section |
 | 6 | `grant-innovation` | Innovation section |
 | 7 | `grant-approach` | Approach, one subsection at a time, rationales first |
+| 7a | `grant-approach-experiment` | Deep design review of a single experiment (controls, power, confounds, interpretation) |
 | 8 | `grant-letters-of-support` | Early letter drafts for collaborators |
 | 9 | `grant-timeline-milestones` | Timeline, milestones, Gantt |
 | 10 | `grant-abstracts` | Summary, narrative, lay abstracts |
