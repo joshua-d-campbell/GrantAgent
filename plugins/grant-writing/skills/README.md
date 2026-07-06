@@ -1,6 +1,6 @@
 # Grant Writing Skill Suite
 
-A suite of over 20 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
+A suite of 24 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
 
 ## Workflow order
 
@@ -14,6 +14,7 @@ A suite of over 20 skills covering the full lifecycle of a federal research gran
 | 6 | `grant-innovation` | Innovation section |
 | 7 | `grant-approach` | Approach, one subsection at a time, rationales first |
 | 7a | `grant-approach-experiment` | Deep design review of a single experiment (controls, power, confounds, interpretation) |
+| 7b | `grant-approach-math` | Substance review of a single mathematical component (formulation, assumptions, identifiability, proof feasibility) |
 | 8 | `grant-letters-of-support` | Early letter drafts for collaborators |
 | 9 | `grant-timeline-milestones` | Timeline, milestones, Gantt |
 | 10 | `grant-abstracts` | Summary, narrative, lay abstracts |
@@ -47,6 +48,8 @@ flowchart TD
         SIG[grant-significance] --> INN[grant-innovation] --> APP[grant-approach]
         APP -->|audit one experiment| EXP[grant-approach-experiment]
         EXP -.->|approved revisions| APP
+        APP -->|audit one math component| MTH[grant-approach-math]
+        MTH -.->|approved revisions| APP
         APP --> TML[grant-timeline-milestones] --> ABS[grant-abstracts]
     end
 

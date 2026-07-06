@@ -33,7 +33,7 @@ Extract every math token from the LaTeX source: inline `$...$`/`\(...\)`, displa
 
 ### Pass 3 — Mathematical sanity
 
-Check what is checkable without refereeing the mathematics: index consistency (free vs. bound indices matching across equation sides; summation limits present or deliberately implicit), dimensional consistency where quantities carry units or shapes (matrix products conformable, norms of the right space), boundary/degenerate cases in stated conditions ($n \geq 1$ vs. $n > 1$ when $n=1$ appears later), and probability statements well-formed (conditioning stated, measures named where it matters). Report suspected *mathematical* errors factually and separately from notation findings — the user is the mathematical authority; the skill's job is to make sure every flag is precise enough to be adjudicated quickly.
+Check what is checkable without refereeing the mathematics: index consistency (free vs. bound indices matching across equation sides; summation limits present or deliberately implicit), dimensional consistency where quantities carry units or shapes (matrix products conformable, norms of the right space), boundary/degenerate cases in stated conditions ($n \geq 1$ vs. $n > 1$ when $n=1$ appears later), and probability statements well-formed (conditioning stated, measures named where it matters). Report suspected *mathematical* errors factually and separately from notation findings — the user is the mathematical authority; the skill's job is to make sure every flag is precise enough to be adjudicated quickly. For substance-level review of a model, derivation, or proof plan during drafting, use `grant-approach-math`; this pass checks only well-formedness.
 
 ### Pass 4 — LaTeX mechanics (grant-specific)
 
