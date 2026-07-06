@@ -1,6 +1,6 @@
 ---
 name: grant-significance
-description: Draft the Significance section of a research grant — the case that the problem matters and the field will change if the work succeeds. Use when the user is writing or revising Significance (NIH Research Strategy), the importance/impact framing of an NSF Project Description, disease relevance for DoD/CDMRP, or asks how to make a compelling case for why their research matters.
+description: Draft the Significance section of a research grant — the case that the problem matters and the field will change if the work succeeds. Use when the user is writing or revising Significance or Background & Significance (NIH Research Strategy), the importance/impact framing of an NSF Project Description, disease relevance for DoD/CDMRP, or asks how to make a compelling case for why their research matters or how to counter an "incremental" or "low impact" critique.
 ---
 
 # Significance
@@ -18,6 +18,14 @@ Build in this order; each paragraph should advance the argument or be cut:
 3. **The critical gap or barrier** — precisely what is unknown or impossible today, and *why it has persisted* (technical barrier, missing model, unexamined assumption). This sentence family is the core of the section.
 4. **What this project changes** — how the expected outcomes fill the gap; the immediate field-level consequences and the downstream trajectory (new therapeutic targets, enabled measurements, revised framework).
 5. **Rigor of the premise** (NIH) — the key prior data the project rests on, and their strength/limitations, stated candidly. Under the simplified review framework this feeds Factor 1 scoring.
+
+Close with a short paragraph mapping expected outcomes onto the aims (one clause per aim), so Significance and the aims page read as one continuous argument rather than a literature essay followed by an unrelated plan.
+
+## How reviewers use this section
+
+- The assigned advocate lifts sentences from Significance into the written critique. Provide liftable material: a one-sentence problem statement, a one-sentence gap, a one-sentence payoff — each quotable without surrounding context.
+- Secondary reviewers are often outside the subfield and read fast. Make the gap statement visually findable (bold or a labeled sentence) and state field-internal stakes in plain language rather than assuming them.
+- The most common Factor 1 criticism is "incremental." Adjectives do not answer it; evidence does — cite others naming the barrier, show what its persistence costs the field, and quantify the advance over the best current alternative.
 
 ## Register and common failures
 

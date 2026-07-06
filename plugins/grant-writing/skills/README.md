@@ -1,6 +1,6 @@
 # Grant Writing Skill Suite
 
-A set of 20 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
+A suite of over 20 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
 
 ## Workflow order
 
@@ -21,11 +21,12 @@ A set of 20 skills covering the full lifecycle of a federal research grant propo
 | 13 | `grant-data-management-plan` | NIH DMSP / NSF DMP |
 | 14 | `grant-compliance-sections` | Human subjects, vertebrate animals, rigor |
 | 15 | `grant-mock-review` | Red-team study section simulation |
-| 16 | `grant-proofread-structure` | High-level flow, missing elements, transitions |
-| 17 | `grant-proofread-detail` | Spelling, grammar, figure/table references |
-| 18 | `grant-references` | Citation completeness and accuracy |
-| 19 | `grant-format-check` | Page limits, fonts, margins, attachments |
-| 20 | `grant-resubmission` | Response to reviews, resubmission intro |
+| 16 | `grant-math-notation` | Math/LaTeX notation audit for math-heavy proposals (per section or whole document) |
+| 17 | `grant-proofread-structure` | High-level flow, missing elements, transitions |
+| 18 | `grant-proofread-detail` | Spelling, grammar, figure/table references |
+| 19 | `grant-references` | Citation completeness and accuracy |
+| 20 | `grant-format-check` | Page limits, fonts, margins, attachments |
+| 21 | `grant-resubmission` | Response to reviews, resubmission intro |
 
 Order is a default, not a rule. Budget, letters, and admin documents proceed in parallel with the narrative.
 

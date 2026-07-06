@@ -28,16 +28,20 @@ Plus a short preamble (overall strategy, timeline pointer) and, where applicable
 
 ## Step 2 — Rationales first (all aims)
 
-For each aim, draft the rationale as a self-contained argument: the observation/premise → the inference → why *this* experiment discriminates between hypotheses → what the field gains from either outcome. Test it with the user: if the hypothesis is wrong, is the aim still informative? If not, redesign now. Only after all rationales stand does methods drafting begin.
+For each aim, draft the rationale as a self-contained argument: the observation/premise → the inference → why *this* experiment discriminates between hypotheses → what the field gains from either outcome. Test it with the user: if the hypothesis is wrong, is the aim still informative? If not, redesign now.
+
+Check dependence *across* aims too: if Aims 2–3 can proceed only when Aim 1's hypothesis is confirmed, reviewers will call the structure fragile — a classic fatal flaw. Restructure so later aims survive plausible Aim 1 outcomes, or state explicitly why the dependence is acceptable. Only after all rationales stand does methods drafting begin.
 
 ## Step 3 — Draft subsections interactively
 
 One subsection per exchange. For each:
 
-- **Design**: enough detail that a knowledgeable reviewer can judge feasibility — key controls, sample sizes with justification, decision criteria. Cite established methods instead of describing them; spend the page budget on what is new or risky.
-- **Preliminary data**: each figure must earn its space by de-risking a specific step. State what each figure shows factually; note where data are thin rather than overstating.
-- **Expected outcomes**: predicted results, how they'll be interpreted, and quantitative success criteria where possible.
+- **Design**: enough detail that a knowledgeable reviewer can judge feasibility — key controls, sample sizes with power justification (underpowered designs are among the most cited rigor weaknesses; state effect-size assumptions and their source), decision criteria. Cite established methods instead of describing them; spend the page budget on what is new or risky.
+- **Preliminary data**: each figure must earn its space by de-risking a specific step. State what each figure shows factually; note where data are thin rather than overstating. An aim with no supporting data needs its feasibility carried some other way — published precedent, a collaborator letter (coordinate with `grant-letters-of-support`), or a phased design; name which.
+- **Expected outcomes**: predicted results, how they'll be interpreted — including the interpretation if results contradict the hypothesis. Experiments with no informative negative outcome read as fishing expeditions. Quantitative success criteria where possible.
 - **Pitfalls & alternatives**: real risks (not strawmen), with concrete alternatives and decision points. Reviewers read this subsection as a proxy for the PI's judgment.
+
+Write for the skim: reviewers re-read a 12-page Approach in minutes before the meeting. One schematic per aim (design overview with decision points) is usually the best use of figure space; make decision criteria and sample sizes findable rather than buried in prose.
 
 Flag scope problems factually as they emerge ("Aim 3 as designed requires ~18 months of sequential mouse cohorts; the timeline allocates 8").
 

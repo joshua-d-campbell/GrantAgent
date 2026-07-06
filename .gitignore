@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Microsoft Office temp/lock files
+~$*
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz

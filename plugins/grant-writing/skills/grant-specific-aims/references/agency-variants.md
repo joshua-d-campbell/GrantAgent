@@ -3,6 +3,8 @@
 ## NIH
 The one-page Specific Aims format in SKILL.md is the NIH default. Under the simplified review framework (due dates on/after Jan 25, 2025), reviewers score Factor 1 (Importance: Significance + Innovation) and Factor 2 (Rigor and Feasibility: Approach) 1–9, and evaluate Factor 3 (Expertise and Resources) as sufficient/gaps. The aims page is the reviewer's first and sometimes only carefully-read page — the importance argument (Factor 1) must be complete on this page alone.
 
+Career development (K) and fellowship (F) applications are a distinct case: the aims page interweaves research aims with the candidate's training/career-development goals, reviewers weight candidate and mentoring alongside the science, and the research must be scoped to what one trainee can execute — an R01-sized plan on a K aims page signals poor calibration.
+
 ## NSF
 No "Specific Aims" document exists; the equivalent content opens the 15-page Project Description and condenses into the 1-page Project Summary (Overview / Intellectual Merit / Broader Impacts — all three headings mandatory). Frame as research objectives or questions. Broader Impacts is a scored criterion equal in weight to Intellectual Merit: education, outreach, workforce, societal benefit must appear in the overview, not as an afterthought. Include "Results from Prior NSF Support" planning if any senior person has NSF funding within 5 years.
 

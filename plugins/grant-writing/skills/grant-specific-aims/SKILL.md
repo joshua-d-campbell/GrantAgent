@@ -27,7 +27,12 @@ Interview the user, in their own terms:
 - **Aims block**: each aim gets a bolded headline (outcome-oriented, not method-oriented — "Determine whether X drives Y," not "Perform RNA-seq on Z"), 2–4 sentences of approach, a working hypothesis or expected outcome where appropriate.
 - **Payoff paragraph**: expected overall outcomes, positive impact, and what the results enable next. Significance and impact stated simply and clearly — this is the most important element of the page; reviewers outside the immediate subfield must be able to repeat the argument in study section.
 
-Structural quality checks: aims must be related but not interdependent (aim 2 must survive if aim 1's hypothesis is wrong); each aim testable within the project period; scope matched to mechanism and budget.
+Structural quality checks:
+
+- Aims related but not interdependent — aim 2 must survive if aim 1's hypothesis is wrong. Serial dependence is among the most common reasons reviewers score down an otherwise strong application.
+- Each aim has an interpretable outcome whichever way the data fall; an aim that is only informative if the hypothesis is confirmed is a design flaw, not just a writing flaw.
+- Prefer decisive aim verbs (Determine, Define, Test, Identify) over open-ended ones (Explore, Study, Characterize) — descriptive verbs read as fishing expeditions unless the deliverable itself is the point (tool, dataset, resource). For genuinely non-hypothesis-driven work, frame honest objectives and milestones rather than decorating with a token hypothesis.
+- Each aim testable within the project period; scope matched to mechanism and budget.
 
 For NSF, adapt: objectives instead of aims, explicit Intellectual Merit and Broader Impacts sentences. For DoD/CDMRP, tie aims to the announcement's focus areas and military relevance. Read `references/agency-variants.md` when working on a non-NIH proposal.
 
@@ -35,7 +40,7 @@ For NSF, adapt: objectives instead of aims, explicit Intellectual Merit and Broa
 
 After the draft exists, give the user a factual novelty assessment:
 
-- For each aim, state what appears innovative and what has already been done, citing the closest published work you can identify. Use literature search tools if available; otherwise state clearly which claims need a literature check by the user.
+- For each aim, state what appears innovative and what has already been done, citing the closest published work you can identify. Use literature search tools if available. Never fabricate citations: if you cannot verify a specific paper, describe the line of work generically and give the user concrete search terms, flagging the claim as needing their literature check.
 - Distinguish: new question, new method, new application of existing method, incremental extension.
 - Neutral tone. "Aim 2's approach has been applied in system X (author, year); the novelty here is limited to the model system" is the correct register — not softened, not harsh.
 

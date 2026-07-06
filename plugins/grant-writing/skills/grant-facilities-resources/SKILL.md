@@ -26,6 +26,12 @@ For early-stage investigators, NIH invites description of institutional investme
 
 List major items available to the project (typically ≥$5K per unit, but the criterion is relevance): instrument, model where it matters to capability claims, location/ownership (lab vs core). Items the budget requests to *purchase* do not belong here — that's the budget; equipment lists what already exists. A requested instrument that duplicates a listed one is a reviewer objection; reconcile before submission.
 
+## Funder-specific traps
+
+- **NSF**: describe capability, not cost. Dollar figures for institutional contributions in this document can be construed as voluntary committed cost sharing, which the PAPPG prohibits outside solicitation-mandated cases — verify the current PAPPG language, and keep the document qualitative. NSF expects the document even when there is little to report; say so explicitly rather than omitting it.
+- **Multi-site projects**: describe resources at every performance site, including subaward sites — reviewers check that the collaborator doing the animal work has an animal facility, not just that the lead institution does.
+- **NIH Factor 3**: reviewers rate environment/expertise as sufficient or with named gaps rather than scoring 1–9, so the practical bar is "no reviewer can name a needed resource that is absent" — which is exactly the cross-check below.
+
 ## Cross-checks
 
 Every method in the Approach has its enabling resource listed here; every resource claimed here that belongs to someone else has a letter of support; DMSP storage claims match the computing description. Report mismatches factually. Where the institutional boilerplate claims resources the user cannot actually access, cut them — reviewers at the same institution notice.

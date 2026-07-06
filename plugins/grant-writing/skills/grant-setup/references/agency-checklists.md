@@ -22,14 +22,15 @@ Verify against the FOA and current NIH Application Guide (grants.nih.gov). Typic
 - [ ] Letters of Support; Consortium/subaward documents (SOW, subaward budget)
 - [ ] Multiple PI Leadership Plan (if multi-PI)
 - [ ] Resource Sharing Plan(s) (model organisms, etc., if applicable)
-- [ ] Cover Letter (optional; study section / institute assignment requests)
+- [ ] PHS Assignment Request Form (optional but valuable — study section and institute preferences go here, not in the cover letter)
+- [ ] Cover Letter (optional; late submission justification, conflicts, agency-required explanations)
 - Format: Arial/Georgia/Helvetica/Palatino Linotype ≥11 pt, ≥0.5" margins, PDF attachments
 
 ## NSF (standard research proposal per PAPPG 24-1 + supplements)
 
 Verify against current PAPPG (NSF 24-1 as of mid-2026, plus Supplements 26-200/26-202) and the solicitation:
 
-- [ ] Project Summary (1 page: Overview, Intellectual Merit, Broader Impacts)
+- [ ] Project Summary (1 page: Overview, Intellectual Merit, Broader Impacts — must stand alone; no URLs)
 - [ ] Project Description (15 pages default; must address Broader Impacts and Results from Prior NSF Support)
 - [ ] References Cited
 - [ ] Biographical Sketch(es) — SciENcv-generated, all senior personnel
@@ -37,7 +38,8 @@ Verify against current PAPPG (NSF 24-1 as of mid-2026, plus Supplements 26-200/2
 - [ ] Budget + Budget Justification (5-page limit)
 - [ ] Facilities, Equipment and Other Resources
 - [ ] Data Management and Sharing Plan (2 pages)
-- [ ] Mentoring Plan (if postdocs funded; 1 page)
+- [ ] Mentoring Plan (1 page; required when postdocs — and, per recent PAPPG updates, graduate students — are funded; verify scope in current PAPPG)
+- [ ] Safe and Inclusive Working Environments plan (off-campus/off-site research, where the solicitation or directorate requires it)
 - [ ] Collaborators & Other Affiliations (COA) template per senior person
 - [ ] Letters of Collaboration (format-restricted — no endorsement language) if allowed
 - [ ] Synergistic activities, solicitation-specific supplements as required
@@ -46,10 +48,11 @@ Verify against current PAPPG (NSF 24-1 as of mid-2026, plus Supplements 26-200/2
 
 Always start from the specific BAA/Program Announcement; DoD has no single format. Common pattern:
 
-- [ ] Pre-application / white paper / letter of intent (often required first)
+- [ ] Pre-application / white paper / letter of intent (often required first; CDMRP pre-applications go through eBRAP with their own deadline)
 - [ ] Project Narrative (page limit per BAA)
-- [ ] Statement of Work (SOW) — task/milestone structure, often a fixed template
+- [ ] Statement of Work (SOW) — task/milestone structure, often a fixed template; budget must map onto SOW tasks
 - [ ] Budget and Justification (agency-specific forms)
+- [ ] Citizenship / security / export-control attestations where the BAA requires them (check early — these can exclude team members)
 - [ ] Biosketches/CVs per BAA format
 - [ ] Quad chart (many CDMRP/DARPA mechanisms)
 - [ ] Military relevance / impact statement (CDMRP)
@@ -67,3 +70,4 @@ Foundations vary most. Read the RFP; common items:
 - [ ] Institutional information, tax status letters (grants office provides)
 - [ ] Letters of support
 - [ ] Lay abstract / public summary (foundations weight these heavily)
+- Even when the foundation's portal accepts PI-submitted applications, most institutions still require internal routing/approval — confirm with the grants office before assuming the PI can submit alone

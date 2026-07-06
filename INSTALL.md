@@ -1,6 +1,6 @@
 # Installing the Grant Writing Skills
 
-The `grant-writing` plugin gives Claude 20 skills for research grant writing — from project setup and Specific Aims through mock review, format checking, and resubmission. Installing takes about two minutes and requires no technical setup.
+The `grant-writing` plugin gives Claude over 20 skills for research grant writing — from project setup and Specific Aims through mock review, format checking, and resubmission. Installing takes about two minutes and requires no technical setup.
 
 ## Claude desktop app (recommended for most users)
 

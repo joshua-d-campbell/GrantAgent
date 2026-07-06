@@ -26,7 +26,16 @@ Do not write abstracts fresh — compress existing approved text so no inconsist
 1. Extract: the gap sentence (Significance), objective + hypothesis (aims page ¶2), one sentence per aim (aims block headlines), payoff sentence (aims page final ¶).
 2. Assemble to the target length, then rewrite transitions for flow.
 3. Check register against the audience. For lay abstracts, apply a hard jargon pass: every term a non-scientist would not know is replaced or explained; readability target roughly 8th–10th grade. Read the result aloud logic: one idea per sentence.
-4. Verify hard limits from the FOA (line counts, character counts, headings) — these are return-without-review items at NSF and form-validation failures at NIH.
+4. Verify hard limits from the FOA (line counts, character counts, headings) — these are return-without-review items at NSF and form-validation failures at NIH. Count NIH's 30 lines in the final formatted document (submission font and margins), not in the working draft; line count is a property of formatting.
+
+Refine each abstract interactively in conversation; write only user-approved text to files.
+
+## Public-record and routing constraints
+
+- NIH Summary/Abstract and Project Narrative publish verbatim on RePORTER if funded. No proprietary or confidential information, no citations, no figure references, no hyperlinks (unless the FOA explicitly permits them). Anything the user would not want a competitor or journalist to read does not belong here.
+- At NIH, the title and abstract drive CSR referral and reviewer assignment. Put the field-orienting terms — disease, model system, methodology — in the first few lines so the application lands in the intended study section. If the user has a target study section, check the abstract's vocabulary signals it; if the assignment matters enough, remind them a cover letter can request it.
+
+## Drift check
 
 State factually where the abstract overpromises relative to the approach, or where aims in the abstract have drifted from the current aims version — abstracts written late catch drift, which is useful; resolve drift in the source documents, not by papering over it in the abstract.
 

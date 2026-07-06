@@ -11,7 +11,7 @@ Read `00_admin/project-config.md` and the FOA summary; pull exact requirements f
 
 ## Build the requirement table
 
-From the FOA/guide, extract the binding rules and record them, then check each document against them:
+From the FOA/guide, extract the binding rules and record them, noting which source each came from — where the FOA and the general application guide conflict, the FOA wins. Then check each document against them:
 
 - **Page limits** per component (Specific Aims, Research Strategy, Project Description, budget justification, DMSP, biosketch, etc.) — these differ by mechanism (R01 12 pp vs R21 6 pp; NSF 15 pp; NSF biosketch/C&P via SciENcv have their own limits).
 - **Font**: NIH accepts Arial, Georgia, Helvetica, Palatino Linotype at ≥11 pt (text); figure/table/legend text no smaller than a legibility floor. NSF specifies allowed fonts/sizes in the PAPPG. Confirm the current list.
@@ -32,4 +32,4 @@ Cross-check the assembled set against the `00_admin/` checklist and the FOA's re
 
 ## Deliverable
 
-`09_final_assembly/format-check_<date>.md`: a pass/fail table (requirement | measured | status) plus a blocking-issues list. Nothing here is a style opinion — every item is a binary compliance fact. Recommend the user's grants office run their own validation in the submission system (ASSIST/Workspace/Research.gov) as the final gate, since system-level validations can catch registration and form errors this check cannot see.
+`09_final_assembly/format-check_<date>.md`: a pass/fail table (requirement | measured | status) plus a blocking-issues list. Nothing here is a style opinion — every item is a binary compliance fact. Recommend the user's grants office run their own validation in the submission system (ASSIST/Workspace/Research.gov) as the final gate, since system-level validations catch registration and form errors this check cannot see. For NIH, remind the user to inspect the assembled application image in eRA Commons during the short post-submission viewing window (verify its current length) — the assembled image, not the uploaded files, is what reviewers receive, and assembly can garble figures or drop pages.

@@ -15,11 +15,11 @@ For each aim, list tasks with duration estimates and dependencies (which tasks a
 
 ## Step 2 — Sanity-check the load
 
-Cross-check against the budget's effort allocations: a year in which three aims run heavy experiments simultaneously with 1.2 FTE of staff is a factual inconsistency — report it and help rebalance (stagger aims, adjust scope, or revisit effort). Front-loading everything into years 1–2 and back-loading "analysis and dissemination" is a recognized weak pattern; so is a timeline with no slack for failure and iteration.
+Cross-check against the budget's effort allocations: a year in which three aims run heavy experiments simultaneously with 1.2 FTE of staff is a factual inconsistency — report it and help rebalance (stagger aims, adjust scope, or revisit effort). Front-loading everything into years 1–2 and back-loading "analysis and dissemination" is a recognized weak pattern; so is a timeline with no slack for failure and iteration. Start year 1 with the ramp reviewers expect — hiring, approvals, training: heavy experimental milestones in the first two quarters read as naive and undercut the credibility of everything after them. The timeline is where "overambitious" critiques get anchored; a visibly staggered, slack-bearing schedule is the main defense.
 
 ## Step 3 — Define milestones, not just bars
 
-Milestones are verifiable events, ideally quantitative: "Aim 1 cohort enrollment complete (n=120), month 18," "Assay validated at CV<15%, month 9." For each, define the decision rule where relevant — what happens if missed (the alternative from the pitfalls subsection). DoD and NIH U/cooperative mechanisms often require formal go/no-go milestones; write them so an outside monitor could adjudicate them.
+Milestones are verifiable events, ideally quantitative: "Aim 1 cohort enrollment complete (n=120), month 18," "Assay validated at CV<15%, month 9." Keep them within the team's control — "manuscript submitted" works, "manuscript accepted" and "hypothesis confirmed" do not; result-contingent branches are decision points, not milestones. For each, define the decision rule where relevant — what happens if missed (the alternative from the pitfalls subsection). DoD and NIH U/cooperative mechanisms often require formal go/no-go milestones; write them so an outside monitor could adjudicate them. For DoD, distinguish milestones (progress markers) from deliverables (items owed to the sponsor — reports, data, prototypes per the SOW) and schedule both.
 
 ## Step 4 — Render the Gantt
 

@@ -31,7 +31,11 @@ Structure (adapt to signer's voice, ~1 page, signer's letterhead):
 4. Brief statement of the collaboration's history or fit, where true.
 5. Closing commitment sentence.
 
-Write in the signer's plausible voice, not the PI's. Vary structure and phrasing across letters — reviewers notice a stack of letters with identical bones.
+Write in the signer's plausible voice, not the PI's. Vary structure and phrasing across letters — reviewers notice a stack of letters with identical bones. Ask the user for each signer's title, affiliation, and collaboration history rather than inventing them.
+
+## What reviewers do with letters
+
+Under the NIH simplified framework, letters feed Factor 3 (Expertise and Resources): a reviewer can cite "Core X commits 200 instrument-hours/year" but can do nothing with enthusiasm. Cross-check every quantitative commitment (effort, rates, hours, samples, access) against the budget and personnel plan — mismatches surface in review and again at just-in-time. Discourage prestige endorsements from people with no role in the project; they add nothing and invite "why is this person not a collaborator?" Letters of support are also not reference letters — some mechanisms (e.g., NIH K awards) require separately submitted reference letters with their own process and deadline; check the FOA.
 
 ## Agency constraints (verify against FOA)
 

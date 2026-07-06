@@ -13,7 +13,8 @@ Reviewers and program officers see the title before anything else; assignment to
 
 - Names the scientific problem and the approach or system, concretely
 - Is understandable to reviewers adjacent to the subfield
-- Contains the searchable keywords a program officer would use to route it
+- Contains the searchable keywords a program officer would use to route it — assignment pipelines also mine title and abstract text, so keyword choice affects which study section or program sees the application in practice
+- Reads acceptably to a lay/public audience: funded titles are published verbatim (NIH RePORTER, NSF award search, USAspending) and occasionally cherry-picked as examples of wasteful spending — avoid phrasing that sounds frivolous out of context
 - Avoids: unexplained acronyms, cleverness at the expense of clarity, vague framing ("Studies of...", "Toward an understanding of..."), and overclaiming ("A cure for...")
 
 ## Constraints (verify against the FOA)
@@ -28,4 +29,4 @@ Reviewers and program officers see the title before anything else; assignment to
 2. Generate 6–10 candidate titles spanning styles: declarative ("X drives Y in Z"), mechanistic question framing, method-forward, impact-forward.
 3. For each candidate, state factually its strengths and weaknesses: character count, keyword coverage, audience readability, assignment implications. No ranking by enthusiasm — give the user the trade-offs.
 4. Check the chosen title against the character limit and any required prefixes.
-5. Record the final title in `00_admin/project-config.md` and save candidates considered to `06_abstracts_title/title-candidates.md` (versioned) — earlier candidates often become paper titles or resurface in resubmission.
+5. Record the final title in `00_admin/project-config.md` and save candidates considered to `06_abstracts_title/title-candidates.md` (versioned) — earlier candidates often become paper titles or resurface in resubmission. The config copy is authoritative: the title must appear verbatim on the application form and anywhere the narrative cites it, and mismatches are a routine format-check catch.

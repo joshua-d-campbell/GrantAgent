@@ -20,11 +20,13 @@ Record these in the config so all future sessions honor them:
 
 Ask the user for (accept partial answers; record gaps as open items):
 
-1. **Funding announcement**: FOA/NOFO/PA/RFA/BAA number or URL, funder, mechanism (e.g., NIH R01, NSF CAREER, DoD CDMRP), due date. Fetch or copy the announcement text into `00_admin/foa/`. Extract and summarize: page limits, review criteria, budget cap, required documents, eligibility constraints — save as `00_admin/foa/foa-summary.md`.
-2. **Team**: PI(s), co-investigators, collaborators, institutions.
-3. **Grant administration checklist**: Ask whether their sponsored programs / grants office provided one. If yes, copy it into `00_admin/`. If not, generate one from the FOA's required-documents list plus the agency defaults in `references/agency-checklists.md`, and label it clearly as auto-generated pending office confirmation.
-4. **Document format**: Microsoft Word or LaTeX. Record the choice; it determines file templates and how approved text is inserted.
-5. **Storage location**: local folder, Google Drive, or OneDrive.
+1. **Funding announcement**: FOA/NOFO/PA/RFA/BAA number or URL, funder, mechanism (e.g., NIH R01, NSF CAREER, DoD CDMRP), due date. Fetch or copy the announcement text into `00_admin/foa/`. Extract into `00_admin/foa/foa-summary.md`: page limits, review criteria (quote them verbatim — later sections are drafted against them), budget cap, required documents, eligibility constraints, and any letter-of-intent or pre-application requirement with its own deadline (these often fall weeks before the full deadline and are the most commonly missed date). The FOA overrides the agency's general guide wherever they differ; where the FOA is silent, verify against the current guide rather than memory.
+2. **Eligibility and submission status**: confirm any career-stage, citizenship (common in DoD), or institutional eligibility gates before drafting effort is spent — an eligibility miss voids everything else. Ask whether this is a new submission or a resubmission; if resubmission, put the prior reviews in `00_admin/foa/` and note that `grant-resubmission` runs alongside the drafting skills.
+3. **Deadline map**: work backward from the sponsor deadline. Ask for the internal grants-office deadline — institutions typically require the complete application days before the sponsor date, so the internal date is the real deadline. Flag long-lead items now: subaward documents (need the partner institution's grants office to sign off), letters of support, and biosketches/Other Support from external collaborators. These routinely take 2–4 weeks and cannot be compressed at the end.
+4. **Team**: PI(s), co-investigators, collaborators, institutions. Record who submits — an authorized institutional official via Grants.gov/ASSIST, Research.gov, eBRAP, or a foundation portal, almost never the PI personally — and confirm the PI has active credentials in that system (eRA Commons, SciENcv, etc.).
+5. **Grant administration checklist**: Ask whether their sponsored programs / grants office provided one. If yes, copy it into `00_admin/`. If not, generate one from the FOA's required-documents list plus the agency defaults in `references/agency-checklists.md`, and label it clearly as auto-generated pending office confirmation.
+6. **Document format**: Microsoft Word or LaTeX. Record the choice; it determines file templates and how approved text is inserted.
+7. **Storage location**: local folder, Google Drive, or OneDrive.
 
 ## Step 2 — Create the directory structure
 
@@ -83,7 +85,9 @@ Create `00_admin/project-config.md`:
 ```markdown
 # Project Config — <short name>
 - Funder / mechanism / FOA: ...
-- Due date: ...            # plus internal grants-office deadline if earlier
+- New submission | resubmission
+- Due dates: sponsor ... / internal grants-office ... / LOI-pre-app ...
+- Submission system + submitting official: ...
 - Document format: Word | LaTeX
 - Team: ...
 - Page limits: ...         # from FOA summary
@@ -104,4 +108,4 @@ Summarize what was created, list open items (missing FOA details, unconfirmed ch
 
 ## References
 
-- `references/agency-checklists.md` — default document checklists per funder (NIH, NSF, DoD, foundations). Read when auto-generating a checklist in Step 1.3.
+- `references/agency-checklists.md` — default document checklists per funder (NIH, NSF, DoD, foundations). Read when auto-generating a checklist in Step 1.5.
