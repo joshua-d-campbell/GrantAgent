@@ -5,7 +5,7 @@ description: Prepare biosketches and support documents — NIH Biosketch (person
 
 # Biosketches and Support Documents
 
-These documents answer review Factor 3 (NIH: Expertise and Resources) — whether this team can do this work. The high-leverage part is tailoring: a biosketch recycled from the last grant argues for the last grant.
+These documents answer review Factor 3 (NIH: Expertise and Resources) — whether this team can do this work. The high-leverage part is tailoring: a biosketch recycled from the last grant argues for the last grant. For multi-PI applications, coordinate the PIs' personal statements with `grant-multi-pi-plan` — the biosketches and the leadership plan must tell the same complementarity story.
 
 Read `00_admin/project-config.md` for the team list and mechanism. Files go to `04_biosketches/`, one per person, versioned. Collect current CVs or prior biosketches from the user as source material. For NIH fellowship applications (F series), the applicant's biosketch uses the *fellowship* format, which adds a **Scholastic Performance** section (institutions, courses, and grades) — collect transcripts, and make the sponsor's personal statement speak to training *this* candidate, not to the sponsor's research program.
 
