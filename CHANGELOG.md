@@ -1,0 +1,70 @@
+# Changelog
+
+All notable changes to the GrantAgent skill suite. Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is semantic as applied to a skill suite: **major** = breaking changes to shared contracts (project-config fields, folder structure, versioning schema), **minor** = new skill added, **patch** = refinements and agency-fact updates.
+
+Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
+
+## [0.9.0] — 2026-07-07
+
+### Added
+- `version` field in the plugin manifest, this changelog, and a live "What's new" page on the website that renders the changelog directly from the repository.
+
+## [0.8.0] — 2026-07-07
+
+### Added
+- `grant-loi-preproposal` — LOIs, pre-proposals, and DoD white papers, distinguishing administrative notification LOIs from first-stage competitive screens.
+- `grant-multi-pi-plan` — Multiple PD/PI Leadership Plan: complementarity case, governance, conflict resolution, resource splits.
+- Explicit out-of-scope declarations (training/program grants, post-award, regulatory documents, submission mechanics, non-US funders) in the skills README, with a runtime scope check in `grant-setup`.
+
+## [0.7.0] — 2026-07-07
+
+### Added
+- Fellowship support (NIH F30/F31/F32, NSF GRFP) in `grant-career-plan`: sponsor/co-sponsor statements, activities-by-year breakdown, F30 dual-degree and F32 variants, GRFP two-statement structure.
+- Fellowship and GRFP review instruments in `grant-mock-review`'s criteria reference.
+
+### Changed
+- `grant-setup` gains a `fellowship` award type and NRSA/GRFP citizenship eligibility gate; `grant-budget-justification` stops before producing an R01-style budget for formulaic NRSA awards; `grant-biosketch-support` covers the fellowship biosketch's Scholastic Performance section.
+
+## [0.6.0] — 2026-07-07
+
+### Changed
+- License changed from GPL-3.0 to PolyForm Noncommercial 1.0.0: free for academic, nonprofit, and government use; commercial use requires a separate license. Versions previously published under GPL-3.0 remain available under GPL-3.0 to anyone who obtained them.
+
+### Added
+- `CONTRIBUTING.md` with a Contributor License Agreement enabling dual licensing.
+
+## [0.5.0] — 2026-07-07
+
+### Added
+- `grant-career-plan` — career development awards (NIH K series, NSF CAREER, foundation career awards): training-gap coherence chain, mentor team, mentor statements, institutional commitment, referee letters, RCR plan.
+- K-award and NSF CAREER review instruments in `grant-mock-review`'s criteria reference; award-type field in the project config.
+
+## [0.4.0] — 2026-07-07
+
+### Added
+- `grant-approach-math` — substance review of a single mathematical component (formulation–aim fit, assumptions, identifiability, complexity, sandbox verification, proof-feasibility fallbacks).
+- Workflow diagram (SVG), GitHub Pages site, usage tips in the install guide, and skill-authoring guidance in the skills README.
+
+## [0.3.0] — 2026-07-07
+
+### Added
+- `grant-approach-experiment` — deep design review of a single experiment: rationale, controls, confounds, power, analysis plan, interpretation, feasibility.
+- `grant-condense` — cutting an over-length draft to the limit: structural cuts ranked by yield, then two-tier sentence tightening with running-total tracking.
+
+### Changed
+- Suite-wide convention separating reasoning (conversation) from document text (lean, justified prose); refinements to both new skills from review (power recomputation, measurement fallbacks, versioned report filenames).
+
+## [0.2.0] — 2026-07-06
+
+### Added
+- `grant-math-notation` — notation audit for math-heavy proposals: symbol registry, consistency passes, LaTeX mechanics.
+
+### Changed
+- Refinement pass across all skills; count-agnostic wording; Office temp files ignored.
+
+## [0.1.0] — 2026-07-06
+
+### Added
+- Initial suite of 22 skills covering the full proposal lifecycle: setup, aims, title, budget, significance, innovation, approach, letters, timeline, abstracts, biosketches, facilities, DMP, compliance, mock review, condensing, proofreading, references, format check, resubmission.
+- Shared conventions: project-config contract, neutral interaction tone, versioning schema, approved-text-only flow, style profile from prior grants, decision log.
+- Install guide for non-technical researchers.

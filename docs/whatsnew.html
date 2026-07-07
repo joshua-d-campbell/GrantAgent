@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's new — GrantAgent</title>
+<meta name="description" content="Changelog for the GrantAgent grant-writing skill suite, rendered live from the repository.">
+<style>
+  :root {
+    --ink: #0f172a; --muted: #475569; --faint: #94a3b8;
+    --blue: #2563eb; --panel: #f8fafc; --line: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  nav { position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); z-index: 10; }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; max-width: 960px; }
+  nav .brand { font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
+  nav .links a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 0.92rem; }
+  nav .links a:hover { color: var(--ink); }
+  header { padding: 48px 0 8px; }
+  header h1 { font-size: 2rem; letter-spacing: -0.02em; }
+  header p { color: var(--muted); margin-top: 8px; }
+  main { padding: 24px 0 64px; }
+  #log h2 { font-size: 1.25rem; margin: 32px 0 4px; padding-top: 18px; border-top: 1px solid var(--line); }
+  #log h2:first-of-type { border-top: none; padding-top: 0; }
+  #log h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); margin: 14px 0 4px; }
+  #log ul { margin: 6px 0 6px 22px; }
+  #log li { margin: 4px 0; }
+  #log p { margin: 10px 0; color: var(--muted); }
+  #log code { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; font-size: 0.9em; }
+  #log a { color: var(--blue); }
+  .loading { color: var(--faint); font-style: italic; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--faint); font-size: 0.88rem; text-align: center; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">GrantAgent</a>
+    <span class="links">
+      <a href="index.html#install">Install</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="https://github.com/joshua-d-campbell/GrantAgent">GitHub</a>
+    </span>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <h1>What's new</h1>
+    <p>Rendered live from the repository's <a href="https://github.com/joshua-d-campbell/GrantAgent/blob/main/CHANGELOG.md">CHANGELOG.md</a> — always current.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div id="log"><p class="loading">Loading the changelog…</p></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="index.html">GrantAgent home</a> · <a href="https://github.com/joshua-d-campbell/GrantAgent/commits/main">Full commit history</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var SRC = 'https://raw.githubusercontent.com/joshua-d-campbell/GrantAgent/main/CHANGELOG.md';
+
+  function esc(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function inline(s) {
+    return s
+      .replace(/`([^`]+)`/g, '<code>$1</code>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2">$1</a>');
+  }
+
+  function render(md) {
+    var lines = md.split(/\r?\n/), out = [], inList = false, para = [];
+    function flushPara() {
+      if (para.length) { out.push('<p>' + inline(para.join(' ')) + '</p>'); para = []; }
+    }
+    function closeList() { if (inList) { out.push('</ul>'); inList = false; } }
+    for (var i = 0; i < lines.length; i++) {
+      var raw = lines[i], t = esc(raw.trim());
+      if (/^# /.test(t)) { flushPara(); closeList(); continue; }               // skip page title
+      else if (/^## /.test(t)) { flushPara(); closeList(); out.push('<h2>' + inline(t.slice(3)) + '</h2>'); }
+      else if (/^### /.test(t)) { flushPara(); closeList(); out.push('<h3>' + inline(t.slice(4)) + '</h3>'); }
+      else if (/^- /.test(t)) { flushPara(); if (!inList) { out.push('<ul>'); inList = true; } out.push('<li>' + inline(t.slice(2)) + '</li>'); }
+      else if (t === '') { flushPara(); closeList(); }
+      else { closeList(); para.push(t); }
+    }
+    flushPara(); closeList();
+    return out.join('\n');
+  }
+
+  fetch(SRC, { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (md) { document.getElementById('log').innerHTML = render(md); })
+    .catch(function () {
+      document.getElementById('log').innerHTML =
+        '<p>The changelog couldn’t be loaded right now. View it directly on ' +
+        '<a href="https://github.com/joshua-d-campbell/GrantAgent/blob/main/CHANGELOG.md">GitHub</a>.</p>';
+    });
+})();
+</script>
+
+</body>
+</html>

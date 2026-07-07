@@ -25,3 +25,4 @@ Pull requests without this confirmation cannot be merged.
 - Agency facts (page limits, review criteria, effort rules) must carry a verify-against-the-FOA hedge and a note of when they were checked — agency rules change.
 - If you add or remove a skill, update the skills README table, the workflow figure (`plugins/grant-writing/docs/workflow.svg`, copied to `docs/workflow.svg`), and the skill count on the landing page (`docs/index.html`).
 - Test with 2–3 realistic prompts before submitting, and note in the PR what you tested.
+- Version and changelog: `plugins/grant-writing/.claude-plugin/plugin.json` carries the suite version (semver — major: breaking changes to shared contracts; minor: new skill; patch: refinements and fact updates). Bump it and add a `CHANGELOG.md` entry in the same commit as the change.
