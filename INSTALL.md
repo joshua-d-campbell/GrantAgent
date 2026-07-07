@@ -132,3 +132,9 @@ Skills trigger on substantial, specific requests. Instead of "help with my grant
 
 **How do I know it worked?**
 After installing, ask Claude directly: *"Which grant-writing skills do you have available?"* It can list them for you.
+
+---
+
+## License
+
+These skills are free to use for academic, nonprofit, and government work under the [PolyForm Noncommercial License](LICENSE) — if you're a researcher at a university writing grants, you're fully covered. Commercial use (for-profit companies, paid grant-consulting services) requires a separate license: contact camp@bu.edu.
