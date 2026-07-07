@@ -82,6 +82,10 @@ The best starting point for any new proposal is asking Claude to **set up the pr
 
 A few habits make a large difference:
 
+**Set up with the real solicitation.** When you start a project, give Claude the actual FOA/NOFO (or a link to it). Page limits, required sections, and review criteria then come from *your* solicitation rather than general knowledge — agency rules change often.
+
+**Share a prior grant or two.** During setup, Claude builds a style profile from grants you've written before, so drafts come out in your voice instead of generic prose. Drop them in the project's prior-grants folder.
+
 **One document per conversation.** Draft the Approach in one conversation, the budget in another. Long conversations that wander across several documents make Claude drift from the skill's instructions. Starting fresh is cheap — the project's settings file carries your deadline, format, and preferences over, so you never re-explain.
 
 **Put lasting decisions in files, not in chat.** Conversations don't remember each other. Anything that must persist — a dropped aim, a tone preference, a scope change — belongs in the project folder, and the skills record these automatically (in the config file and decision log). If you notice yourself re-explaining the same thing each session, ask Claude to write it into the project config.
@@ -91,6 +95,8 @@ A few habits make a large difference:
 **Get critiques from a fresh conversation.** A mock review is most honest when it comes from a conversation that didn't spend hours helping write the text. Start a new conversation for the review, or ask Claude to run it as a separate agent.
 
 **Read before it lands.** The skills are built to show you text before placing it into your documents — take advantage of that rather than waving edits through.
+
+**Run the finishing steps in order.** Condense to the page limit *before* line-by-line proofreading — there's no point polishing text that's about to be cut — and leave the format check for last.
 
 **Corrected Claude the same way twice?** That correction belongs in the skill or the project config, not in every future conversation. Tell Claude to record it.
 
@@ -126,7 +132,3 @@ Skills trigger on substantial, specific requests. Instead of "help with my grant
 
 **How do I know it worked?**
 After installing, ask Claude directly: *"Which grant-writing skills do you have available?"* It can list them for you.
-
----
-
-*Maintainer note: this marketplace installs from the public repository `joshua-d-campbell/GrantAgent`. If you make the repo private, collaborators will each need a GitHub account and read access, and will authenticate with their own credentials — which adds friction for non-technical users. Keeping the repo public is recommended since it contains only grant-writing methodology, no proposal content or personal data.*
