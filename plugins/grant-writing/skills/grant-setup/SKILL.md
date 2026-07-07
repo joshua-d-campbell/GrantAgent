@@ -94,6 +94,7 @@ Create `00_admin/project-config.md`:
 - Document format: Word | LaTeX
 - Team: ...
 - Page limits: ...         # from FOA summary
+- Target study section / IC: ...   # decide early — shapes the writing; grant-cover-letter-assignment finalizes the request
 - Budget cap / type: ...   # modular vs detailed, direct cost cap
 - Versioning: <schema above>
 - Tone rules: neutral scientific register, no flattery, strengths/weaknesses stated factually

@@ -1,6 +1,6 @@
 # Grant Writing Skill Suite
 
-A suite of 27 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
+A suite of 28 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
 
 ## Workflow order
 
@@ -32,6 +32,7 @@ A suite of 27 skills covering the full lifecycle of a federal research grant pro
 | 19 | `grant-proofread-detail` | Spelling, grammar, figure/table references |
 | 20 | `grant-references` | Citation completeness and accuracy |
 | 21 | `grant-format-check` | Page limits, fonts, margins, attachments |
+| 21a | `grant-cover-letter-assignment` | NIH cover letter and PHS Assignment Request: study section targeting, expertise, reviewer exclusions |
 | 22 | `grant-resubmission` | Response to reviews, resubmission intro |
 
 Order is a default, not a rule. Budget, letters, and admin documents proceed in parallel with the narrative.

@@ -4,6 +4,12 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.10.0] — 2026-07-07
+
+### Added
+- `grant-cover-letter-assignment` — NIH cover letter and PHS Assignment Request Form: study section targeting (RePORTER/ART/program-officer grounding), institute assignment, needed-expertise extraction from the final Approach, and sparing, competition-based reviewer exclusions.
+- Target study section field in the project config (chosen early, since it shapes the writing); `grant-mock-review` now casts personas as members of the named section.
+
 ## [0.9.0] — 2026-07-07
 
 ### Added

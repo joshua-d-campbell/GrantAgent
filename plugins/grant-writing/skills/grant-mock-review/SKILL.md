@@ -7,7 +7,7 @@ description: Simulate a study section / peer review of a draft grant — score i
 
 Predict the review the proposal will actually receive. The value is adversarial: the useful posture is a fair but skeptical reviewer with a stack of applications, a weekend to read them, and no obligation to fund this one. This is where the no-flattery rule matters most — a mock review that softens problems wastes the exercise. Frame everything as "here is the case reviewers will make," including objections the model does not itself find persuasive; the goal is to predict the panel, not to be right.
 
-Read `00_admin/project-config.md` for funder and mechanism, load the matching criteria and calibration notes from `references/review-criteria.md`, and assemble the current full draft.
+Read `00_admin/project-config.md` for funder and mechanism, load the matching criteria and calibration notes from `references/review-criteria.md`, and assemble the current full draft. If the config names a target study section, cast the personas as members of that section — its stated scope defines what expertise the simulated reviewers do and do not have.
 
 ## Read like a reviewer, not an editor
 

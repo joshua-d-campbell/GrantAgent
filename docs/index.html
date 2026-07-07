@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GrantAgent — Claude skills for grant writing</title>
-<meta name="description" content="A suite of 27 Claude skills covering the full lifecycle of a federal research grant proposal — NIH, NSF, DoD, and foundations. Install once, then just describe what you're working on.">
+<meta name="description" content="A suite of 28 Claude skills covering the full lifecycle of a federal research grant proposal — NIH, NSF, DoD, and foundations. Install once, then just describe what you're working on.">
 <style>
   :root {
     --ink: #0f172a; --muted: #475569; --faint: #94a3b8;
@@ -106,7 +106,7 @@
 <header class="hero">
   <div class="wrap">
     <h1>Teach Claude to write grants with you</h1>
-    <p class="tag">GrantAgent is a suite of 27 Claude skills covering the full lifecycle of a federal research grant — NIH, NSF, DoD, and foundations. From Specific Aims to the final format check.</p>
+    <p class="tag">GrantAgent is a suite of 28 Claude skills covering the full lifecycle of a federal research grant — NIH, NSF, DoD, and foundations. From Specific Aims to the final format check.</p>
     <div class="cta">
       <a class="btn btn-primary" href="#install">Install in 5 minutes</a>
       <a class="btn btn-ghost" href="https://github.com/joshua-d-campbell/GrantAgent">View on GitHub</a>
@@ -133,7 +133,7 @@
     <ol class="steps">
       <li><strong>Open the plugins settings</strong><p>In the Claude desktop app, go to <b>Settings → Customize → Plugins</b>. (Menu wording varies slightly by version — look for "Plugins," "Capabilities," or "Extensions.")</p></li>
       <li><strong>Add the marketplace</strong><p>Click <b>Add Marketplace</b> and enter exactly:</p><div class="copybox">joshua-d-campbell/GrantAgent</div></li>
-      <li><strong>Install the plugin</strong><p>In the <b>grant-agent</b> marketplace, install the <b>grant-writing</b> plugin. One plugin contains all 27 skills.</p></li>
+      <li><strong>Install the plugin</strong><p>In the <b>grant-agent</b> marketplace, install the <b>grant-writing</b> plugin. One plugin contains all 28 skills.</p></li>
       <li><strong>Start writing</strong><p>Open a conversation and say, for example: <i>"I'm starting a new NIH R01 application. Can you help me set up?"</i></p></li>
     </ol>
     <details>
@@ -161,7 +161,7 @@
 
 <section class="alt" id="skills">
   <div class="wrap">
-    <h2>The 27 skills</h2>
+    <h2>The 28 skills</h2>
     <p class="lead">Every skill reads a shared project config, follows a strict versioning schema, never silently edits a document you haven't seen, and writes in your voice using a style profile built from your prior grants.</p>
 
     <div class="phase">
@@ -211,6 +211,7 @@
         <div class="skill b-purple"><code>grant-proofread-detail</code><br><span>Spelling, grammar, figure/table references</span></div>
         <div class="skill b-purple"><code>grant-references</code><br><span>Citation completeness and accuracy</span></div>
         <div class="skill b-purple"><code>grant-format-check</code><br><span>Page limits, fonts, margins, attachments</span></div>
+        <div class="skill b-purple"><code>grant-cover-letter-assignment</code><br><span>NIH cover letter and PHS Assignment Request: study section targeting, expertise, reviewer exclusions</span></div>
       </div>
     </div>
 
@@ -271,7 +272,7 @@
       <div class="card"><h3>Fold corrections into the skill</h3><p>If a user corrects the agent the same way twice, that correction belongs in SKILL.md, not in every future conversation.</p></div>
     </div>
     <h2 style="margin-top:48px" id="conventions">Shared conventions</h2>
-    <p class="lead">All 27 skills follow the same contracts, so any skill can pick up where another left off.</p>
+    <p class="lead">All 28 skills follow the same contracts, so any skill can pick up where another left off.</p>
     <div class="cards3">
       <div class="card"><h3>Project config contract</h3><p><code>grant-setup</code> creates <code>00_admin/project-config.md</code> — funder, mechanism, deadline, document format, page limits. Every other skill reads it first, so nothing is re-explained between sessions.</p></div>
       <div class="card"><h3>Rigorous, neutral tone</h3><p>No flattery, no filler praise. Strengths and weaknesses stated as facts with reasons, and direct disagreement — with evidence — when the science or strategy warrants it.</p></div>
