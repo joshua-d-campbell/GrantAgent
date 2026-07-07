@@ -266,7 +266,17 @@
       <div class="card"><h3>Test with realistic prompts</h3><p>Run each skill on prompts phrased the way researchers actually type — typos and shorthand included — and fix what generalizes, not what's specific to one test.</p></div>
       <div class="card"><h3>Fold corrections into the skill</h3><p>If a user corrects the agent the same way twice, that correction belongs in SKILL.md, not in every future conversation.</p></div>
     </div>
-    <p style="margin-top:22px; color:var(--muted); font-size:0.95rem">See also the <a href="https://github.com/joshua-d-campbell/GrantAgent/blob/main/plugins/grant-writing/skills/README.md#shared-conventions-all-skills-follow-these">shared conventions</a> all 24 skills follow — project config contract, versioning schema, interaction tone, and the reasoning-vs-document-text separation.</p>
+    <h2 style="margin-top:48px" id="conventions">Shared conventions</h2>
+    <p class="lead">All 24 skills follow the same contracts, so any skill can pick up where another left off.</p>
+    <div class="cards3">
+      <div class="card"><h3>Project config contract</h3><p><code>grant-setup</code> creates <code>00_admin/project-config.md</code> — funder, mechanism, deadline, document format, page limits. Every other skill reads it first, so nothing is re-explained between sessions.</p></div>
+      <div class="card"><h3>Rigorous, neutral tone</h3><p>No flattery, no filler praise. Strengths and weaknesses stated as facts with reasons, and direct disagreement — with evidence — when the science or strategy warrants it.</p></div>
+      <div class="card"><h3>Versioning schema</h3><p><code>&lt;document&gt;_v&lt;NN&gt;_&lt;date&gt;_&lt;status&gt;</code>, with status moving draft → internal → shared → final. A version is never overwritten; every session writes a new file.</p></div>
+      <div class="card"><h3>Only approved text lands</h3><p>Text is refined in conversation and placed into documents only after you approve it. Reasoning about choices stays in the chat; the document gets the lean, justified version.</p></div>
+      <div class="card"><h3>Your voice, from your grants</h3><p>Setup ingests prior grants into a style profile that every drafting skill reads, so new sections recapitulate how you actually write.</p></div>
+      <div class="card"><h3>Decision log</h3><p>Scope changes, dropped aims, and budget shifts are appended to a dated decision log, so late-stage skills can detect and reconcile inconsistencies.</p></div>
+    </div>
+    <p style="margin-top:22px; color:var(--muted); font-size:0.95rem">Full text of the conventions and authoring guidance: <a href="https://github.com/joshua-d-campbell/GrantAgent/blob/main/plugins/grant-writing/skills/README.md">skills README</a>.</p>
   </div>
 </section>
 
