@@ -7,7 +7,7 @@ description: Build a research grant budget and budget justification — personne
 
 Budgeting is where the study design becomes concrete: you cannot price an experiment you have not specified. Expect this skill to force design decisions, and propagate those decisions back to the aims page.
 
-Read `00_admin/project-config.md` (budget cap, mechanism, team) first. Budget files live in `03_budget/`, versioned per the schema. The budget folder may have restricted permissions — salary figures are sensitive; do not copy them into shared narrative folders.
+Read `00_admin/project-config.md` (budget cap, mechanism, team) first. If the award type is a fellowship (NIH F series, NSF GRFP), stop: stipends, tuition/fees, and institutional allowances are formulaic at published levels — verify the current figures and skip the justification workflow below, which would produce the wrong document. Budget files live in `03_budget/`, versioned per the schema. The budget folder may have restricted permissions — salary figures are sensitive; do not copy them into shared narrative folders.
 
 ## Step 1 — Finalize the roster
 

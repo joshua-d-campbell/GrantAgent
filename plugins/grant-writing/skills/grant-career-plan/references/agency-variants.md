@@ -16,6 +16,32 @@ Verify everything below against the specific FOA/PA/solicitation before relying 
 
 **RCR**: instruction plan described across format, subject matter, faculty participation, duration, and frequency; at least eight face-to-face contact hours is the working standard, online-only insufficient, refreshed at each career stage.
 
+## NIH F series (NRSA individual fellowships)
+
+**Mechanisms**: F31 (predoctoral, including the F31-Diversity variant), F30 (dual-degree — MD/PhD, DO/PhD, and similar), F32 (postdoctoral). NRSA rules apply: US citizenship, national status, or permanent residency required — a hard eligibility gate to check before any drafting. Stipends, tuition/fees, and the institutional allowance are formulaic at published NRSA levels; there is no detailed budget to justify.
+
+**Review** (NIH revised the fellowship framework effective 2025 — confirm the current instrument in the PA): candidate-centric factors covering the candidate's preparedness and potential, the research training plan, and the commitment to the candidate (sponsor and institution), with RCR training rated acceptable/unacceptable as an additional consideration. Overall impact is framed as the likelihood the fellowship will enhance the candidate's development into a productive, independent scientist — the science is judged as a training vehicle, not on R01 terms.
+
+**Distinctive documents** (beyond the research training plan):
+
+- **Applicant's Background and Goals for Fellowship Training** — the coherence chain lives here: trajectory so far, gaps, goals.
+- **Activities Planned Under This Award** — percent breakdown by year (research, coursework, clinical work, professional development); must match the training narrative exactly.
+- **Sponsor and Co-Sponsor Statements** — scored: the training plan for this candidate, the sponsor's *active funding covering the proposed research*, previous trainees with named outcomes, and the training environment. The fellowship analog of the K mentor statement.
+- **Selection of Sponsor and Institution** — why this lab and this place serve these training goals; reviewers read it as a test of the candidate's judgment.
+- **Respective Contributions** — an honest account of how applicant and sponsor jointly developed the plan; "the sponsor's R01 in miniature" is the critique this section exists to answer.
+- **Letters of reference** (3–5) submitted by referees via eRA Commons, not from the sponsor — same long-lead logic as K referee letters.
+
+**F30 specifics**: the plan must integrate clinical and research training with a credible timeline to *both* degrees; reviewers probe whether the dissertation phase is protected from clinical creep. **F32 specifics**: reviewers look for a genuinely new training environment and skills — a postdoc continuing their PhD work in a similar lab needs an explicit argument for what is new.
+
+## NSF Graduate Research Fellowship Program (GRFP)
+
+A fellowship to the *person*, not a project: several years of support for the graduate career, awarded on the applicant's whole record and trajectory. The standard NSF criteria — Intellectual Merit and Broader Impacts — are applied to the applicant, and **both statements must address both criteria explicitly** (labeled sections are the convention); a thin or token Broader Impacts discussion is the classic GRFP kill.
+
+- **Documents**: Personal, Relevant Background and Future Goals Statement; Graduate Research Plan Statement (short — currently 3 and 2 pages; verify); transcripts; three reference letters with their own submission deadline. No sponsor statement, no institutional commitment document, no mentor team — the coherence chain compresses to: record → goals → plan → impact.
+- **The research plan is a demonstration of thinking, not a contract** — panels know first-year plans change; they judge whether the applicant can frame a question, design an approach, and articulate its merit and impacts at appropriate scope. Overclaimed scope reads as poor calibration, same as an R01-sized K plan.
+- **Eligibility**: US citizens, nationals, and permanent residents; applications are accepted before graduate school and very early in it, with a strict limit on attempts as a graduate student — the timing rules have changed across solicitations, so verify the current one before planning a skip-a-year strategy. Deadlines fall in mid-to-late October, by discipline.
+- **Reference letters** carry unusual weight: choose writers for complementary coverage (research, teaching/outreach), brief them on both criteria, and track their separate deadline — a missing letter ends the application.
+
 ## NSF CAREER
 
 Solicitation **NSF 22-586** (verify current; deadline the fourth Wednesday in July, annually). Single PI, no co-PIs, one CAREER proposal per year, and a lifetime cap on the number of CAREER competitions a PI may enter (three under recent solicitations — verify).

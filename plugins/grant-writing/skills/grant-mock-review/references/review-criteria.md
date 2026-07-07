@@ -41,6 +41,12 @@ K applications are scored on candidate-centric criteria, classically five: **Can
 
 Recurring K-award killers: a mentor without current funding or placed trainees; a training plan of generic activities unmapped to stated gaps; a research plan indistinguishable from the mentor's program (no visible independence trajectory) or sized beyond one trainee; institutional commitment letters that praise without committing protected time; for K99/R00, independent-phase aims that cannot leave the mentor's lab.
 
+## NIH — NRSA Fellowships (F30/F31/F32)
+
+Reviewed under NIH's revised fellowship framework (effective 2025 — confirm the current instrument in the PA): candidate-centric factors covering the candidate's preparedness and potential, the research training plan, and the commitment to the candidate (sponsor and institution), with RCR training rated acceptable/unacceptable. Overall impact is the likelihood the fellowship will enhance the candidate's development into a productive, independent scientist — the science is scored as a training vehicle, not on R01 terms.
+
+Recurring fellowship killers: a sponsor statement without active funding covering the research or without prior trainees and outcomes; an activities-by-year breakdown inconsistent with the training narrative; a research plan that reads as the sponsor's R01 in miniature, with no visible candidate ownership; generic selection-of-sponsor reasoning; for F30, a timeline that doesn't credibly protect the dissertation from clinical training; reference letters missing at the deadline.
+
 ## NSF — Two Merit Review Criteria (PAPPG 24-1)
 
 - **Intellectual Merit**: potential to advance knowledge.
@@ -49,6 +55,8 @@ Recurring K-award killers: a mentor without current funding or placed trainees; 
 Both assessed through five elements: (1) potential to advance knowledge / benefit society; (2) creative, original, potentially transformative concepts; (3) well-reasoned, well-organized plan with a mechanism to assess success; (4) qualifications of team/organization; (5) adequacy of resources. Reviewers give strengths/weaknesses per criterion and an overall rating (Excellent / Very Good / Good / Fair / Poor). Solicitation-specific criteria may be added — check.
 
 Panel behavior: ratings skew high, so a plain "Good" usually signals a proposal in trouble. Panels typically produce a consensus panel summary and place proposals in recommendation categories (naming varies by division — e.g., High/Medium/Low Priority, or Fund/Do Not Fund). NSF program officers exercise substantially more discretion relative to panel rank than NIH program staff do relative to percentile. Recurring score-killers: Broader Impacts that are generic or bolted-on rather than integrated with the research, and project plans that list activities with no way to assess success (element 3).
+
+**GRFP**: the same two criteria applied to the *applicant* — record, potential, and plans across both statements, rated holistically by fast-reading panels. Killers: Broader Impacts asserted in a sentence rather than evidenced with past activity and concrete plans; statements that fail to address both criteria explicitly; a research plan overclaiming scope for an early graduate student.
 
 **CAREER**: reviewed under the same two criteria, but panels specifically judge the *integration* of the research and education plans — education activities that are integral, assessable, and scaled to a single PI. A bolted-on outreach paragraph is the classic CAREER kill, and the solicitation-prescribed departmental letter is compliance-checked (see `grant-career-plan`).
 

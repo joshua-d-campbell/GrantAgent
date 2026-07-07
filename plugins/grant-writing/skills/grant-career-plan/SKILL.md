@@ -1,11 +1,11 @@
 ---
 name: grant-career-plan
-description: Develop the career-development components of a training or career award — candidate background and career goals, training gap analysis, career development activities and timeline, mentor and advisory team assembly, mentor statements, institutional commitment requirements, referee letter strategy, and the RCR training plan. Use whenever the grant is a career development award (NIH K01/K08/K23/K25/K99-R00, NSF CAREER, foundation career or early-career awards), or the user mentions a career plan, candidate statement, mentoring team, mentor statement, training plan, protected time, or K-award reference letters.
+description: Develop the career-development and training components of a career award or fellowship — candidate background and career goals, training gap analysis, development activities and timeline, mentor/sponsor team assembly, mentor and sponsor statements, institutional commitment, referee letter strategy, and the RCR training plan. Use whenever the grant is a career development award (NIH K01/K08/K23/K25/K99-R00, NSF CAREER, foundation career awards) or a graduate/postdoctoral fellowship (NIH F30/F31/F32, NSF GRFP), or the user mentions a career plan, candidate statement, mentoring team, sponsor statement, training plan, protected time, or fellowship reference letters.
 ---
 
 # Career Development Plan
 
-On a career award the applicant *is* the project: reviewers fund a trajectory, not just a study, and they weight the candidate, the mentoring, and the training plan as heavily as the science. The document set stands or falls on one coherence chain: **stated training gaps → chosen development activities → mentor expertise covering each gap → research plan as the training vehicle → the five-year career goal**. Every classic career-award critique is a break in that chain — a named training area no mentor covers, an activity unconnected to the goal, a research plan sized for a funded lab rather than one trainee.
+On a career award or fellowship the applicant *is* the project: reviewers fund a trajectory, not just a study, and they weight the candidate, the mentoring, and the training plan as heavily as the science. (Fellowships call the mentor the *sponsor* — the terms below map directly.) The document set stands or falls on one coherence chain: **stated training gaps → chosen development activities → mentor expertise covering each gap → research plan as the training vehicle → the five-year career goal**. Every classic career-award critique is a break in that chain — a named training area no mentor covers, an activity unconnected to the goal, a research plan sized for a funded lab rather than one trainee.
 
 Read `00_admin/project-config.md` first (run `grant-setup` if missing) and confirm the award type is recorded as career-development. Career-award files live in `10_career/` (add the folder to the standard structure if absent), versioned per the schema. Agency differences are substantial — read `references/agency-variants.md` for the mechanism in play before drafting.
 
@@ -19,7 +19,7 @@ Elicit: career stage and prior training, key publications, and the specific inde
 
 ## Step 2 — Gap analysis and development activities
 
-Keep gaps concrete and few (typically 3–4): specific techniques or fields, plus professional skills (lab leadership, grant and personnel management, responsible mentoring). Every activity maps to a gap and carries a time allocation and year — named coursework, technique training in a specific lab, structured writing programs. Generic filler ("attend seminars," "read the literature") carries no weight and dilutes the real plan. Build the timeline with training front-loaded, research effort growing across years, and explicit independence markers: first corresponding-author paper, first R01 (or equivalent) submission, transition milestones.
+Keep gaps concrete and few (typically 3–4): specific techniques or fields, plus professional skills (lab leadership, grant and personnel management, responsible mentoring). Every activity maps to a gap and carries a time allocation and year — named coursework, technique training in a specific lab, structured writing programs. Generic filler ("attend seminars," "read the literature") carries no weight and dilutes the real plan. Build the timeline with training front-loaded, research effort growing across years, and explicit independence markers: first corresponding-author paper, first R01 (or equivalent) submission, transition milestones. NIH fellowships additionally require an "Activities Planned Under This Award" percent breakdown by year (research, coursework, clinical, professional development) — it must sum sensibly and match the training narrative word for word, because reviewers cross-check the two.
 
 ## Step 3 — Mentor team
 
@@ -29,13 +29,13 @@ The team is designed against the gap list, not assembled from availability:
 - **Co-mentors and advisors**: each mapped to a specific gap in the training map. A gap with no covering mentor, or a mentor with no assigned gap, is the flag reviewers find first.
 - **Structure**: meeting cadences (primary mentor weekly/biweekly; advisory committee 1–2×/year with stated milestones reviewed), and who adjudicates if advice conflicts.
 
-Draft the **mentor statement** here — it is a scored plan, not a courtesy letter: the mentor's assessment of the candidate, the plan for this candidate (cadence, milestones, transition-to-independence steps, what the mentor cedes to the candidate and when), lab/data resources committed, and the mentor's mentoring history. Write it in the mentor's plausible voice; follow `grant-letters-of-support` drafting conventions (early drafts, tracker, signer edits), but this document is owned here.
+Draft the **mentor statement** (K) or **sponsor/co-sponsor statement** (F) here — it is a scored plan, not a courtesy letter: the mentor's assessment of the candidate, the plan for this candidate (cadence, milestones, transition-to-independence steps, what the mentor cedes to the candidate and when), lab/data resources committed, and the mentor's mentoring history. Fellowship sponsor statements additionally must show the sponsor's *active funding covering the proposed research* and previous trainees with outcomes — reviewers read a sponsor without either as a training environment that can't deliver. Write it in the mentor's plausible voice; follow `grant-letters-of-support` drafting conventions (early drafts, tracker, signer edits), but this document is owned here.
 
 ## Step 4 — Institutional commitment and referees
 
 The chair/institutional letter has required content, not sentiment: the protected-effort percentage stated numerically (typically 75% for NIH K mechanisms; some clinician tracks 50% — the FOA rules), space, resources, reduced clinical/teaching load, and a statement the position is not contingent on the award. For NSF CAREER the departmental letter has solicitation-prescribed elements — deviation risks return without review.
 
-For NIH K awards, plan the **referee letters** at project start: 3–5 letters submitted independently by referees through eRA Commons by the deadline, from people who can speak to the candidate's potential and are *not* the mentors or others named in the application. Missing letters can bar review, and referees are the least controllable dependency in the whole application — choose them, brief them with a one-page summary of the training map, and set them a deadline two weeks early (coordinate with the long-lead tracking from `grant-setup`).
+For NIH K awards and F fellowships, plan the **referee letters** at project start: 3–5 letters submitted independently by referees through eRA Commons by the deadline, from people who can speak to the candidate's potential and are *not* the mentors or others named in the application. Missing letters can bar review, and referees are the least controllable dependency in the whole application — choose them, brief them with a one-page summary of the training map, and set them a deadline two weeks early (coordinate with the long-lead tracking from `grant-setup`).
 
 ## Step 5 — RCR training plan
 
@@ -51,4 +51,4 @@ Walk the training map row by row: every gap has an activity, a covering mentor, 
 
 ## References
 
-- `references/agency-variants.md` — NIH K series (mechanisms, effort rules, referee letters, K99/R00 phasing), NSF CAREER (education-plan integration, departmental letter), foundation career awards. Read before drafting for any specific mechanism.
+- `references/agency-variants.md` — NIH K series (mechanisms, effort rules, referee letters, K99/R00 phasing), NIH F fellowships (sponsor statements, activities breakdown, F30 dual-degree), NSF CAREER (education-plan integration, departmental letter), NSF GRFP (two-statement structure), foundation career awards. Read before drafting for any specific mechanism.

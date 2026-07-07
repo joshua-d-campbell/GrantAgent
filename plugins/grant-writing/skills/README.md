@@ -8,7 +8,7 @@ A suite of 25 skills covering the full lifecycle of a federal research grant pro
 |---|---|---|
 | 1 | `grant-setup` | Folder structure, FOA ingestion, checklist, config, style profile |
 | 2 | `grant-specific-aims` | Aims page drafting and innovation feedback |
-| 2a | `grant-career-plan` | Career awards only (K, CAREER, foundation): career plan, mentor team, mentor statements, referee strategy |
+| 2a | `grant-career-plan` | Career awards & fellowships (K, CAREER, F30/F31/F32, GRFP, foundation): training plan, mentor/sponsor team, statements, referee strategy |
 | 3 | `grant-title` | Title development after aims stabilize |
 | 4 | `grant-budget-justification` | Personnel, line items, justification; syncs aims |
 | 5 | `grant-significance` | Significance section |

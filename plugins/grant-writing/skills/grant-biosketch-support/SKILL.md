@@ -7,7 +7,7 @@ description: Prepare biosketches and support documents — NIH Biosketch (person
 
 These documents answer review Factor 3 (NIH: Expertise and Resources) — whether this team can do this work. The high-leverage part is tailoring: a biosketch recycled from the last grant argues for the last grant.
 
-Read `00_admin/project-config.md` for the team list and mechanism. Files go to `04_biosketches/`, one per person, versioned. Collect current CVs or prior biosketches from the user as source material.
+Read `00_admin/project-config.md` for the team list and mechanism. Files go to `04_biosketches/`, one per person, versioned. Collect current CVs or prior biosketches from the user as source material. For NIH fellowship applications (F series), the applicant's biosketch uses the *fellowship* format, which adds a **Scholastic Performance** section (institutions, courses, and grades) — collect transcripts, and make the sponsor's personal statement speak to training *this* candidate, not to the sponsor's research program.
 
 Everything factual — products, dates, positions, grant numbers, effort figures — comes from the user's CV, an ORCID/My Bibliography export, or a verified lookup. Never reconstruct a publication or award number from memory: a biosketch listing a product that does not exist as cited carries the same integrity weight as a fabricated reference. Where a product's metadata cannot be confirmed against a source, flag it rather than smoothing it.
 
