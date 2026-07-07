@@ -35,7 +35,7 @@ Write in the signer's plausible voice, not the PI's. Vary structure and phrasing
 
 ## What reviewers do with letters
 
-Under the NIH simplified framework, letters feed Factor 3 (Expertise and Resources): a reviewer can cite "Core X commits 200 instrument-hours/year" but can do nothing with enthusiasm. Cross-check every quantitative commitment (effort, rates, hours, samples, access) against the budget and personnel plan — mismatches surface in review and again at just-in-time. Discourage prestige endorsements from people with no role in the project; they add nothing and invite "why is this person not a collaborator?" Letters of support are also not reference letters — some mechanisms (e.g., NIH K awards) require separately submitted reference letters with their own process and deadline; check the FOA.
+Under the NIH simplified framework, letters feed Factor 3 (Expertise and Resources): a reviewer can cite "Core X commits 200 instrument-hours/year" but can do nothing with enthusiasm. Cross-check every quantitative commitment (effort, rates, hours, samples, access) against the budget and personnel plan — mismatches surface in review and again at just-in-time. Discourage prestige endorsements from people with no role in the project; they add nothing and invite "why is this person not a collaborator?" Letters of support are also not reference letters — some mechanisms (e.g., NIH K awards) require separately submitted reference letters with their own process and deadline; check the FOA. For career-development awards, mentor statements, institutional-commitment letters, and referee strategy are owned by `grant-career-plan`; this skill keeps collaborator, consultant, and resource letters.
 
 ## Agency constraints (verify against FOA)
 

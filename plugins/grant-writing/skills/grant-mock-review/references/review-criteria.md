@@ -35,6 +35,12 @@ The adjectives mislead: a "Good" (5) is not fundable for investigator-initiated 
 - Discussion concentrates on disagreements between assigned reviewers and on whichever weakness reviewer 1 leads with. Enthusiastic champions rescue borderline applications; an application with no champion drifts down even without a fatal flaw.
 - The summary statement is the (largely unedited) critiques plus, for discussed applications, a resume of discussion — the resume is the panel's collective judgment and the highest-signal text in the document.
 
+## NIH — Career Development (K) Awards
+
+K applications are scored on candidate-centric criteria, classically five: **Candidate** (record, potential, commitment); **Career Development Plan / Career Goals & Objectives** (gaps → activities → goal coherence); **Research Plan** (judged as a training vehicle scoped to one trainee, not as an R01); **Mentor(s), Co-Mentor(s), Consultant(s), Collaborator(s)** (mentor's funding and mentoring track record, plan for this candidate); **Environment & Institutional Commitment** (protected effort stated numerically, real load reduction). Overall Impact is framed as the likelihood the award *enhances the candidate's potential for an independent research career* — strong science with weak mentoring or a generic training plan scores badly. Confirm the current instrument in the PA: NIH has been migrating mechanisms to revised frameworks, and the K instrument may differ from the classic form above.
+
+Recurring K-award killers: a mentor without current funding or placed trainees; a training plan of generic activities unmapped to stated gaps; a research plan indistinguishable from the mentor's program (no visible independence trajectory) or sized beyond one trainee; institutional commitment letters that praise without committing protected time; for K99/R00, independent-phase aims that cannot leave the mentor's lab.
+
 ## NSF — Two Merit Review Criteria (PAPPG 24-1)
 
 - **Intellectual Merit**: potential to advance knowledge.
@@ -44,6 +50,8 @@ Both assessed through five elements: (1) potential to advance knowledge / benefi
 
 Panel behavior: ratings skew high, so a plain "Good" usually signals a proposal in trouble. Panels typically produce a consensus panel summary and place proposals in recommendation categories (naming varies by division — e.g., High/Medium/Low Priority, or Fund/Do Not Fund). NSF program officers exercise substantially more discretion relative to panel rank than NIH program staff do relative to percentile. Recurring score-killers: Broader Impacts that are generic or bolted-on rather than integrated with the research, and project plans that list activities with no way to assess success (element 3).
 
+**CAREER**: reviewed under the same two criteria, but panels specifically judge the *integration* of the research and education plans — education activities that are integral, assessable, and scaled to a single PI. A bolted-on outreach paragraph is the classic CAREER kill, and the solicitation-prescribed departmental letter is compliance-checked (see `grant-career-plan`).
+
 ## DoD — varies by agency/program
 
 - **CDMRP**: two-tier — peer review (scientific merit) then programmatic review (portfolio/relevance fit); criteria published per program announcement, typically impact, innovation, approach, and the stated military/disease relevance. Many mechanisms seat consumer/advocate reviewers who score in part from the lay abstract — a weak lay abstract is a scoring event, not a formality.
@@ -51,4 +59,4 @@ Panel behavior: ratings skew high, so a plain "Good" usually signals a proposal 
 
 ## Foundations
 
-Criteria vary widely; extract them from the RFP. Common axes: mission alignment, significance to the funder's focus population, feasibility, investigator fit, and (frequently) lay-summary clarity, since board members are often non-scientists. Board review may weight non-scientific factors (institutional or geographic distribution) the RFP discloses.
+Criteria vary widely; extract them from the RFP. Common axes: mission alignment, significance to the funder's focus population, feasibility, investigator fit, and (frequently) lay-summary clarity, since board members are often non-scientists. Board review may weight non-scientific factors (institutional or geographic distribution) the RFP discloses. Foundation *career* awards additionally weight the mentor statement and the candidate's trajectory much as NIH K reviewers do — apply the K-award killer list above alongside the RFP's criteria.

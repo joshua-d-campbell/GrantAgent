@@ -1,6 +1,6 @@
 # Grant Writing Skill Suite
 
-A suite of 24 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
+A suite of 25 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
 
 ## Workflow order
 
@@ -8,6 +8,7 @@ A suite of 24 skills covering the full lifecycle of a federal research grant pro
 |---|---|---|
 | 1 | `grant-setup` | Folder structure, FOA ingestion, checklist, config, style profile |
 | 2 | `grant-specific-aims` | Aims page drafting and innovation feedback |
+| 2a | `grant-career-plan` | Career awards only (K, CAREER, foundation): career plan, mentor team, mentor statements, referee strategy |
 | 3 | `grant-title` | Title development after aims stabilize |
 | 4 | `grant-budget-justification` | Personnel, line items, justification; syncs aims |
 | 5 | `grant-significance` | Significance section |
