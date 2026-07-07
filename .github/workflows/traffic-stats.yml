@@ -1,0 +1,40 @@
+name: Log traffic stats
+
+# Snapshots the 14-day Traffic API data into traffic/*.csv daily so history
+# accumulates beyond GitHub's built-in 14-day window.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # daily at 06:17 UTC (offset from the top of the hour)
+  workflow_dispatch: {}     # allows manual runs from the Actions tab
+
+permissions:
+  contents: write           # needed to commit the updated CSVs back
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and log traffic
+        env:
+          TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/log_traffic.py
+
+      - name: Commit updated CSVs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add traffic/*.csv
+          if git diff --cached --quiet; then
+            echo "No traffic changes to commit."
+          else
+            git commit -m "Update traffic stats [skip ci]"
+            git push
+          fi
