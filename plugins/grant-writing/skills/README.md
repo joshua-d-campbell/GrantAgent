@@ -41,6 +41,17 @@ Solid arrows are the default sequence, dashed arrows are loops and feedback. Sou
 
 ![Grant-writing workflow diagram](../docs/workflow.svg)
 
+## Out of scope
+
+Declared deliberately, so the suite doesn't half-support things and mislead. If a request falls here, skills should say so plainly and point to the right resource rather than improvise.
+
+- **Training and multi-project program grants** — T32/T35 training grants and P01/P50/U54/center mechanisms have a different document architecture (trainee data tables, cross-project cores, program-level narratives) that these single-project skills would get wrong. Individual components (a project within a P01, a biosketch, a budget) can still use the matching skills.
+- **Post-award lifecycle** — just-in-time submissions, RPPRs and progress reports, no-cost extensions, prior-approval requests. The suite ends at submission and resubmission.
+- **Regulatory documents themselves** — IRB/IACUC protocols, clinical trial registration, DSMB charters. The suite drafts the grant's compliance *sections*; the regulatory submissions belong to the relevant offices and boards.
+- **Submission mechanics** — operating ASSIST/Grants.gov/Research.gov/eBRAP and institutional routing. `grant-setup` records who submits and when; the grants office drives the portal.
+- **Non-US funders** — ERC, UKRI, Wellcome, and similar have conventions different enough that the embedded guidance would be wrong. Scope is NIH, NSF, DoD, and US foundations.
+- **The science** — skills structure, critique, and verify; the researcher originates the ideas and remains the scientific authority throughout.
+
 ## Shared conventions (all skills follow these)
 
 ### 1. Project config contract

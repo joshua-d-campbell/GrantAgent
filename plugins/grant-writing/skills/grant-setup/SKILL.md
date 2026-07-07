@@ -7,6 +7,8 @@ description: Initialize a new research grant proposal project — folder structu
 
 Set up the infrastructure for a grant proposal so every later stage (aims, budget, approach, review) has a consistent home. Run this once per proposal; it produces the `project-config.md` contract that all other grant skills depend on.
 
+Scope check first: this suite supports single-project research grants, career awards, and fellowships from NIH, NSF, DoD, and US foundations. If the mechanism is a training grant (T32/T35), a multi-project program grant (P01/P50/U54, centers), a post-award document (RPPR, JIT), or a non-US funder, say so plainly — these are out of scope and half-supporting them misleads. Individual components (one project within a P01, a biosketch, a budget) can still use the matching skills, stated as such.
+
 ## Interaction ground rules (apply to this and every subsequent session)
 
 Record these in the config so all future sessions honor them:
