@@ -4,6 +4,14 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.11.0] — 2026-07-07
+
+### Added
+- `grant-human-subjects` — the PHS Human Subjects and Clinical Trials Information form, run after the Approach's design and enrollment numbers are settled: study records, clinical-trial classification, inclusion enrollment reports, recruitment feasibility arithmetic, the four-part protection attachment, DSMP, sIRB, and the protocol synopsis with numbers matching the Approach exactly.
+
+### Changed
+- `grant-compliance-sections` keeps the human-subjects determination and cross-cutting checks, handing the full form to the new skill.
+
 ## [0.10.0] — 2026-07-07
 
 ### Added

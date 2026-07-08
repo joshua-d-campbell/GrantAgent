@@ -14,7 +14,7 @@ Read `00_admin/project-config.md` and the Approach. Output to `07_compliance/`, 
 If the project involves human subjects or their identifiable data/specimens:
 
 - **Determination first**: confirm with the user whether the work is human-subjects research and whether it meets the clinical-trial definition (NIH's four questions) — this drives which FOA is even eligible and which forms apply.
-- **PHS Human Subjects and Clinical Trials Information**: per study — protection of subjects (risks, protections, risk/benefit), data and safety monitoring for trials.
+- **PHS Human Subjects and Clinical Trials Information**: the full form — study records field by field, inclusion enrollment reports, the protection attachment, DSMP, and the protocol synopsis — is owned by `grant-human-subjects`, which runs after the Approach's design and enrollment numbers are settled. This skill keeps the determination above and the cross-cutting checks below.
 - **Inclusion**: inclusion of women, minorities, and individuals across the lifespan; inclusion enrollment reports; scientific justification for any exclusion (age, sex/gender) — blanket exclusions need defensible rationale.
 - **Clinical trials carry extra obligations**: only clinical-trial-permitting FOAs are eligible, a data and safety monitoring plan is required, and ClinicalTrials.gov registration/reporting obligations attach at award — note them so nothing is promised the team won't staff.
 - **Multi-site domestic studies**: NIH generally expects a single IRB (sIRB) plan — verify applicability in the FOA and involve the IRB early, since reliance agreements take time.
