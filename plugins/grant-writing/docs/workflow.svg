@@ -13,7 +13,7 @@
   <!-- containers -->
   <rect x="45" y="200" width="410" height="370" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-dasharray="6 4"/>
   <text x="65" y="224" font-size="12" font-weight="bold" fill="#166534">Narrative (sequential)</text>
-  <rect x="505" y="200" width="330" height="370" rx="10" fill="#fefce8" stroke="#fde047" stroke-dasharray="6 4"/>
+  <rect x="505" y="200" width="330" height="412" rx="10" fill="#fefce8" stroke="#fde047" stroke-dasharray="6 4"/>
   <text x="525" y="224" font-size="12" font-weight="bold" fill="#713f12">Parallel with narrative (any order)</text>
 
   <!-- foundation arrows -->
@@ -76,10 +76,12 @@
   <text x="670" y="504" text-anchor="middle" font-size="12" fill="#713f12">grant-data-management-plan</text>
   <rect x="540" y="526" width="260" height="30" rx="6" fill="#fef9c3" stroke="#eab308"/>
   <text x="670" y="546" text-anchor="middle" font-size="12" fill="#713f12">grant-compliance-sections</text>
+  <rect x="540" y="568" width="260" height="30" rx="6" fill="#fef9c3" stroke="#eab308" stroke-dasharray="5 4"/>
+  <text x="670" y="588" text-anchor="middle" font-size="11" fill="#713f12">grant-resource-sharing (model organisms)</text>
 
   <!-- convergence into mock review -->
   <line x1="250" y1="572" x2="418" y2="607" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
-  <line x1="670" y1="572" x2="464" y2="607" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="670" y1="614" x2="474" y2="620" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
   <path d="M340,626 C250,652 155,622 152,574" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ad)"/>
   <text x="228" y="655" text-anchor="middle" font-size="10" font-style="italic" fill="#6b7280">revisions</text>
 

@@ -7,6 +7,8 @@ description: Write a Data Management and Sharing Plan (NIH DMSP) or Data Managem
 
 Required at NIH for essentially all research generating scientific data (policy effective January 2023) and at NSF for all proposals. Under the simplified review framework the NIH DMSP is not scored by the study section — program staff assess it — but weak plans generate administrative back-and-forth, the plan becomes a term of award, and noncompliance can affect future funding. Do not promise practices the lab will not follow.
 
+This skill covers **data, software, and code**. Sharing of physical and biological resources — model organisms, strains, reagents, cell lines, vectors — is a separate NIH regime (the Model Organism and Research Tools policies), described in the application's Resource Sharing section and owned by `grant-resource-sharing`. A project generating both data and novel organisms needs both plans; keep each resource in its own document. Genomic *data* stays here even when it comes from a shared organism.
+
 Read `00_admin/project-config.md` and the Approach (data types come from the design). Output to `07_compliance/dmsp_v<NN>_<date>_draft.<ext>`. Verify current format and length guidance (NIH recommends ≤2 pages; NSF 2 pages) and any institute-specific expectations in the FOA.
 
 ## Elicit from the Approach and the user

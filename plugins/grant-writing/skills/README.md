@@ -1,6 +1,6 @@
 # Grant Writing Skill Suite
 
-A suite of 29 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
+A suite of 30 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
 
 ## Workflow order
 
@@ -23,7 +23,8 @@ A suite of 29 skills covering the full lifecycle of a federal research grant pro
 | 10 | `grant-abstracts` | Summary, narrative, lay abstracts |
 | 11 | `grant-biosketch-support` | Biosketches, Other Support / Current & Pending |
 | 12 | `grant-facilities-resources` | Facilities, equipment, environment docs |
-| 13 | `grant-data-management-plan` | NIH DMSP / NSF DMP |
+| 13 | `grant-data-management-plan` | NIH DMSP / NSF DMP (data, software, code) |
+| 13a | `grant-resource-sharing` | Resource Sharing Plan: model organisms, research tools, materials, MTAs (not data) |
 | 14 | `grant-compliance-sections` | Human subjects determination, vertebrate animals, rigor |
 | 14a | `grant-human-subjects` | PHS Human Subjects & Clinical Trials form: study records, enrollment, protections, DSMP, protocol synopsis |
 | 15 | `grant-mock-review` | Red-team study section simulation |

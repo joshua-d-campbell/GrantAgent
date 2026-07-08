@@ -4,6 +4,14 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.12.0] — 2026-07-07
+
+### Added
+- `grant-resource-sharing` — NIH Resource Sharing Plan(s): the Model Organism Sharing Plan (no cost threshold; distribution form, repository, timeframe, MTA/tech-transfer, Bayh-Dole availability of patented resources) and related research-tool statements. Verified against the current Model Organism Sharing Policy (NOT-OD-04-042, NIH page updated August 2025).
+
+### Changed
+- Clear data-vs-resources boundary between `grant-resource-sharing` and `grant-data-management-plan`: data, software, and code stay with the DMSP; physical and biological resources move to the new skill; genomic data stays with the DMSP even when it comes from a shared organism.
+
 ## [0.11.0] — 2026-07-07
 
 ### Added
