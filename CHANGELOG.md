@@ -4,6 +4,11 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.12.1] — 2026-07-07
+
+### Changed
+- `grant-resource-sharing` refinements: currency hedge with a July 2026 verification date and note that the policy pages moved to grants.nih.gov; added trigger phrasing ("unique/novel organism," "mouse line," "reagent request policy"); reciprocal cross-reference with `grant-facilities-resources` disambiguating the two senses of "resources"; and a decision-log entry for committed repositories, timeframe, and restrictions (a term of award weighed at renewal).
+
 ## [0.12.0] — 2026-07-07
 
 ### Added
