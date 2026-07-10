@@ -86,9 +86,15 @@ done
 
 - **Suite/plugin version** (semver in `plugin.json`): major = breaking change to a shared
   contract (e.g., the config format or folder layout the skills depend on); minor = a new
-  skill; patch = refinements and agency-fact updates. Bump on every release; the plugin is
+  skill, or a new suite-wide convention/capability that affects how all skills operate
+  (e.g., the v0.13.0 version-stamping convention); patch = refinements and agency-fact
+  updates. Bump on every release; the plugin is
   pinned to this string, so users only get updates when it changes. **Every bump — patch
-  included — gets a dated `CHANGELOG.md` entry** (whatsnew.html renders it publicly).
+  included — gets a dated `CHANGELOG.md` entry** (whatsnew.html renders it publicly)
+  **and an annotated git tag** (`git tag -a vX.Y.Z -m "<summary>"; git push --follow-tags`,
+  run from the user's terminal — see git gotchas). Tags matter because, as of v0.13.0,
+  grant configs record the suite version used for each application; the tag is what lets
+  a researcher retrieve the exact suite that shaped a proposal, possibly years later.
 - **Document versioning** used *inside* grants: defined authoritatively in
   `skills/README.md` §3 (Shared conventions) — do not restate it here or it drifts. As of
   v0.12.2 there are two modes (a filename schema, and git commits + status tags for

@@ -93,10 +93,15 @@ Drafting skills recapitulate this profile. If no prior grants are provided, note
 
 ## Step 5 — Write project-config.md
 
+First, record which suite version is shaping this application: read `version` from the installed grant-writing plugin's `.claude-plugin/plugin.json` (the plugin directory two levels above this skill's folder). If it cannot be located, record `unknown` — never guess. This matters most long after submission: a revision a year later can check what methodology version the original was written under, and the repository's git tags let anyone retrieve that exact version.
+
 Create `00_admin/project-config.md`:
 
 ```markdown
 # Project Config — <short name>
+- Suite version: grant-writing <X.Y.Z> (recorded <YYYY-MM-DD>)
+- Suite version history: none   # appended on upgrade: "<old> → <new> on <date> — <context, e.g. mid-draft, resubmission>"
+- Session-start rule: compare the installed grant-writing plugin version (its .claude-plugin/plugin.json) against Suite version above; if different, update it, append the change to the history line, and add a decision-log entry
 - Funder / mechanism / FOA: ...
 - Award type: research | career-development | fellowship   # K/CAREER/foundation career; F30/F31/F32/GRFP
 - New submission | resubmission

@@ -98,6 +98,10 @@ Refine text interactively in the AI conversation. Only user-approved text is pla
 
 Skills append significant decisions (scope changes, dropped aims, budget changes) to `00_admin/decision-log.md` with date and rationale, so late-stage skills can detect inconsistencies.
 
+### 7. Suite version stamp
+
+`grant-setup` records the installed plugin version (read from the plugin's own `.claude-plugin/plugin.json`) in `project-config.md` with the date. The config carries a session-start rule instructing every later session to compare the installed version against the recorded one and, on mismatch, append the upgrade to the version history with date and context plus a decision-log entry. The detection logic deliberately lives in the config, not in each skill body — every skill reads the config first, so the rule executes without 30 skills restating it. Combined with git tags on the repository (one per release), this lets a researcher or a future session know — and retrieve — the exact suite version that shaped an application, which matters most for revisions long after submission.
+
 ## Agency reference facts — currency
 
 Agency rules change. Facts embedded in these skills were verified July 2026 where possible (NSF PAPPG 24-1 + Supplements NSF 26-200/26-202; NIH simplified review framework effective Jan 2025). Every skill instructs the model to verify limits and requirements against the specific FOA/NOFO and current agency guide before relying on them.

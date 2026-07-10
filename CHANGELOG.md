@@ -1,8 +1,17 @@
 # Changelog
 
-All notable changes to the GrantAgent skill suite. Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is semantic as applied to a skill suite: **major** = breaking changes to shared contracts (project-config fields, folder structure, versioning schema), **minor** = new skill added, **patch** = refinements and agency-fact updates.
+All notable changes to the GrantAgent skill suite. Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is semantic as applied to a skill suite: **major** = breaking changes to shared contracts (project-config fields, folder structure, versioning schema), **minor** = new skill added, or a new suite-wide convention/capability affecting how all skills operate, **patch** = refinements and agency-fact updates.
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
+
+## [0.13.0] — 2026-07-10
+
+### Added
+- Suite version stamping (shared convention 7). `grant-setup` records the installed plugin version — read from the plugin's own `.claude-plugin/plugin.json`, never guessed — in `project-config.md` with the date. The config carries a session-start rule: any later session that finds a different installed version appends the upgrade to a version-history line (old → new, date, context) and the decision log. Detection lives in the config rather than in each skill body, since every skill reads the config first.
+- Releases are now tagged in git (annotated `vX.Y.Z`), so the exact suite version recorded in a grant's config can be retrieved later — most useful when revising an application long after submission.
+
+### Changed
+- Semver policy amended: **minor** now covers new suite-wide conventions/capabilities affecting how all skills operate, not only new skills — this release is the first example.
 
 ## [0.12.5] — 2026-07-10
 
