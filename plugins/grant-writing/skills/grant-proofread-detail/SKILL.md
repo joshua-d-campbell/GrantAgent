@@ -27,6 +27,8 @@ Line-level pass on near-final text. Run only after `grant-proofread-structure` �
 
 Regex catches what tired eyes miss; write throwaway scripts rather than checking these by reading. Get plain text first (`pandoc file.docx -t plain` or python-docx; LaTeX sources read directly), then:
 
+One extraction caveat: reference-manager citations (Zotero/EndNote/Mendeley) are field codes, and plain-text extraction shows only their cached display string — or drops them entirely. Never flag "missing citation" from extracted text alone; confirm against `word/document.xml` (citation audits belong to `grant-references`, which reads the fields directly).
+
 - **Figure/table integrity**: extract in-text references (`(Fig(?:ure)?s?\.?|Table)\s*S?\d+[A-Za-z]?`) and caption openers (lines starting with the same pattern); diff the sets. Report references without captions, captions never cited, and numbering gaps/duplicates.
 - **Abbreviations**: collect candidate tokens (2–8 chars containing ≥2 capitals, e.g. `\b(?=\w*[A-Z]\w*[A-Z])[A-Za-z0-9-]{2,8}\b`), find each token's first occurrence per document, check for a nearby parenthetical definition, and count total uses. The <3-uses deletion candidates fall out of the counts.
 - **Numbers**: extract `n\s*=\s*\d+`, percentages, and dollar amounts with surrounding context; compare against the budget spreadsheet and against each other. Recompute stated totals and percentages.

@@ -4,6 +4,22 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.12.5] — 2026-07-10
+
+### Added
+- Citation placeholder detection. `grant-references` gains a placeholder sweep in the coverage audit: explicit pattern families — bare markers (`(ref)`, `(cite)`), identifier-bearing (`(PMID: 123456)`, `[ref: 12345]`, DOIs), LaTeX leftovers (`\cite{TODO}`, `??`), and generic to-do markers including Word highlighting — treated as seeds, not an exhaustive list. Identifier-bearing placeholders are resolved via PubMed/Crossref and offered as real citations through the reference manager; the audit reports the placeholder count explicitly, including zero.
+- `grant-setup` asks how the PI marks to-be-added citations and records the convention in `project-config.md`, since every investigator has their own habit.
+- `grant-format-check` gains a last-gate placeholder grep on the assembled PDFs; any hit is a blocking issue.
+
+## [0.12.4] — 2026-07-10
+
+### Added
+- `grant-references` Pass 0 — extract citations in machine-readable form before auditing. Reference-manager citations in Word are field codes, not text: plain-text extraction (pandoc/python-docx) returns only the cached display string and can drop or garble it. The skill now reads `word/document.xml` directly — Zotero/Mendeley fields embed full CSL JSON and EndNote embeds XML records (title, authors, year, DOI per citation), a more reliable verification input than parsing formatted strings. Mixed fielded/hand-typed citations are flagged as a finding (hand-typed entries silently break renumbering); fields are refreshed and the bibliography regenerated before auditing.
+
+### Changed
+- `grant-proofread-detail` warns against flagging "missing citations" from extracted plain text, for the same field-code reason.
+- `grant-setup` recommends a shared library (Zotero group, EndNote shared, or the repo `.bib`) for multi-author documents — personal-library citations fragment on merge.
+
 ## [0.12.3] — 2026-07-10
 
 ### Removed
