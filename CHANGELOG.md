@@ -4,6 +4,12 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.13.1] — 2026-07-10
+
+### Added
+- `grant-mock-review` grounds its reviewer personas in the target study section's real composition (NIH): fetch the public CSR roster, profile members via RePORTER/PubMed, and aggregate into a dated `00_admin/study-section-profile.md` — expertise clusters, methodological cultures, and gaps relevant to the application. Personas are cast as **archetypes drawn from the distribution**, never as named members: named simulation is inaccurate (caricature from publication records), strategically wrong (assignments are confidential; the closest experts are the likeliest conflicted out), and unfair to real colleagues. NSF panels are confidential — no roster grounding.
+- `grant-cover-letter-assignment` shares the same profile: panel expertise gaps feed the needed-expertise field; roster members with directly competing work feed the exclusion conversation.
+
 ## [0.13.0] — 2026-07-10
 
 ### Added

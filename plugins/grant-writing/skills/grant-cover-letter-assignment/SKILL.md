@@ -18,7 +18,7 @@ The target study section shapes how the proposal should be written — framing, 
 - **CSR's Assisted Referral Tool (ART)** suggests sections from abstract text — offer it to the user as a cross-check.
 - **The program officer**: encourage the user to ask — POs know where applications like this one get traction, and the conversation builds a relationship that matters later.
 
-When the config names a target section, `grant-mock-review` should cast its personas as members of that section — note this handoff.
+When the config names a target section, check the roster too: CSR publishes standing-member rosters, and a membership profile (`00_admin/study-section-profile.md`, built by `grant-mock-review` or here — whichever runs first, dated because rosters change) sharpens two fields below: the panel's expertise gaps feed **needed expertise**, and roster members with directly competing work feed the exclusion conversation. `grant-mock-review` uses the same profile to ground its personas in the panel's real composition — note this handoff.
 
 ## The Assignment Request Form, field by field
 

@@ -7,7 +7,15 @@ description: Simulate a study section / peer review of a draft grant — score i
 
 Predict the review the proposal will actually receive. The value is adversarial: the useful posture is a fair but skeptical reviewer with a stack of applications, a weekend to read them, and no obligation to fund this one. This is where the no-flattery rule matters most — a mock review that softens problems wastes the exercise. Frame everything as "here is the case reviewers will make," including objections the model does not itself find persuasive; the goal is to predict the panel, not to be right.
 
-Read `00_admin/project-config.md` for funder and mechanism, load the matching criteria and calibration notes from `references/review-criteria.md`, and assemble the current full draft. If the config names a target study section, cast the personas as members of that section — its stated scope defines what expertise the simulated reviewers do and do not have.
+Read `00_admin/project-config.md` for funder and mechanism, load the matching criteria and calibration notes from `references/review-criteria.md`, and assemble the current full draft. If the config names a target study section, ground the personas in that section's real composition (next step) — its scope and membership define what expertise the simulated reviewers do and do not have.
+
+## Ground the personas in the real panel (NIH)
+
+Study section rosters are public: CSR posts standing-member rosters, and meeting rosters (including ad hoc members and SEPs) appear roughly 30 days before each meeting — past meeting rosters serve for ad hoc panels. When the config names a section, fetch the current roster and profile the membership: for each member, a quick RePORTER and PubMed pass gives field, methods, model systems, and funding history. Aggregate into `00_admin/study-section-profile.md` (dated — rosters change): the dominant expertise clusters, the methodological cultures (human-cohort vs. model-organism, experimental vs. computational), and the gaps relevant to this application. `grant-cover-letter-assignment` reuses this profile.
+
+Use the aggregate, not the individuals. Cast personas as **archetypes drawn from the distribution** — "a statistical geneticist of the kind this panel has three of" — never as named members, and never attribute simulated opinions to a real person. Named simulation is also strategically wrong: assignments are confidential, and the members closest to the work are the likeliest to be conflicted out (collaborators, co-authors, same institution, direct competitors), so exclude probable COIs when choosing which clusters the assigned-reviewer personas come from. The most consequential output is usually the mismatch finding: if the panel's center of mass is far from the application's methods, reviewer 2's adjacent-field reading is the real review, and the draft must survive it.
+
+NSF panels are confidential and assembled per round — no roster grounding is possible; fall back to the program description and the personas below.
 
 ## Read like a reviewer, not an editor
 
@@ -19,7 +27,7 @@ Assigned reviewers form a provisional impact judgment from the Aims page and the
 
 ## Run 2–3 reviewer personas
 
-Produce distinct, independently written critiques — real reviews diverge, and suspicious convergence means the simulation is echoing itself rather than modeling three readers:
+Produce distinct, independently written critiques — real reviews diverge, and suspicious convergence means the simulation is echoing itself rather than modeling three readers. Where a study-section profile exists, draw each persona from it: reviewer 1 from the nearest non-conflicted expertise cluster, reviewer 2 from the panel's dominant cluster (that is who actually votes):
 
 1. **Assigned reviewer 1 (in-field expert)**: knows the prior art; catches overclaims ("first to show" that isn't), missing citations to competing groups, and methods presented as routine that aren't.
 2. **Assigned reviewer 2 (adjacent field)**: judges significance and clarity; punishes jargon, unexplained leaps, and aims whose payoff is stated only in field-internal terms. This persona proxies the unassigned members whose votes decide borderline applications.
