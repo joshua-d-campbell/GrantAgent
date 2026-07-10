@@ -42,16 +42,19 @@ public is intentional (methodology only; no proposal content or personal data).
 ## THE CRITICAL INVARIANT: adding, removing, or renaming a skill
 
 The skill directories are canonical; several other surfaces describe them and drift out
-of sync easily (they currently disagree — see Known Issues). Whenever you add, remove, or
-rename a skill, update **all** of these in the same commit:
+of sync easily (they have disagreed before — see Known Issues). Whenever you add, remove,
+or rename a skill, update **all** of these in the same commit:
 
 1. `plugins/grant-writing/skills/README.md` — the workflow table (row + phase number).
 2. `docs/index.html` — the skill grid/cards listing (add the new skill's card).
-3. `docs/whatsnew.html` — add a "what's new" entry.
-4. `docs/workflow.svg` — the workflow diagram (and its copy, if one exists under the
+3. `docs/workflow.svg` — the workflow diagram (and its copy, if one exists under the
    plugin's own `docs/`). Regenerate or hand-edit so the new skill appears.
-5. `CHANGELOG.md` — a dated entry.
-6. `plugins/grant-writing/.claude-plugin/plugin.json` — bump the version (see Versioning).
+4. `CHANGELOG.md` — a dated entry.
+5. `plugins/grant-writing/.claude-plugin/plugin.json` — bump the version (see Versioning).
+
+`docs/whatsnew.html` renders `CHANGELOG.md` live from the repository — do NOT edit it for
+a release; writing the CHANGELOG entry updates the page automatically. This also means a
+skipped CHANGELOG entry is a public-facing gap, not just a bookkeeping one.
 
 Note the "30+ skills" wording policy means the marketplace description, landing-page
 counts, and READMEs do NOT need touching for a routine skill add — only the surfaces
@@ -84,10 +87,13 @@ done
 - **Suite/plugin version** (semver in `plugin.json`): major = breaking change to a shared
   contract (e.g., the config format or folder layout the skills depend on); minor = a new
   skill; patch = refinements and agency-fact updates. Bump on every release; the plugin is
-  pinned to this string, so users only get updates when it changes.
-- **Document version schema** used *inside* grants (defined in the skills README):
-  `<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>`, status ∈ draft/internal/shared/final.
-  This is a convention the skills apply to a researcher's files, not to this repo's files.
+  pinned to this string, so users only get updates when it changes. **Every bump — patch
+  included — gets a dated `CHANGELOG.md` entry** (whatsnew.html renders it publicly).
+- **Document versioning** used *inside* grants: defined authoritatively in
+  `skills/README.md` §3 (Shared conventions) — do not restate it here or it drifts. As of
+  v0.12.2 there are two modes (a filename schema, and git commits + status tags for
+  GitHub-hosted proposals), selected per grant in `project-config.md`. This is a
+  convention the skills apply to a researcher's files, not to this repo's files.
 
 ## Authoring & product conventions (summary — full detail in skills/README.md)
 
@@ -105,6 +111,12 @@ done
 - **Agency facts carry a verify-against-the-current-FOA/guide hedge** and a note of when
   they were checked. Rules change (NIH simplified review framework Jan 2025; NSF PAPPG
   24-1 + supplements). Never assert a page limit or policy as timeless fact.
+- **Shared-convention changes ripple into skill bodies.** When a shared convention in
+  `skills/README.md` changes (versioning, tone, config fields), individual SKILL.md files
+  that restate or exemplify it must be found and updated in the same commit — skills are
+  read at runtime, the README is not. Grep for the convention's distinctive strings
+  (e.g., `grep -rn 'v<NN>' plugins/grant-writing/skills/` for the versioning schema)
+  rather than trusting memory of which skills mention it.
 
 ## Analytics
 
@@ -131,4 +143,3 @@ done
   records and should not be changed to "30+".
 - **Testing status**: skills were drafted and refined but not yet run through formal eval
   loops. High-value first candidates: grant-specific-aims, grant-approach, grant-mock-review.
-```

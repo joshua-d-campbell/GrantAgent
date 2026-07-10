@@ -4,6 +4,14 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.12.2] — 2026-07-10
+
+### Added
+- GitHub + LaTeX workflow support: `grant-setup` now offers a GitHub repository as the storage location (common for computational faculty writing NSF proposals in LaTeX), with a git versioning mode — stable filenames, one commit per editing session, annotated tags for status transitions — plus `.gitignore` guidance for LaTeX build artifacts, a private-repo check, and the rule that salary-bearing budgets and prior grants stay out of the repo (git access is repo-wide).
+
+### Changed
+- Skills README documents the two versioning modes (filename schema vs. git) as a shared convention; `grant-specific-aims` and `grant-multi-pi-plan` show both modes in their file-naming examples; `grant-resubmission` tags the submitted commit before resubmission edits so the diff against what reviewers read stays one command away.
+
 ## [0.12.1] — 2026-07-07
 
 ### Changed
