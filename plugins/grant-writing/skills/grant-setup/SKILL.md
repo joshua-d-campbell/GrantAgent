@@ -27,7 +27,7 @@ Ask the user for (accept partial answers; record gaps as open items):
 3. **Deadline map**: work backward from the sponsor deadline. Ask for the internal grants-office deadline — institutions typically require the complete application days before the sponsor date, so the internal date is the real deadline. Flag long-lead items now: subaward documents (need the partner institution's grants office to sign off), letters of support, biosketches/Other Support from external collaborators, and — for career-development awards and fellowships — referee letters, which referees submit themselves and are the least controllable dependency in the application. These routinely take 2–4 weeks and cannot be compressed at the end.
 4. **Team**: PI(s), co-investigators, collaborators, institutions. Record who submits — an authorized institutional official via Grants.gov/ASSIST, Research.gov, eBRAP, or a foundation portal, almost never the PI personally — and confirm the PI has active credentials in that system (eRA Commons, SciENcv, etc.).
 5. **Grant administration checklist**: Ask whether their sponsored programs / grants office provided one. If yes, copy it into `00_admin/`. If not, generate one from the FOA's required-documents list plus the agency defaults in `references/agency-checklists.md`, and label it clearly as auto-generated pending office confirmation.
-6. **Document format**: Microsoft Word or LaTeX. Record the choice; it determines file templates and how approved text is inserted.
+6. **Document format**: Microsoft Word or LaTeX. Record the choice; it determines file templates and how approved text is inserted. Also ask which reference manager the team uses (Zotero, EndNote, Mendeley, or hand-maintained BibTeX for LaTeX) — citations live inside the manuscripts via the manager, not in a separate folder, and `grant-references` needs to know the toolchain to audit them.
 7. **Storage location**: local folder, Google Drive, OneDrive, or a GitHub repository. Computational faculty writing NSF proposals commonly pair LaTeX with a GitHub repo as the shared home — if the user mentions either, ask about the other. For GitHub: record the repo URL, confirm it is **private**, and note how collaborators edit (direct commits, PRs, or Overleaf–GitHub sync). Storage choice determines the versioning mode in Step 3.
 
 ## Step 2 — Create the directory structure
@@ -43,8 +43,7 @@ Ask the user for (accept partial answers; record gaps as open items):
 ├── 05_support_letters/
 ├── 06_abstracts_title/
 ├── 07_compliance/       # DMSP, human subjects, facilities, etc.
-├── 08_references/
-├── 09_final_assembly/
+├── 08_final_assembly/   # assembled docs, audit reports, cover letter
 └── 99_prior_grants/     # researcher's previous proposals (style corpus)
 ```
 
@@ -104,6 +103,7 @@ Create `00_admin/project-config.md`:
 - Due dates: sponsor ... / internal grants-office ... / LOI-pre-app ...
 - Submission system + submitting official: ...
 - Document format: Word | LaTeX
+- Reference manager: Zotero | EndNote | Mendeley | BibTeX (.bib) | none yet
 - Storage: local | Google Drive | OneDrive | GitHub repo <URL, private, edit workflow>
 - Excluded from repo (git mode): 03_budget/ at <location>, 99_prior_grants/ at <location>
 - Team: ...

@@ -43,7 +43,7 @@ At each major section boundary, check the first paragraph orients the reader and
 
 ## Reporting format
 
-Produce `09_final_assembly/structural-review_<date>.md`:
+Produce `08_final_assembly/structural-review_<date>.md`:
 
 1. **Blocking issues** — missing elements, contradictions, broken through-line (each with location and specific fix)
 2. **Consistency table** — aims/numbers/terms across documents, discrepancies marked

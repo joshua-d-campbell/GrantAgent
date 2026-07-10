@@ -7,11 +7,11 @@ description: Develop the career-development and training components of a career 
 
 On a career award or fellowship the applicant *is* the project: reviewers fund a trajectory, not just a study, and they weight the candidate, the mentoring, and the training plan as heavily as the science. (Fellowships call the mentor the *sponsor* — the terms below map directly.) The document set stands or falls on one coherence chain: **stated training gaps → chosen development activities → mentor expertise covering each gap → research plan as the training vehicle → the five-year career goal**. Every classic career-award critique is a break in that chain — a named training area no mentor covers, an activity unconnected to the goal, a research plan sized for a funded lab rather than one trainee.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing) and confirm the award type is recorded as career-development. Career-award files live in `10_career/` (add the folder to the standard structure if absent), versioned per the schema. Agency differences are substantial — read `references/agency-variants.md` for the mechanism in play before drafting.
+Read `00_admin/project-config.md` first (run `grant-setup` if missing) and confirm the award type is recorded as career-development. Career-award files live in `09_career/` (add the folder to the standard structure if absent), versioned per the schema. Agency differences are substantial — read `references/agency-variants.md` for the mechanism in play before drafting.
 
 ## Maintain the training map
 
-Create `10_career/training-map.md` early: one row per training gap — the gap, the activity that closes it, the mentor or resource that covers it, the aim that exercises it, the year it happens. This table is the audit instrument for the whole document set; every section below reads from and writes to it, and the final coherence check walks it row by row.
+Create `09_career/training-map.md` early: one row per training gap — the gap, the activity that closes it, the mentor or resource that covers it, the aim that exercises it, the year it happens. This table is the audit instrument for the whole document set; every section below reads from and writes to it, and the final coherence check walks it row by row.
 
 ## Step 1 — Candidate and career goals
 

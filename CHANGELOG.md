@@ -4,6 +4,17 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.12.3] — 2026-07-10
+
+### Removed
+- **`08_references/` folder removed from the standard grant directory structure** — references live inside the manuscripts via the team's reference manager (Zotero, EndNote, Mendeley, or a `.bib` file alongside LaTeX source), so a separate folder had no real contents. `09_final_assembly/` is renumbered to `08_final_assembly/` and the career-award folder to `09_career/`. Grants set up under the old layout keep working (skills follow `project-config.md`), but new audit reports will target the new folder names.
+
+### Added
+- `grant-setup` now asks which reference manager the team uses and records it in `project-config.md` — `grant-references` always read this field, but nothing previously collected it.
+
+### Changed
+- `grant-references` audits citations where they live (Word fields or `.bib`) and files its reports to `08_final_assembly/`.
+
 ## [0.12.2] — 2026-07-10
 
 ### Added

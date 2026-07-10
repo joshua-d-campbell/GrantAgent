@@ -7,7 +7,7 @@ description: Audit and refine mathematical notation in math-heavy grant proposal
 
 Notation is how mathematical reviewers judge rigor before they judge ideas: a symbol that silently changes meaning between Section 2 and Aim 3, or a variable used before it is defined, reads as carelessness — and in a proposal claiming mathematical sophistication, carelessness is disqualifying. This skill audits sections one at a time or the assembled document, and maintains a single source of truth for the proposal's notation.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing; this skill assumes the LaTeX workflow — if the project is in Word, the same audit applies to equations but the scripted extraction below is replaced by manual passes). Reports go to `09_final_assembly/notation-audit_<date>.md`; the notation registry lives with the LaTeX source.
+Read `00_admin/project-config.md` first (run `grant-setup` if missing; this skill assumes the LaTeX workflow — if the project is in Word, the same audit applies to equations but the scripted extraction below is replaced by manual passes). Reports go to `08_final_assembly/notation-audit_<date>.md`; the notation registry lives with the LaTeX source.
 
 ## The notation registry
 

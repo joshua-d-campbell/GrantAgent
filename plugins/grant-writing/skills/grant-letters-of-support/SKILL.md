@@ -45,4 +45,4 @@ Under the NIH simplified framework, letters feed Factor 3 (Expertise and Resourc
 
 ## Step 3 — Send, track, chase
 
-Produce a short request email per signer (what's attached, what to check, deadline for return — set it 2+ weeks before the real deadline). Update the tracker as letters return; verify each signed letter's date, letterhead, and signature before filing to `09_final_assembly/`.
+Produce a short request email per signer (what's attached, what to check, deadline for return — set it 2+ weeks before the real deadline). Update the tracker as letters return; verify each signed letter's date, letterhead, and signature before filing to `08_final_assembly/`.

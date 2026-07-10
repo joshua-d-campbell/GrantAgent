@@ -7,7 +7,7 @@ description: Verify and manage citations in a grant proposal — every backgroun
 
 Two failure classes matter: substantive claims without citations (reads as unsupported assertion or, worse, unacknowledged borrowing) and citations that do not support the claim they anchor (a reviewer who checks one bad citation distrusts the rest). This skill audits both, then handles formatting.
 
-Read `00_admin/project-config.md` for the citation manager and format in use. Work from the latest versions of all narrative documents; bibliography lives in `08_references/`.
+Read `00_admin/project-config.md` for the reference manager and format in use. Work from the latest versions of all narrative documents. There is no separate references folder: the bibliography lives inside the manuscripts, managed by the team's tool (Zotero/EndNote/Mendeley fields in Word; a `.bib` file alongside the LaTeX source). Audit the documents and the manager's output where they live; report findings to `08_final_assembly/`.
 
 ## Pass 1 — Coverage audit
 
@@ -38,4 +38,4 @@ Beyond existence:
 
 ## Deliverable
 
-`08_references/reference-audit_<date>.md`: uncited claims; the verification classification per reference with counts; claim-support mismatches for user review; formatting corrections. Fixes are applied to new document versions with user approval. References still classified *not found* or *claim unchecked* stay flagged in every subsequent audit until resolved — an unresolved flag near the deadline is a decision for the user, never a silent default.
+`08_final_assembly/reference-audit_<date>.md`: uncited claims; the verification classification per reference with counts; claim-support mismatches for user review; formatting corrections. Fixes are applied to new document versions with user approval. References still classified *not found* or *claim unchecked* stay flagged in every subsequent audit until resolved — an unresolved flag near the deadline is a decision for the user, never a silent default.

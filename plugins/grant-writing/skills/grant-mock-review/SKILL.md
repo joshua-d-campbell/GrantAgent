@@ -53,4 +53,4 @@ Mirror a real summary statement: overall impact/merit paragraph with the bottom-
 
 ## Synthesis and triage
 
-Consolidate into an action list ranked by score impact: what would most move Overall Impact, what is cosmetic, and what is unfixable this cycle (this feeds `grant-resubmission` strategy). Save to `09_final_assembly/mock-review_<date>.md`.
+Consolidate into an action list ranked by score impact: what would most move Overall Impact, what is cosmetic, and what is unfixable this cycle (this feeds `grant-resubmission` strategy). Save to `08_final_assembly/mock-review_<date>.md`.

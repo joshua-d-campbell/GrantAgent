@@ -7,7 +7,7 @@ description: Draft the NIH cover letter and PHS Assignment Request Form — inst
 
 Two documents PIs routinely conflate, with different audiences and rules. The **PHS Assignment Request Form** carries all assignment preferences — institute/center, study section, reviewer exclusions, needed expertise — and is read only by referral and scientific review staff, never by reviewers. The **cover letter** is for administrative matters only (late submission explanation, changed/corrected applications, prior-approval documentation for $500K+ direct costs in any year, and similar); assignment requests placed there instead of the form is the classic error. Both are optional, both are worth doing deliberately: assignment is where an application can land in front of the right audience or the wrong one, and it is decided before any reviewer reads a word.
 
-Read `00_admin/project-config.md` first. Files go to `09_final_assembly/`, versioned per the schema. This skill runs near the end — the expertise and exclusion content should be extracted from the *final* aims and Approach — but the study-section choice itself belongs early (see below).
+Read `00_admin/project-config.md` first. Files go to `08_final_assembly/`, versioned per the schema. This skill runs near the end — the expertise and exclusion content should be extracted from the *final* aims and Approach — but the study-section choice itself belongs early (see below).
 
 ## Choose the study section early, finalize the request late
 

@@ -39,4 +39,4 @@ Script output is a candidate list, not a finding: confirm every hit by reading t
 
 For the language pass, work in small chunks (2–3 pages per pass) — line-level error detection degrades over long stretches. Quote the current text verbatim in every finding; never reconstruct it from memory.
 
-Deliver findings as a correction list per document (`09_final_assembly/detail-review_<date>.md`): location, current text, proposed correction, severity (error vs. style suggestion). Style suggestions that conflict with the style profile are not offered. Apply corrections only with user approval, writing new versions per the schema. Documents that pass cleanly are listed as checked with no findings — no further commentary.
+Deliver findings as a correction list per document (`08_final_assembly/detail-review_<date>.md`): location, current text, proposed correction, severity (error vs. style suggestion). Style suggestions that conflict with the style profile are not offered. Apply corrections only with user approval, writing new versions per the schema. Documents that pass cleanly are listed as checked with no findings — no further commentary.

@@ -44,4 +44,4 @@ Apply substantive changes through the relevant section skills (new preliminary d
 
 NSF has no formal resubmission mechanism: a declined proposal returns as a new proposal, likely with different reviewers, and there is no response-to-reviews document — but the PAPPG expects substantial revision of previously declined proposals and the program officer sees the history, so address the prior panel's critiques anyway. For DoD and foundations, ask the program manager/officer whether a response to prior review is expected and in what form.
 
-Save the response analysis to `09_final_assembly/resubmission-response_<date>.md`.
+Save the response analysis to `08_final_assembly/resubmission-response_<date>.md`.
