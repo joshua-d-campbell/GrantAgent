@@ -1,6 +1,6 @@
 # Installing the GrantAgent Grant-Writing Skills
 
-This guide walks you through adding a set of grant-writing skills to Claude. Once installed, Claude can help you through the whole federal grant process — setting up your proposal files, drafting Specific Aims, building budgets, writing the Approach, running a mock study-section review, checking formatting, and more (over 20 skills in total).
+This guide walks you through adding a set of grant-writing skills to Claude. Once installed, Claude can help you through the whole federal grant process — setting up your proposal files, drafting Specific Aims, building budgets, writing the Approach, running a mock study-section review, checking formatting, and more (30+ skills in total).
 
 You do **not** need to know how to code, and you do **not** need to install anything on your computer beyond the Claude app you already use. The whole process takes about five minutes.
 

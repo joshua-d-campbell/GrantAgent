@@ -1,6 +1,6 @@
 # GrantAgent
 
-A collection of Claude skills to aid in grant writing and submission — 25 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations), from project setup through submission and resubmission.
+A collection of Claude skills to aid in grant writing and submission — 30+ skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations), from project setup through submission and resubmission.
 
 - **Install guide**: [INSTALL.md](INSTALL.md)
 - **Website**: https://joshua-d-campbell.github.io/GrantAgent/

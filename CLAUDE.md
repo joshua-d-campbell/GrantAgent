@@ -46,18 +46,25 @@ of sync easily (they currently disagree — see Known Issues). Whenever you add,
 rename a skill, update **all** of these in the same commit:
 
 1. `plugins/grant-writing/skills/README.md` — the workflow table (row + phase number).
-2. `.claude-plugin/marketplace.json` — the plugin `description` (skill list / count).
-3. `docs/index.html` — the skill count (appears in the `<meta name="description">` and
-   the hero `.tag`) **and** the skill grid/cards listing.
-4. `docs/whatsnew.html` — add a "what's new" entry.
-5. `docs/workflow.svg` — the workflow diagram (and its copy, if one exists under the
+2. `docs/index.html` — the skill grid/cards listing (add the new skill's card).
+3. `docs/whatsnew.html` — add a "what's new" entry.
+4. `docs/workflow.svg` — the workflow diagram (and its copy, if one exists under the
    plugin's own `docs/`). Regenerate or hand-edit so the new skill appears.
-6. `CHANGELOG.md` — a dated entry.
-7. `plugins/grant-writing/.claude-plugin/plugin.json` — bump the version (see Versioning).
+5. `CHANGELOG.md` — a dated entry.
+6. `plugins/grant-writing/.claude-plugin/plugin.json` — bump the version (see Versioning).
+
+Note the "30+ skills" wording policy means the marketplace description, landing-page
+counts, and READMEs do NOT need touching for a routine skill add — only the surfaces
+above that enumerate or diagram the actual skills.
 
 **Canonical skill count = number of `plugins/grant-writing/skills/grant-*/` directories
-that contain a `SKILL.md`.** As of this writing that is **30**. Never state a count that
-you have not just verified against the directories; run the consistency check below.
+that contain a `SKILL.md`.** As of this writing that is **30**.
+
+**Public-facing wording policy: always "30+ skills", never a hard number.** This is a
+deliberate low-maintenance choice — 30 is treated as a floor, so adding a skill needs no
+count edits anywhere. Do NOT "correct" a "30+" back to an exact figure. The only place an
+exact count lives is this file (for the invariant/verification). If the directory count
+ever drops below 30, revisit the floor with the maintainer.
 
 ### Consistency check (run before committing a skill change)
 
@@ -118,12 +125,10 @@ done
 
 ## Known issues / open items (update as resolved)
 
-- **Skill-count drift**: the surfaces in the Critical Invariant currently disagree
-  (directories 30, README 25, CHANGELOG 22, marketplace "over 20", landing page 30).
-  Reconcile all to 30 on the next skill change.
-- **Skill-count wording**: `docs/index.html` uses a hard number; consider whether to keep
-  exact counts everywhere or move to "30+" to reduce future drift. Exact is more
-  impressive but higher-maintenance — maintainer's call.
+- **Skill-count drift**: RESOLVED. All living surfaces now say "30+ skills" (see the
+  wording policy above). The one exception is `CHANGELOG.md`, which keeps historical
+  per-release counts (e.g. "22 skills" for the initial release) — those are point-in-time
+  records and should not be changed to "30+".
 - **Testing status**: skills were drafted and refined but not yet run through formal eval
   loops. High-value first candidates: grant-specific-aims, grant-approach, grant-mock-review.
 ```

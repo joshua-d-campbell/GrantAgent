@@ -9,7 +9,7 @@
     {
       "name": "grant-writing",
       "source": "./plugins/grant-writing",
-      "description": "Over 20 skills covering the full grant lifecycle: project setup, specific aims, title, budget, significance, innovation, approach, letters of support, timelines, abstracts, biosketches, facilities, data management plans, compliance sections, math/LaTeX notation auditing, mock review, proofreading, references, format check, and resubmission.",
+      "description": "30+ skills covering the full grant lifecycle: project setup, specific aims, title, budget, significance, innovation, approach, letters of support, timelines, abstracts, biosketches, facilities, data management plans, compliance sections, math/LaTeX notation auditing, mock review, proofreading, references, format check, and resubmission.",
       "author": {
         "name": "Josh",
         "email": "camp@bu.edu"

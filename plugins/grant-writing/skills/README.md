@@ -1,6 +1,6 @@
 # Grant Writing Skill Suite
 
-A suite of 30 skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
+A suite of 30+ skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
 
 ## Workflow order
 
