@@ -7,7 +7,7 @@ description: Prepare a grant resubmission or revision after review — decode th
 
 Most funded grants are resubmissions. The task is not to defend the original — it is to demonstrate responsiveness while genuinely strengthening the science. Reviewers of a resubmission look first at whether the concerns were taken seriously; but the panel is not guaranteed to be the same people, so the target is a better application overall, not a reply brief addressed to three individuals.
 
-Read `00_admin/project-config.md`. Collect the summary statement / reviews and the prior submitted version. Verify current resubmission rules (NIH: one resubmission (A1), a one-page Introduction to Resubmission, a time window for submitting it, and rules on when a reworked project may return as a "new" application — all have changed before; check the current policy and FOA). Work in a new project version, preserving the prior submission intact for reference.
+Read `00_admin/project-config.md`. Collect the summary statement / reviews and the prior submitted version. Verify current resubmission rules (NIH: one resubmission (A1), a one-page Introduction to Resubmission, a time window for submitting it, and rules on when a reworked project may return as a "new" application — all have changed before; check the current policy and FOA). Work in a new project version, preserving the prior submission intact for reference (git mode: tag the submitted commit — e.g., `submitted-A0-<date>` — before any resubmission edits, so the diff against what reviewers actually read stays one command away).
 
 ## Step 0 — Read the summary statement between the lines
 

@@ -1,6 +1,6 @@
 ---
 name: grant-setup
-description: Initialize a new research grant proposal project — folder structure, funding announcement ingestion, submission checklist, versioning schema, writing-style profile from prior grants, and interaction ground rules. Use this whenever the user says they are starting a new grant, proposal, R01/R21/K-award, NSF proposal, DoD white paper, or foundation application, mentions a funding opportunity announcement (FOA/NOFO/PA/RFA/BAA), or asks to "set up" anything grant-related. Also use when another grant skill finds no project-config.md.
+description: Initialize a new research grant proposal project — folder structure, funding announcement ingestion, submission checklist, versioning schema, writing-style profile from prior grants, and interaction ground rules. Use this whenever the user says they are starting a new grant, proposal, R01/R21/K-award, NSF proposal, DoD white paper, or foundation application, mentions a funding opportunity announcement (FOA/NOFO/PA/RFA/BAA), asks to "set up" anything grant-related, or wants a GitHub repo / LaTeX project created for a proposal. Also use when another grant skill finds no project-config.md.
 ---
 
 # Grant Project Setup
@@ -28,7 +28,7 @@ Ask the user for (accept partial answers; record gaps as open items):
 4. **Team**: PI(s), co-investigators, collaborators, institutions. Record who submits — an authorized institutional official via Grants.gov/ASSIST, Research.gov, eBRAP, or a foundation portal, almost never the PI personally — and confirm the PI has active credentials in that system (eRA Commons, SciENcv, etc.).
 5. **Grant administration checklist**: Ask whether their sponsored programs / grants office provided one. If yes, copy it into `00_admin/`. If not, generate one from the FOA's required-documents list plus the agency defaults in `references/agency-checklists.md`, and label it clearly as auto-generated pending office confirmation.
 6. **Document format**: Microsoft Word or LaTeX. Record the choice; it determines file templates and how approved text is inserted.
-7. **Storage location**: local folder, Google Drive, or OneDrive.
+7. **Storage location**: local folder, Google Drive, OneDrive, or a GitHub repository. Computational faculty writing NSF proposals commonly pair LaTeX with a GitHub repo as the shared home — if the user mentions either, ask about the other. For GitHub: record the repo URL, confirm it is **private**, and note how collaborators edit (direct commits, PRs, or Overleaf–GitHub sync). Storage choice determines the versioning mode in Step 3.
 
 ## Step 2 — Create the directory structure
 
@@ -50,6 +50,14 @@ Ask the user for (accept partial answers; record gaps as open items):
 
 Adjust names to the mechanism (e.g., add `02_research_plan/broader_impacts/` for NSF), but keep the numbered ordering — it mirrors the workflow.
 
+### GitHub repositories
+
+Use the same structure at the repo root. Additionally:
+
+- Add a `.gitignore` for LaTeX build artifacts (`*.aux`, `*.log`, `*.bbl`, `*.blg`, `*.out`, `*.synctex.gz`, `*.fls`, `*.fdb_latexmk`). Committing the compiled PDF is the user's choice — some teams commit it at status transitions so non-LaTeX collaborators can read without building; record the choice.
+- Git access is repo-wide — per-folder permissions are impossible. Sensitive material therefore stays out of the repo: detailed budgets with salary data (`03_budget/`) and `99_prior_grants/` live in a local or drive folder unless the user explicitly accepts that all repo collaborators see them. Record where each excluded folder actually lives in the config.
+- A `README.md` at repo root pointing to `00_admin/project-config.md` helps collaborators who arrive via GitHub rather than via these skills.
+
 ### Permissions (shared drives)
 
 If the folder lives on Google Drive or OneDrive, the model usually cannot set permissions itself. Produce a concrete instruction list for the user instead:
@@ -61,11 +69,15 @@ If the folder lives on Google Drive or OneDrive, the model usually cannot set pe
 
 If a Drive/OneDrive connector is available, offer to set these directly.
 
+For GitHub, translate the same access tiers into collaborator invitations: investigators get write access; the grants office contact rarely works in GitHub, so plan to deliver budget and admin documents by another channel rather than adding them to the repo.
+
 ## Step 3 — Establish versioning
 
-Record this schema in the config and use it for every document:
+Record the versioning mode in the config and use it for every document. The mode follows the storage choice:
 
-`<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>` — status ∈ `draft`, `internal`, `shared`, `final`. Increment `NN` each editing session; never overwrite an existing version. Log each new version in `00_admin/version-log.md` (file, date, one-line summary of changes).
+**Filename mode** (local, Drive, OneDrive): `<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>` — status ∈ `draft`, `internal`, `shared`, `final`. Increment `NN` each editing session; never overwrite an existing version. Log each new version in `00_admin/version-log.md` (file, date, one-line summary of changes).
+
+**Git mode** (GitHub repo): git history *is* the version log — do not duplicate it with versioned filenames. Use stable filenames (`01_aims/specific-aims.tex`), commit at the end of each editing session with a message summarizing the change, and mark status transitions (`draft` → `internal` → `shared` → `final`) with annotated tags (e.g., `aims-internal-2026-07-12`) or the team's existing branch/PR convention. Never rewrite pushed history. Skip `version-log.md`; the decision log is still kept — commit messages record *what* changed, the decision log records *why*. Wherever another skill says "new version per the schema," in git mode that means a commit (plus a tag if the status changed).
 
 ## Step 4 — Ingest prior grants → style profile
 
@@ -92,11 +104,13 @@ Create `00_admin/project-config.md`:
 - Due dates: sponsor ... / internal grants-office ... / LOI-pre-app ...
 - Submission system + submitting official: ...
 - Document format: Word | LaTeX
+- Storage: local | Google Drive | OneDrive | GitHub repo <URL, private, edit workflow>
+- Excluded from repo (git mode): 03_budget/ at <location>, 99_prior_grants/ at <location>
 - Team: ...
 - Page limits: ...         # from FOA summary
 - Target study section / IC: ...   # decide early — shapes the writing; grant-cover-letter-assignment finalizes the request
 - Budget cap / type: ...   # modular vs detailed, direct cost cap
-- Versioning: <schema above>
+- Versioning: filename schema | git (commits + status tags)
 - Tone rules: neutral scientific register, no flattery, strengths/weaknesses stated factually
 - Text flow: refine interactively in conversation; only user-approved text enters documents
 - Checklist: 00_admin/<checklist file> (office-provided | auto-generated)
@@ -104,7 +118,7 @@ Create `00_admin/project-config.md`:
 - Open items: ...
 ```
 
-Also create an empty `00_admin/decision-log.md` and `00_admin/version-log.md`.
+Also create an empty `00_admin/decision-log.md` and — in filename mode only — `00_admin/version-log.md`.
 
 ## Step 6 — Confirm and hand off
 

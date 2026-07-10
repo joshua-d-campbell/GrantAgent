@@ -60,7 +60,7 @@ Declared deliberately, so the suite doesn't half-support things and mislead. If 
 
 ### 1. Project config contract
 
-`grant-setup` creates `00_admin/project-config.md` in the grant folder. **Every other skill reads this file first** and asks the user to run `grant-setup` if it is missing. It records: funder, mechanism, FOA number, deadline, document format (Word/LaTeX), personnel, page limits, versioning schema, and links to the checklist and style profile.
+`grant-setup` creates `00_admin/project-config.md` in the grant folder. **Every other skill reads this file first** and asks the user to run `grant-setup` if it is missing. It records: funder, mechanism, FOA number, deadline, document format (Word/LaTeX), storage location (local/Drive/OneDrive/GitHub repo), personnel, page limits, versioning mode, and links to the checklist and style profile.
 
 ### 2. Interaction tone
 
@@ -73,12 +73,16 @@ All skills use rigorous, neutral scientific language:
 
 ### 3. Versioning schema
 
-`<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>`
+Two modes; `project-config.md` records which is in effect.
+
+**Filename mode** (local/Drive/OneDrive storage): `<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>`
 
 - `NN`: zero-padded integer, incremented per editing session, never reused
 - `status`: `draft` → `internal` (shared with team) → `shared` (external readers) → `final`
 - Never overwrite a version; each session writes a new file
 - Example: `specific-aims_v03_2026-07-12_internal.docx`
+
+**Git mode** (GitHub repo storage — common for computational faculty writing NSF proposals in LaTeX): stable filenames, one commit per editing session with a descriptive message, status transitions marked with annotated tags (or the team's branch/PR convention). No `version-log.md` — git history serves that role; the decision log is still kept. Where any skill says "new version per the schema," read that as a commit (plus a tag on status change). Never rewrite pushed history.
 
 ### 4. Text refinement flow
 

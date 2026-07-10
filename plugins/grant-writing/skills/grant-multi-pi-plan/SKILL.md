@@ -7,7 +7,7 @@ description: Draft the Multiple PD/PI Leadership Plan for grants with more than 
 
 Reviewers read the leadership plan as a proxy for whether the team will actually function — and most plans give them nothing, because most are boilerplate ("the PIs will meet weekly and resolve disagreements collegially") that could be pasted into any application. The document has two jobs: the compliance job (governance mechanics the funder requires) and the strategic job (the argument that *this specific combination* of PIs is worth more than a single PI with co-investigators). The second job is where the plan earns points, and it is the one boilerplate forfeits.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing). Files go to `07_compliance/leadership-plan_v<NN>_<YYYY-MM-DD>_<status>.<ext>`, versioned per the schema. NIH requires this attachment whenever multiple PD/PIs are designated; keep it concise (~1 page is conventional — verify any limit in the FOA).
+Read `00_admin/project-config.md` first (run `grant-setup` if missing). Files go to `07_compliance/`, versioned per the schema in project-config (`leadership-plan_v<NN>_<YYYY-MM-DD>_<status>.<ext>` in filename mode; a stable filename plus commit in git mode). NIH requires this attachment whenever multiple PD/PIs are designated; keep it concise (~1 page is conventional — verify any limit in the FOA).
 
 ## Step 1 — The case for this team
 

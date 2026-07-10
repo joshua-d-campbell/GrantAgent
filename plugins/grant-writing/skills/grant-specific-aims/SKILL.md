@@ -46,6 +46,6 @@ After the draft exists, give the user a factual novelty assessment:
 
 ## Working method
 
-Refine text interactively in conversation. Iterate paragraph by paragraph; only user-approved text goes into the document (`01_aims/`, versioned per the schema, e.g., `specific-aims_v01_<date>_draft.docx`). When aims change materially later (budget, approach development), this file gets a new version and the change is recorded in `00_admin/decision-log.md`.
+Refine text interactively in conversation. Iterate paragraph by paragraph; only user-approved text goes into the document (`01_aims/`, versioned per the schema in project-config: e.g., `specific-aims_v01_<date>_draft.docx` in filename mode, or a stable `specific-aims.tex` committed with a status tag in git mode). When aims change materially later (budget, approach development), this file gets a new version and the change is recorded in `00_admin/decision-log.md`.
 
 Suggest circulating the `internal` version to colleagues once the user judges the scope stable, and remind them the title (`grant-title`) comes next.
