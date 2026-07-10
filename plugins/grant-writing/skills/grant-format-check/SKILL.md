@@ -26,6 +26,10 @@ Prefer measurement over eyeballing. Where the workflow allows, script the checks
 
 For page-limit failures, do not silently cut — report the overage precisely (e.g., "Research Strategy is 12.4 pp; limit 12") and route to `grant-proofread-structure` or the relevant section skill for the user to decide what tightens.
 
+## Placeholder sweep
+
+Grep the extracted text of every final PDF for citation placeholders: the PI's recorded convention from `project-config.md` plus the common families (`(ref)`, `PMID:` outside the bibliography, `[ref:`, `\cite{`-style leftovers, `??`, `TODO`, `XXX`). `grant-references` does the thorough audit earlier; this is the last-gate version on the assembled PDFs, where a hit is a blocking issue — a placeholder in front of reviewers reads as an unfinished application.
+
 ## Attachment completeness
 
 Cross-check the assembled set against the `00_admin/` checklist and the FOA's required-documents list: every required attachment present, none prohibited included, signatures present where required (letters, Other Support flattened/signed per current policy), SciENcv-generated documents in the right format for NSF.
