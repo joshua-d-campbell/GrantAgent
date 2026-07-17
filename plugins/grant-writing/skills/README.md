@@ -102,6 +102,19 @@ Skills append significant decisions (scope changes, dropped aims, budget changes
 
 `grant-setup` records the installed plugin version (read from the plugin's own `.claude-plugin/plugin.json`) in `project-config.md` with the date. The config carries a session-start rule instructing every later session to compare the installed version against the recorded one and, on mismatch, append the upgrade to the version history with date and context plus a decision-log entry. The detection logic deliberately lives in the config, not in each skill body — every skill reads the config first, so the rule executes without 30 skills restating it. Combined with git tags on the repository (one per release), this lets a researcher or a future session know — and retrieve — the exact suite version that shaped an application, which matters most for revisions long after submission.
 
+### 8. Applicant originates the ideas; the suite assists
+
+NIH policy ("Apply Responsibly," [NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html), effective for the September 25, 2025 receipt date; [announcement](https://grants.nih.gov/news-events/nih-extramural-nexus-news/2025/07/apply-responsibly-policy-on-ai-use-in-nih-research-applications-and-limiting-submissions-per-pi)): applications "either substantially developed by AI or containing sections substantially developed by AI are not considered the original ideas of applicants and will not be considered." The same expectation of original authorship holds across funders even where it is not yet written into policy. The scientific ideas — the problem, the hypotheses, the aims, the experimental design — must originate with the researcher.
+
+The suite therefore collaborates on *expression*, not on *ideas*. This matters most in the four idea-bearing narrative sections — `grant-specific-aims`, `grant-significance`, `grant-innovation`, `grant-approach` — which carry the intellectual content reviewers judge as the applicant's own. All drafting skills, and those four especially, must:
+
+- **Elicit before drafting.** Draw out the researcher's own problem, gap, aims, hypotheses, novelty claims, and design first. Do not invent them. Where the researcher has no answer, ask questions and offer options for them to react to and choose among — framed as prompts for their judgment, not a finished scientific direction handed over for approval.
+- **Structure and stress-test, don't supply.** Organize an argument the researcher provides, tighten prose in their voice, surface gaps and counterarguments, assess novelty against the literature. That is editorial and analytical work on their material — not generation of the intellectual content.
+- **Keep the researcher the author of record.** Text enters a document only after they have read, edited, and approved it (convention 4), so the wording is one they have made their own.
+- **Do not paper over a thin idea.** When a section is weak because the underlying science is thin, say so and send the researcher back to the science — never manufacture novelty or significance to fill the space.
+
+This is a boundary the skills enforce *toward the user*, in the same spirit as the neutral-tone rule (convention 2): assistance stays on the writing side of the line the funder draws. Verify the policy against the current FOA and agency guide before relying on specifics — agency rules on AI are tightening. (NIH notice checked July 2026.)
+
 ## Agency reference facts — currency
 
 Agency rules change. Facts embedded in these skills were verified July 2026 where possible (NSF PAPPG 24-1 + Supplements NSF 26-200/26-202; NIH simplified review framework effective Jan 2025). Every skill instructs the model to verify limits and requirements against the specific FOA/NOFO and current agency guide before relying on them.

@@ -9,6 +9,10 @@ Innovation states what is new — in concept, approach, method, instrumentation,
 
 Read `00_admin/project-config.md`, the aims, and the Significance draft first (to avoid overlap). If `grant-specific-aims` produced a novelty assessment, start from it.
 
+## Your ideas, not mine (shared convention 8)
+
+Innovation is the claim of what is new in the applicant's own work — precisely the "original ideas" NIH tests when it rejects sections "substantially developed by AI" ([NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html), Sep 25 2025 receipt onward). The novelty claims must be the researcher's; elicit what they believe is new and why it matters, then rank the claims honestly, verify them against prior art, and help narrow or drop overclaims. Do not generate novelty the researcher has not put forward — an AI-invented innovation claim is both unoriginal and the easiest kind to refute with a citation. If the work is honestly incremental, say so and shift weight to significance and rigor rather than manufacturing claims.
+
 ## What counts as innovation
 
 Rank strength honestly with the user. In roughly descending reviewer weight:

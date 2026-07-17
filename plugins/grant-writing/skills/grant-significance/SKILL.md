@@ -9,6 +9,10 @@ Significance argues that the problem is important, the current state of the fiel
 
 Read `00_admin/project-config.md`, the current aims version, and the style profile first. Length is set by the grant type: within an NIH 12-page Research Strategy, Significance typically runs 1.5–3 pages; a 6-page R21 compresses it to ~1 page; NSF distributes the same content across the Project Description opening and Broader Impacts. Check the FOA and ask the user what allocation they want.
 
+## Your ideas, not mine (shared convention 8)
+
+The significance case — why the problem matters, why the field is stuck, what changes if the work succeeds — is the applicant's own scientific judgment, and NIH will reject sections "substantially developed by AI" as not their original ideas ([NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html), Sep 25 2025 receipt onward). Draw the argument, the stakes, and the field claims out of the researcher; then organize, tighten, and evidence-check what they supply. Do not invent significance the researcher has not asserted, and do not manufacture impact to answer an "incremental" worry — if the case is genuinely thin, say so and send them back to the science and the literature.
+
 ## The argument structure
 
 Build in this order; each paragraph should advance the argument or be cut:

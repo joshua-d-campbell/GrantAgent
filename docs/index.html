@@ -76,6 +76,13 @@
   .prompt { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; font-style: italic; color: var(--muted); font-size: 0.95rem; }
   .prompt::before { content: "\201C"; color: var(--blue); font-size: 1.4rem; font-style: normal; margin-right: 4px; }
 
+  .notice { border: 1px solid #fcd34d; background: var(--amber-soft); border-radius: 10px; padding: 16px 20px; color: #713f12; font-size: 0.95rem; }
+  .notice a { color: #92400e; font-weight: 600; }
+  .hero .notice { max-width: 640px; margin: 26px auto 0; text-align: left; font-size: 0.9rem; padding: 12px 16px; }
+  .designfor { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 820px; margin-top: 22px; }
+  .designfor .item { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--amber); border-radius: 8px; padding: 12px 16px; font-size: 0.93rem; }
+  .designfor .item strong { display: block; margin-bottom: 3px; }
+
   footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--faint); font-size: 0.88rem; text-align: center; }
   footer a { color: var(--muted); }
 
@@ -95,6 +102,7 @@
       <a href="#install">Install</a>
       <a href="#workflow">Workflow</a>
       <a href="#skills">Skills</a>
+      <a href="#responsible-ai">Responsible AI</a>
       <a href="#tips">Tips</a>
       <a href="#developers">Developers</a>
       <a href="whatsnew.html">What's new</a>
@@ -111,6 +119,9 @@
       <a class="btn btn-primary" href="#install">Install in 5 minutes</a>
       <a class="btn btn-ghost" href="https://github.com/joshua-d-campbell/GrantAgent">View on GitHub</a>
     </div>
+    <div class="notice">
+      <strong>The ideas stay yours.</strong> NIH will not consider applications with sections <em>substantially developed by AI</em>. GrantAgent is built to assist your writing, not to originate your science — <a href="#responsible-ai">how it respects that line</a>.
+    </div>
   </div>
 </header>
 
@@ -123,6 +134,23 @@
       <div class="card"><span class="num">2</span><h3>Describe your task</h3><p>"I'm starting an NIH R01" or "my Research Strategy is over the page limit" — plain language is enough.</p></div>
       <div class="card"><span class="num">3</span><h3>Work the proposal</h3><p>Claude sets up an organized project folder, drafts section by section with your approval, and runs reviewer-style checks.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="responsible-ai">
+  <div class="wrap">
+    <h2>Responsible AI use</h2>
+    <p class="lead">Effective for the September 25, 2025 receipt date, NIH will not consider applications that are <em>either substantially developed by AI or containing sections substantially developed by AI</em> — such work is not treated as the applicant's original ideas. NIH also now limits a PI to six new, renewal, resubmission, or revision applications per calendar year. Read the <a href="https://grants.nih.gov/news-events/nih-extramural-nexus-news/2025/07/apply-responsibly-policy-on-ai-use-in-nih-research-applications-and-limiting-submissions-per-pi">NIH announcement</a> and the underlying notice <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html">NOT-OD-25-132</a>.</p>
+    <div class="notice">
+      GrantAgent is designed to keep you the author of your proposal. It works as a collaborator on <strong>expression</strong> — structuring, sharpening, and stress-testing your material — not as a generator of the <strong>ideas</strong> reviewers judge as yours. This matters most in the sections that carry the science: Specific Aims, Significance, Innovation, and Approach.
+    </div>
+    <div class="designfor">
+      <div class="item"><strong>You supply the science</strong>The skills interview you for the problem, aims, hypotheses, novelty, and design first — and won't invent them. When you're unsure, they offer options for you to judge, not a finished direction to approve.</div>
+      <div class="item"><strong>Nothing lands unread</strong>Text is refined in conversation and enters your documents only after you've read, edited, and approved it, so the words are ones you've made your own.</div>
+      <div class="item"><strong>Thin ideas aren't papered over</strong>When a section is weak because the underlying science is thin, the skills tell you and send you back to the work — they don't manufacture novelty or significance to fill the page.</div>
+      <div class="item"><strong>Assist, don't originate</strong>Organizing your argument, tightening prose in your voice, checking claims against the literature, and red-teaming for reviewers is editorial help — the intellectual content stays yours.</div>
+    </div>
+    <p style="margin-top:22px; color:var(--muted); font-size:0.92rem">Agency rules on AI are evolving — always confirm requirements against your specific FOA/NOFO and the current agency guide. (NIH notice checked July 2026.)</p>
   </div>
 </section>
 

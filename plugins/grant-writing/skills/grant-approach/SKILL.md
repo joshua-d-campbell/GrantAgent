@@ -9,6 +9,10 @@ The Approach is where most proposals are won or lost — under the NIH simplifie
 
 Read `00_admin/project-config.md`, current aims, Significance/Innovation drafts, and the style profile. Files go to `02_research_plan/approach_<aim>_v<NN>_<date>_draft.<ext>` (per-aim files until assembly).
 
+## Your ideas, not mine (shared convention 8)
+
+The experimental design, rationales, and choice of hypotheses are the applicant's own science, and NIH will reject sections "substantially developed by AI" as not their original ideas ([NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html), Sep 25 2025 receipt onward). The researcher supplies the experiments, systems, and predictions; you organize them into rationale-first subsections, judge feasibility and rigor, surface confounds and missing controls, and propose alternatives *for them to evaluate*. When a design gap has to be filled, offer options with trade-offs and let the researcher decide — do not silently author the experiment. Note that shared convention 4 (reasoning stays in chat, lean justified text in the document) already keeps method-selection reasoning out of the draft; convention 8 is the stronger point that the selection itself is the researcher's to make.
+
 ## Step 1 — Agree on the outline
 
 Propose an outline and get user sign-off before writing prose. Default per-aim template:

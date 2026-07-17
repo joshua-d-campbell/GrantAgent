@@ -9,6 +9,10 @@ Produce a first-draft aims page that communicates scope clearly enough to circul
 
 Read `00_admin/project-config.md` first (run `grant-setup` if missing). Apply the tone rules and the style profile.
 
+## Your ideas, not mine (shared convention 8)
+
+The aims page is the intellectual core reviewers judge as the applicant's own, and NIH will reject applications with sections "substantially developed by AI" as not the applicant's original ideas ([NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html), Sep 25 2025 receipt onward). So the problem, the gap, the aims, and the central hypothesis must come from the researcher — elicit them (below), do not invent them. Where they are unsure, ask questions and offer options to choose among and react to, not a finished scientific direction to approve. Your job is to structure, sharpen, and pressure-test their thinking and put it in their voice. If an aim is thin because the idea is thin, say so and send them back to the science rather than generating novelty to fill the page.
+
 ## Elicit before drafting
 
 Interview the user, in their own terms:

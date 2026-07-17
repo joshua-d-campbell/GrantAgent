@@ -4,6 +4,13 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.14.0] — 2026-07-17
+
+### Added
+- Shared convention 8 — **the applicant originates the ideas; the suite assists with expression.** Codifies the boundary behind NIH's "Apply Responsibly" policy ([NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html), effective the Sep 25 2025 receipt date): applications with sections "substantially developed by AI" are not considered the applicant's original ideas and will not be reviewed. Drafting skills elicit the researcher's own problem, aims, hypotheses, novelty, and design before drafting; offer options for the researcher to judge rather than finished scientific directions; keep the researcher the author of record (text lands only after their approval, per convention 4); and refuse to paper over a thin idea with manufactured novelty or significance.
+- Concise "Your ideas, not mine" guardrail added to the four idea-bearing narrative skills — `grant-specific-aims`, `grant-significance`, `grant-innovation`, `grant-approach` — each pointing to convention 8 and tailored to the intellectual content that section carries.
+- Landing page: a hero callout and a dedicated **Responsible AI use** section (with nav link) explaining the NIH policy — including the six-applications-per-PI-per-year limit — linking the announcement and NOT-OD-25-132, and describing how the suite is designed to assist writing without originating the science.
+
 ## [0.13.1] — 2026-07-10
 
 ### Added
