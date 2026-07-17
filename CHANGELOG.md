@@ -4,6 +4,11 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.14.1] — 2026-07-17
+
+### Changed
+- Style-corpus guidance (shared convention 5 + `grant-setup` Step 4) reworked around a privacy consideration: the style profile needs *voice*, not unpublished ideas, so setup now recommends already-public writing (published papers, review articles, RePORTER/NSF public grant text) as the default source and treats prior/unpublished grants as the user's informed choice. Setup states a plain, accurate data-path note before ingesting anything — files are transmitted to and processed on Anthropic's servers and retained; training use depends on the account (not on commercial plans by default; on consumer plans only when the model-improvement setting is on), while the transmission itself is the consideration for embargoed/confidential/IP material and institutional AI-use policies. The chosen source and any confidentiality constraint are recorded in `project-config.md` (new *Style corpus source* field); the landing-page tip and a new "Your material and your data" note reflect the same. (Anthropic policy verified July 2026.)
+
 ## [0.14.0] — 2026-07-17
 
 ### Added

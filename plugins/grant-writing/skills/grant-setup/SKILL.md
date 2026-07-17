@@ -78,9 +78,21 @@ Record the versioning mode in the config and use it for every document. The mode
 
 **Git mode** (GitHub repo): git history *is* the version log — do not duplicate it with versioned filenames. Use stable filenames (`01_aims/specific-aims.tex`), commit at the end of each editing session with a message summarizing the change, and mark status transitions (`draft` → `internal` → `shared` → `final`) with annotated tags (e.g., `aims-internal-2026-07-12`) or the team's existing branch/PR convention. Never rewrite pushed history. Skip `version-log.md`; the decision log is still kept — commit messages record *what* changed, the decision log records *why*. Wherever another skill says "new version per the schema," in git mode that means a commit (plus a tag if the status changed).
 
-## Step 4 — Ingest prior grants → style profile
+## Step 4 — Build the style corpus → style profile
 
-Ask the user to place previous proposals in `99_prior_grants/`. Read them and write `00_admin/style-profile.md` covering, with examples quoted from the corpus:
+The profile needs the researcher's **writing voice**, not their unpublished ideas. Present the choice of source material and let the user decide — do not assume prior grants:
+
+- **Preferred: already-public writing.** Published papers (especially first-author), review articles, and public grant text — funded-abstract text on NIH RePORTER, an awarded NSF abstract — capture voice fully while being public already, so no unpublished content is exposed. Recommend this as the default source.
+- **The user's choice: prior/unpublished grants.** These are excellent voice samples, but before the user places anything unpublished in `99_prior_grants/`, state the data-path consideration plainly so the decision is informed (below). Some institutions have policies on putting unpublished research into external AI tools; the PI should confirm theirs.
+
+**Data-path note to give the user (accurate, not alarmist).** Any file read here is sent to and processed on Anthropic's servers and retained for a window; whether it can also be used to improve future models depends on the account:
+
+- On **commercial plans** (Claude for Work / Team / Enterprise, the API, Claude Gov): inputs and outputs are **not** used for model training by default; retention is short (≈30 days; Zero Data Retention available to qualified Enterprise accounts). Training exposure is effectively a non-issue.
+- On **consumer plans** (Free / Pro / Max): content is used for training **only if the account has the model-improvement setting turned on** — a per-user choice; if it is off, chats are not used for training and retention is short. If it is on, content can persist (de-identified) in training pipelines for up to ~5 years.
+- Regardless of the training setting, the content still leaves the user's machine and is processed by a third party — the relevant consideration for embargoed data, collaborator-confidential material, IP disclosures, or sponsor/institutional confidentiality. For those, prefer published sources or omit the sensitive passages.
+- These are current as of the setup date and change; point the user to Anthropic's privacy settings and privacy center to confirm, and record their chosen source and any constraint in the config. (Verified July 2026.)
+
+Read the chosen corpus and write `00_admin/style-profile.md` covering, with examples quoted from it:
 
 - Sentence length and paragraph density; use of topic sentences
 - Voice (active/passive ratio), person ("we" vs. impersonal), tense conventions
@@ -89,7 +101,7 @@ Ask the user to place previous proposals in `99_prior_grants/`. Read them and wr
 - Terminology preferences and field-specific phrasing
 - Figure caption style
 
-Drafting skills recapitulate this profile. If no prior grants are provided, note that the profile is absent and drafting will use standard scientific register until samples arrive.
+Drafting skills recapitulate this profile. If no samples are provided, note that the profile is absent and drafting will use standard scientific register until samples arrive.
 
 ## Step 5 — Write project-config.md
 
@@ -121,6 +133,7 @@ Create `00_admin/project-config.md`:
 - Text flow: refine interactively in conversation; only user-approved text enters documents
 - Checklist: 00_admin/<checklist file> (office-provided | auto-generated)
 - Style profile: 00_admin/style-profile.md (present | pending)
+- Style corpus source: published papers | public grant text | prior/unpublished grants | none yet   # note any confidentiality constraint the PI raised
 - Open items: ...
 ```
 

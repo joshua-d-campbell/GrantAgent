@@ -92,7 +92,7 @@ Refine text interactively in the AI conversation. Only user-approved text is pla
 
 ### 5. Writing style profile
 
-`grant-setup` ingests prior grants from `99_prior_grants/` into `00_admin/style-profile.md`. All drafting skills read it and recapitulate the researcher's voice.
+`grant-setup` builds `00_admin/style-profile.md` from a corpus of the researcher's writing; all drafting skills read it and recapitulate their voice. The profile needs *voice*, not unpublished ideas, so the default recommended source is already-public writing — published papers, review articles, public grant text (RePORTER funded abstracts, awarded NSF abstracts) — which carries the voice while exposing nothing unpublished. Prior/unpublished grants are the user's choice, offered with a plain data-path note: files read by the suite are transmitted to and processed on Anthropic's servers and retained for a window, and *may* be used to improve future models depending on the account — not on commercial plans (Team/Enterprise/API/Gov) by default, and on consumer plans (Free/Pro/Max) only when the model-improvement setting is on. Independent of training, the transmission itself is the consideration for embargoed/confidential/IP material and for institutional AI-use policies. `grant-setup` records the chosen source and any confidentiality constraint in the config; agency and vendor policies change, so it points the user to Anthropic's current privacy settings to confirm.
 
 ### 6. Decision log
 

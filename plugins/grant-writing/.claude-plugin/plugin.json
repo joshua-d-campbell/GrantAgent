@@ -1,6 +1,6 @@
 {
   "name": "grant-writing",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "description": "Skills for writing federal research grant proposals (NIH, NSF, DoD, foundations) — setup through submission and resubmission.",
   "author": {
     "name": "Josh",
