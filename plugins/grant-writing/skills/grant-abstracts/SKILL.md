@@ -1,6 +1,6 @@
 ---
 name: grant-abstracts
-description: Write grant abstracts and summaries — NIH Project Summary/Abstract (30 lines) and Project Narrative (2-3 sentences), NSF Project Summary (Overview/Intellectual Merit/Broader Impacts), lay abstracts for foundations and CDMRP, and public-facing summaries. Use whenever the user mentions abstract, summary, narrative, lay summary, or public health relevance statement for a grant.
+description: Write grant abstracts and summaries — NIH Project Summary/Abstract (30 lines), NSF Project Summary (Overview/Intellectual Merit/Broader Impacts), lay abstracts for foundations and CDMRP, and public-facing summaries. Use whenever the user mentions abstract, summary, or lay summary for a grant. For the NIH Project Narrative (public health relevance statement) specifically, use the dedicated grant-project-narrative skill; use this skill for the rest of the family or when several documents are needed together.
 ---
 
 # Abstracts and Summaries
@@ -14,18 +14,20 @@ Read `00_admin/project-config.md`, final aims, and the style profile. Files go t
 | Type | Audience | Register |
 |---|---|---|
 | NIH Project Summary/Abstract (≤30 lines) | Reviewers + public (RePORTER) | Technical but broad-scientist-readable |
-| NIH Project Narrative (2–3 sentences) | Public | Plain language, public-health relevance |
+| NIH Project Narrative (≤3 sentences) | Public | Plain language, public-health relevance — **hand off to `grant-project-narrative`**, which has the method and readability checker |
 | NSF Project Summary (1 page, 3 labeled parts) | Reviewers | Overview + Intellectual Merit + Broader Impacts; third person recommended; proposal returned without review if a part is missing |
 | Lay abstract (CDMRP, many foundations) | Patients, advocates, boards | No jargon; disease/societal impact first; CDMRP consumer reviewers score it |
 | Technical abstract (DoD) | Program + peer reviewers | Mission relevance explicit |
 
 ## Construction method
 
-Do not write abstracts fresh — compress existing approved text so no inconsistency can creep in:
+Compression is the right method for **reviewer-facing** abstracts, where the audience shares the field's vocabulary — do not write them fresh; compress existing approved text so no inconsistency can creep in. It is the wrong method for **public-facing** documents (Project Narrative, lay abstracts), which need *transformation* into plain language, not compression — a condensed technical paragraph is still technical. The narrative has its own skill (`grant-project-narrative`); lay abstracts stay here but follow the transformation logic in step 3.
+
+For reviewer-facing abstracts:
 
 1. Extract: the gap sentence (Significance), objective + hypothesis (aims page ¶2), one sentence per aim (aims block headlines), payoff sentence (aims page final ¶).
 2. Assemble to the target length, then rewrite transitions for flow.
-3. Check register against the audience. For lay abstracts, apply a hard jargon pass: every term a non-scientist would not know is replaced or explained; readability target roughly 8th–10th grade. Read the result aloud logic: one idea per sentence.
+3. Check register against the audience. For lay abstracts, apply a hard jargon pass: every term a non-scientist would not know is replaced or explained; readability target roughly 8th–10th grade — verify with the checker rather than estimating: `python3 ../grant-project-narrative/scripts/check_readability.py --max-grade 10 --max-sentences 99 --text "..."` (its `references/readability.md` has the jargon-swap patterns too). Read the result aloud logic: one idea per sentence.
 4. Verify hard limits from the FOA (line counts, character counts, headings) — these are return-without-review items at NSF and form-validation failures at NIH. Count NIH's 30 lines in the final formatted document (submission font and margins), not in the working draft; line count is a property of formatting.
 
 Refine each abstract interactively in conversation; write only user-approved text to files.

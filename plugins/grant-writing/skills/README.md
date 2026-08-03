@@ -1,6 +1,6 @@
 # Grant Writing Skill Suite
 
-A suite of 30+ skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`.
+A suite of 30+ skills covering the full lifecycle of a federal research grant proposal (NIH, NSF, DoD, foundations). Each skill lives in its own directory with a `SKILL.md`; some ship helper code in a `scripts/` subfolder (e.g., `grant-project-narrative`'s readability checker) alongside the usual `references/`.
 
 ## Workflow order
 
@@ -20,7 +20,8 @@ A suite of 30+ skills covering the full lifecycle of a federal research grant pr
 | 7b | `grant-approach-math` | Substance review of a single mathematical component (formulation, assumptions, identifiability, proof feasibility) |
 | 8 | `grant-letters-of-support` | Early letter drafts for collaborators |
 | 9 | `grant-timeline-milestones` | Timeline, milestones, Gantt |
-| 10 | `grant-abstracts` | Summary, narrative, lay abstracts |
+| 10 | `grant-abstracts` | Summary and lay abstracts (the abstract family) |
+| 10a | `grant-project-narrative` | NIH Project Narrative (public health relevance): plain-language transform, readability-scored |
 | 11 | `grant-biosketch-support` | Biosketches, Other Support / Current & Pending |
 | 12 | `grant-facilities-resources` | Facilities, equipment, environment docs |
 | 13 | `grant-data-management-plan` | NIH DMSP / NSF DMP (data, software, code) |
@@ -100,7 +101,7 @@ Skills append significant decisions (scope changes, dropped aims, budget changes
 
 ### 7. Suite version stamp
 
-`grant-setup` records the installed plugin version (read from the plugin's own `.claude-plugin/plugin.json`) in `project-config.md` with the date. The config carries a session-start rule instructing every later session to compare the installed version against the recorded one and, on mismatch, append the upgrade to the version history with date and context plus a decision-log entry. The detection logic deliberately lives in the config, not in each skill body — every skill reads the config first, so the rule executes without 30 skills restating it. Combined with git tags on the repository (one per release), this lets a researcher or a future session know — and retrieve — the exact suite version that shaped an application, which matters most for revisions long after submission.
+`grant-setup` records the installed plugin version (read from the plugin's own `.claude-plugin/plugin.json`) in `project-config.md` with the date. The config carries a session-start rule instructing every later session to compare the installed version against the recorded one and, on mismatch, append the upgrade to the version history with date and context plus a decision-log entry. The detection logic deliberately lives in the config, not in each skill body — every skill reads the config first, so the rule executes without every skill restating it. Combined with git tags on the repository (one per release), this lets a researcher or a future session know — and retrieve — the exact suite version that shaped an application, which matters most for revisions long after submission.
 
 ### 8. Applicant originates the ideas; the suite assists
 

@@ -61,7 +61,7 @@ counts, and READMEs do NOT need touching for a routine skill add — only the su
 above that enumerate or diagram the actual skills.
 
 **Canonical skill count = number of `plugins/grant-writing/skills/grant-*/` directories
-that contain a `SKILL.md`.** As of this writing that is **30**.
+that contain a `SKILL.md`.** As of this writing that is **31**.
 
 **Public-facing wording policy: always "30+ skills", never a hard number.** This is a
 deliberate low-maintenance choice — 30 is treated as a floor, so adding a skill needs no

@@ -4,6 +4,15 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.15.0] — 2026-08-03
+
+### Added
+- `grant-project-narrative` — the NIH Project Narrative (public health relevance statement) gets its own skill, born from a head-to-head test in which a standalone instruction file outperformed `grant-abstracts` on this document. The diagnosis: the narrative is not a condensed abstract, and the abstract skill's compress-approved-text method produces short-but-still-technical output. The new skill *transforms* instead — problem → study → payoff structure in plain language, hard cap of 3 sentences, and measurable targets (Flesch-Kincaid grade ~7–8, never above ~9; Reading Ease 60–70; no sentence past ~25 words). Because the grade level responds most to sentence length, the sentence cap removes the easiest fix (splitting); the skill resolves the tension by shortening words and cutting clauses, never by adding a fourth sentence.
+- `scripts/check_readability.py` — a zero-dependency Python checker bundled with the new skill: scores both Flesch measures, checks sentence count and per-sentence length, and names the concrete revision targets (the long sentence, the 4+-syllable words) on failure. First skill in the suite to ship helper code. `references/readability.md` carries the formulas, R (`quanteda`/`koRpus`) equivalents, jargon-swap patterns, and a revision playbook by failure mode.
+
+### Changed
+- `grant-abstracts` now distinguishes compression (right for reviewer-facing abstracts) from transformation (required for public-facing ones), hands the Project Narrative to the new skill, and points lay abstracts at the readability checker (grade ≤10) instead of estimating reading level.
+
 ## [0.14.1] — 2026-07-17
 
 ### Changed
