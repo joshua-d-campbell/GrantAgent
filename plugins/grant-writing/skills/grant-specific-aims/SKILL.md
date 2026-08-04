@@ -1,6 +1,6 @@
 ---
 name: grant-specific-aims
-description: Draft and refine the Specific Aims page (NIH) or project overview/objectives (NSF, DoD, foundations) of a research grant. Use whenever the user wants to outline their grant's aims, objectives, hypotheses, or overall scope; asks for feedback on which ideas are innovative vs. already done; or wants a one-page overview to circulate to colleagues. This is the standard second step after grant-setup and drives every later section.
+description: Draft and refine the Specific Aims page (NIH) or project overview/objectives (NSF, DoD, foundations) of a research grant. Use whenever the user wants to outline their grant's aims, objectives, hypotheses, or overall scope; asks for feedback on which ideas are innovative vs. already done; or wants a one-page overview to circulate to colleagues. Also use when the user is deciding WHICH aims to have, not only how to write them: revising the aims, changing the number of aims, dropping, adding, merging, or splitting an aim, restructuring or reordering aims, judging whether an aim is too weak or too dependent on another, or deciding what content belongs in which aim. Triggers include "revise the aims," "drop aim N," "draft the aims," "restructure the aims," "should this be its own aim," and any message that lists candidate aims. This is the standard second step after grant-setup and drives every later section.
 ---
 
 # Specific Aims
@@ -9,9 +9,15 @@ Produce a first-draft aims page that communicates scope clearly enough to circul
 
 Read `00_admin/project-config.md` first (run `grant-setup` if missing). Apply the tone rules and the style profile.
 
+## Continuing an existing discussion
+
+Aims work usually arrives mid-conversation — after `grant-setup`, after a summary statement, in the middle of a strategy thread — not as a cold start. Invoking this skill mid-thread is expected and correct, and it is the failure mode to guard against: the interview below has often already happened implicitly, so restarting it feels wrong and tempts you to skip the skill entirely and just answer. Do neither. Instead, when aims are already under discussion, summarize the aims as currently understood, state which of the six elicitation items are already answered and which are not, confirm with the user, and proceed from there. Any turn that revises, drops, adds, reorders, or drafts aims — or debates their architecture — is an aims task, whatever came before it in the thread.
+
 ## Your ideas, not mine (shared convention 8)
 
 The aims page is the intellectual core reviewers judge as the applicant's own, and NIH will reject applications with sections "substantially developed by AI" as not the applicant's original ideas ([NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html), Sep 25 2025 receipt onward). So the problem, the gap, the aims, and the central hypothesis must come from the researcher — elicit them (below), do not invent them. Where they are unsure, ask questions and offer options to choose among and react to, not a finished scientific direction to approve. Your job is to structure, sharpen, and pressure-test their thinking and put it in their voice. If an aim is thin because the idea is thin, say so and send them back to the science rather than generating novelty to fill the page.
+
+Operationally: **never deliver aim text as finished prose on the first pass.** Deliver *options* — two or three framings per aim, or a skeleton that carries the scientific claim in the user's own words drawn from their prior documents. If the user explicitly asks for a draft ("just draft the aims"), produce it, but label it in the response as scaffolding for them to rewrite in their own words, and say in one sentence why. Repeat that label each time aim text is delivered, not only the first. NIH's policy is the written one, but assume the same original-authorship expectation for DoD/CDMRP, NSF, and foundations absent a stated policy to the contrary.
 
 ## Elicit before drafting
 
@@ -31,14 +37,30 @@ Interview the user, in their own terms:
 - **Aims block**: each aim gets a bolded headline (outcome-oriented, not method-oriented — "Determine whether X drives Y," not "Perform RNA-seq on Z"), 2–4 sentences of approach, a working hypothesis or expected outcome where appropriate.
 - **Payoff paragraph**: expected overall outcomes, positive impact, and what the results enable next. Significance and impact stated simply and clearly — this is the most important element of the page; reviewers outside the immediate subfield must be able to repeat the argument in study section.
 
-Structural quality checks:
+### Before delivering any aim, verify it against all five
 
-- Aims related but not interdependent — aim 2 must survive if aim 1's hypothesis is wrong. Serial dependence is among the most common reasons reviewers score down an otherwise strong application.
-- Each aim has an interpretable outcome whichever way the data fall; an aim that is only informative if the hypothesis is confirmed is a design flaw, not just a writing flaw.
-- Prefer decisive aim verbs (Determine, Define, Test, Identify) over open-ended ones (Explore, Study, Characterize) — descriptive verbs read as fishing expeditions unless the deliverable itself is the point (tool, dataset, resource). For genuinely non-hypothesis-driven work, frame honest objectives and milestones rather than decorating with a token hypothesis.
-- Each aim testable within the project period; scope matched to mechanism and budget.
+Check each aim item by item — as prose these read as advice and let weak headlines through; as a list they get verified:
 
-For NSF, adapt: objectives instead of aims, explicit Intellectual Merit and Broader Impacts sentences. For DoD/CDMRP, tie aims to the announcement's focus areas and military relevance. Read `references/agency-variants.md` when working on a non-NIH proposal.
+1. The headline uses a decisive verb (Determine, Define, Test, Identify, Develop) — not Explore, Study, Characterize, Expand, Annotate.
+2. The headline names an outcome, not a method ("Determine whether X drives Y," not "Perform RNA-seq on Z").
+3. The aim survives if the preceding aim's central hypothesis is wrong — state how. Serial dependence is among the most common reasons reviewers score down an otherwise strong application.
+4. The aim yields an interpretable result whichever way the data fall; an aim informative only if the hypothesis is confirmed is a design flaw, not just a writing flaw.
+5. The aim is scoped to the budget and period of performance in `project-config.md`.
+
+**Methods-, tool-, or resource-development aims are a real exception, not a loophole.** When the deliverable itself is the point — a model, software, an atlas (common for Data Science Awards, where two of three aims may be development) — "Develop," "Build," or "Construct" is the correct headline verb and no hypothesis should be manufactured. State instead the objective, the benchmark, and the success criterion. Check 4 still applies: the benchmark must be interpretable whichever way it falls.
+
+**Aim count follows mechanism size.** Relate the number of aims to the page limit and budget in `project-config.md` rather than defaulting to a number: for a 3-year award with a ~15-page narrative, three aims is right and four is crowded.
+
+## Agency adaptation — read before drafting if the funder is not NIH
+
+The one-page hypothesis-driven aims page is an NIH form. For any other funder, **read `references/agency-variants.md` before drafting**, then check the required-attachment list in `project-config.md` and build what that funder actually asks for — do not assume a standalone aims page exists.
+
+- **NSF**: objectives, not aims; explicit Intellectual Merit and Broader Impacts sentences (Broader Impacts is equally weighted). No standalone aims document — the content opens the Project Description and condenses into the 1-page Project Summary.
+- **DoD/CDMRP**: every aim ties to the fiscal-year Overarching Challenges / focus areas, and an explicit military relevance statement is required — omitting it is a scored deficiency. Many CDMRP mechanisms have no Specific Aims attachment at all: aims live inside the multi-page Project Narrative, and the opening/payoff work is split across separate Impact Statement, Technical Abstract, and Transition Plan documents. `agency-variants.md` carries the per-component anatomy.
+
+## Related skills
+
+If prior reviews, a summary statement, or panel feedback exist, run `grant-resubmission` first or alongside — critiques usually determine the aim architecture (how many aims, which ones), not just the wording. Once a full aims draft exists, `grant-mock-review` scores it. If an aim contains mathematical development, `grant-approach-math` audits the content and `grant-math-notation` the symbols.
 
 ## Innovation feedback (required, not optional)
 
