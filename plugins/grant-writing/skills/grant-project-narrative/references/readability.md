@@ -46,12 +46,12 @@ the field's term for it.
 
 | Field term | Everyday equivalent |
 |---|---|
-| fibrotic remodeling | lung scarring |
+| hyperglycemia | high blood sugar |
 | gene expression | which genes are turned on or off |
-| nasal epithelial sampling | a brushing of cells from inside the nose |
-| chronic allograft dysfunction | the new organ slowly stops working |
+| non-invasive assay | a simple test that does not need surgery |
+| cognitive decline | memory loss |
 | biomarker | warning sign / early signal |
-| non-invasive diagnostic | a simple test that does not require surgery |
+| cardiovascular event | heart attack or stroke |
 | therapeutic target | a place where a new drug could act |
 | cohort | group of patients |
 | mortality / morbidity | deaths / serious illness |

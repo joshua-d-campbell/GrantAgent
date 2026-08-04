@@ -23,7 +23,7 @@ The two scores pull in different directions, and the sentence cap sharpens the c
 ## Method
 
 1. **Extract, in plain terms.** From the aims/strategy, pull (a) the health problem and who it affects, (b) what the study does, (c) what could change for patients or public health if it works. These become the three sentences — problem, study, payoff — in that order. Lead with relevance, not with the science.
-2. **Draft below the reading level from the start.** Swap every technical term for its everyday equivalent as you write, not in a later pass: "lung scarring" not "fibrotic remodeling," "which genes are turned on or off" not "gene expression," "a brushing of cells from inside the nose" not "nasal epithelial sampling." Spell out or drop every acronym. Active voice, concrete nouns, one idea per sentence. Cut any word that can go without changing meaning.
+2. **Draft below the reading level from the start.** Swap every technical term for its everyday equivalent as you write, not in a later pass: "high blood sugar" not "hyperglycemia," "which genes are turned on or off" not "gene expression," "a simple test that does not need surgery" not "non-invasive assay." Spell out or drop every acronym. Active voice, concrete nouns, one idea per sentence. Cut any word that can go without changing meaning.
 3. **Score the draft** with the bundled checker (zero dependencies, any Python 3):
 
    ```bash
@@ -38,9 +38,9 @@ Refine interactively in conversation; only user-approved text goes to the file (
 
 ## Example — at target
 
-> Thousands of people get a lung transplant each year, but for many the new lung slowly fails before doctors can spot the damage. This study tests whether a simple brushing of cells from the nose can reveal early warning signs deep in the lung. If it works, this easy test could help doctors act sooner and protect patients before the harm is permanent.
+> Millions of older adults fall at home each year, and a single bad fall can take away the freedom to live at home. This study tests whether a small sensor worn on the belt can spot the people most likely to fall before it happens. If it works, doctors could step in sooner and help older adults stay safe and living on their own.
 
-Scores: grade 8.7, ease 70, 3 sentences, longest 25 words. Note the fingerprints of the method: "get" not "receive," "spot" not "detect," no mention of the assay platform, and the payoff stated as a possibility ("if it works"), not a promise.
+Scores: grade 8.0, ease 75, 3 sentences, longest 24 words. Note the fingerprints of the method: "spot" not "identify," "worn on the belt" not "body-mounted," the problem framed as what a patient stands to lose, and the payoff stated as a possibility ("if it works"), not a promise. (Illustrative only — an invented project, not drawn from any real application.)
 
 ## Constraints that are easy to forget
 
