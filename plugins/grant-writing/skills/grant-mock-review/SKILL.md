@@ -61,4 +61,4 @@ Mirror a real summary statement: overall impact/merit paragraph with the bottom-
 
 ## Synthesis and triage
 
-Consolidate into an action list ranked by score impact: what would most move Overall Impact, what is cosmetic, and what is unfixable this cycle (this feeds `grant-resubmission` strategy). Save to `08_final_assembly/mock-review_<date>.md`.
+Consolidate into an action list ranked by score impact: what would most move Overall Impact, what is cosmetic, and what is unfixable this cycle (this feeds `grant-resubmission` strategy). Save to `08_final_assembly/mock-review_<date>.md`. Action items the user does not fix in this session become entries in `00_admin/tracker.md` (one per finding, against the affected document, `Origin: mock-review`) — the report holds the full critique; the tracker is what later sessions actually work from, so nothing here is rediscovered or re-argued.

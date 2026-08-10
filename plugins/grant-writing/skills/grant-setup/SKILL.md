@@ -34,7 +34,7 @@ Ask the user for (accept partial answers; record gaps as open items):
 
 ```
 <grant-short-name>/
-├── 00_admin/            # config, checklist, FOA, decision log, version log
+├── 00_admin/            # config, checklist, FOA, decision log, tracker, version log
 │   └── foa/
 ├── 01_aims/
 ├── 02_research_plan/    # significance, innovation, approach
@@ -134,15 +134,18 @@ Create `00_admin/project-config.md`:
 - Checklist: 00_admin/<checklist file> (office-provided | auto-generated)
 - Style profile: 00_admin/style-profile.md (present | pending)
 - Style corpus source: published papers | public grant text | prior/unpublished grants | none yet   # note any confidentiality constraint the PI raised
-- Open items: ...
+- Tracker: 00_admin/tracker.md   # the ONE shared TODO list for this grant; skills never create their own
+- Tracker rules (every session): work only the section/document the user names; at session start read the tracker and present the active document's open items as the working checklist; an issue found outside the active section is logged, not discussed — check it isn't already logged (never re-raise a logged item), then log conceptual/ripple findings silently (one-line acknowledgment at most) and log minor mechanical findings (spelling, acronyms) asking once, fix now or later; update the tracker the moment an item is found, resolved, or changed — never wait for session end or a handoff announcement; IDs are sequential (T-001, ...) and never reused; resolved items move to the Resolved table
+- Open items: tracked in 00_admin/tracker.md
 ```
 
-Also create an empty `00_admin/decision-log.md` and — in filename mode only — `00_admin/version-log.md`.
+Also create an empty `00_admin/decision-log.md`, the tracker `00_admin/tracker.md` from `references/tracker-template.md` — seed its document-status table from the FOA's required documents and enter setup's own gaps (missing FOA details, unconfirmed checklist, empty style corpus) as its first items — and, in filename mode only, `00_admin/version-log.md`. The tracker is what lets later sessions pick up mid-proposal without rehashing: findings live there once, by ID, instead of being rediscovered every session. The decision log stays separate on purpose — it records *why* things changed (append-only); the tracker records *what is still open* (working state).
 
 ## Step 6 — Confirm and hand off
 
-Summarize what was created, list open items (missing FOA details, unconfirmed checklist, empty style corpus), and state the natural next step: drafting the Specific Aims (`grant-specific-aims`) — or for NSF, the Project Summary skeleton. For career-development awards, `grant-career-plan` starts alongside the aims: mentors and referees need the most lead time of anything in the application.
+Summarize what was created, point to the open items now seeded in `00_admin/tracker.md` (missing FOA details, unconfirmed checklist, empty style corpus), and state the natural next step: drafting the Specific Aims (`grant-specific-aims`) — or for NSF, the Project Summary skeleton. For career-development awards, `grant-career-plan` starts alongside the aims: mentors and referees need the most lead time of anything in the application.
 
 ## References
 
 - `references/agency-checklists.md` — default document checklists per funder (NIH, NSF, DoD, foundations). Read when auto-generating a checklist in Step 1.5.
+- `references/tracker-template.md` — the tracker file template. Read when creating `00_admin/tracker.md` in Step 5.

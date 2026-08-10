@@ -7,7 +7,7 @@ description: High-level structural proofread of a full grant proposal — overal
 
 This pass reads the proposal the way a reviewer does — beginning to end, once — and reports on architecture, not sentences. Fixing structure after copyediting wastes the copyedit, so this skill runs first.
 
-Read `00_admin/project-config.md`, the checklist, and the decision log (drift recorded there predicts inconsistencies). Assemble the current latest versions of every section in the order a reviewer encounters them (abstract → aims → research strategy → supporting documents). If two versions of a section have the same status, confirm with the user which is current before proofreading the wrong one.
+Read `00_admin/project-config.md`, the checklist, the decision log (drift recorded there predicts inconsistencies), and the tracker (`00_admin/tracker.md`) — its open `ripple` items are predicted inconsistencies to confirm here, and this pass is where they get closed. Assemble the current latest versions of every section in the order a reviewer encounters them (abstract → aims → research strategy → supporting documents). If two versions of a section have the same status, confirm with the user which is current before proofreading the wrong one.
 
 ## Pass 0 — Scripted extraction
 
@@ -50,4 +50,4 @@ Produce `08_final_assembly/structural-review_<date>.md`:
 3. **Transition notes** — by section boundary
 4. **Observations** — weaknesses that are judgment calls, stated neutrally with the trade-off
 
-Every finding cites document, location, and a verbatim quote of the current text, so the user can act without re-searching ("Aim 3 headline on the aims page says 'validate'; Approach 3.0 says 'identify' — different scope claims"). Quote from the file, never from memory of it — a misquoted finding costs the user's trust in the rest of the report. No summary praise; the absence of a finding is the good news. After the user acts on the report, updated sections get new versions, and `grant-proofread-detail` runs next.
+Every finding cites document, location, and a verbatim quote of the current text, so the user can act without re-searching ("Aim 3 headline on the aims page says 'validate'; Approach 3.0 says 'identify' — different scope claims"). Quote from the file, never from memory of it — a misquoted finding costs the user's trust in the rest of the report. No summary praise; the absence of a finding is the good news. Update `00_admin/tracker.md` as part of delivering the report: close ripple items this pass verified, and log each finding the user defers as a tracker item against its document (`Origin: proofread-structure`), so the next session starts from the tracker instead of re-deriving the report. After the user acts on the report, updated sections get new versions, and `grant-proofread-detail` runs next.

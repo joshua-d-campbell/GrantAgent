@@ -4,6 +4,12 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.16.0] — 2026-08-10
+
+### Added
+- Shared convention 9 — **the work tracker.** Born from real use on a DoD application: sessions kept rehashing errors and incongruities in sections the user wasn't working on yet, and nothing was recorded at a session boundary unless the user explicitly announced a handoff. The fix is one shared TODO file per grant, `00_admin/tracker.md` — exactly one, never per skill and never per document, because ripple items are inherently cross-document — created by `grant-setup` from a new `references/tracker-template.md`, registered in `project-config.md` (new *Tracker* field), and carrying document status, open items with sequential never-reused IDs (`T-001`, …), and a Resolved table. The operating rules ride in the config template (the convention-7 pattern, so all 31 skills obey them without restating): sessions work only the section the user names and present its open items at session start; an issue found outside the active section is logged, never discussed — conceptual/ripple findings silently (one-line acknowledgment at most), minor mechanical findings (spelling, acronyms) logged with a single fix-now-or-later question; a logged item is never re-raised; and the tracker is updated the moment an item changes, never batched to session end — so an interrupted session loses nothing and handoff needs no announcement. Division of labor kept deliberate: `decision-log.md` stays a separate append-only record of *why* things changed; the tracker holds *what is still open*; full findings stay in `08_final_assembly/` reports, with the tracker holding only the action items they generate.
+- Tracker routing added to the eight finding-heavy skills: `grant-mock-review`, `grant-proofread-structure` (which also reads open `ripple` items as predicted inconsistencies and closes them), `grant-proofread-detail`, `grant-format-check`, `grant-condense`, `grant-references`, `grant-approach-experiment`, and `grant-approach-math` — deferred findings become tracker items with an `Origin` pointer instead of evaporating with the session.
+
 ## [0.15.1] — 2026-08-04
 
 ### Changed

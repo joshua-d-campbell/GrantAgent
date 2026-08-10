@@ -97,7 +97,7 @@ Refine text interactively in the AI conversation. Only user-approved text is pla
 
 ### 6. Decision log
 
-Skills append significant decisions (scope changes, dropped aims, budget changes) to `00_admin/decision-log.md` with date and rationale, so late-stage skills can detect inconsistencies.
+Skills append significant decisions (scope changes, dropped aims, budget changes) to `00_admin/decision-log.md` with date and rationale, so late-stage skills can detect inconsistencies. The log records *why things changed* and is append-only; open work lives in the tracker (convention 9) — a decision that creates work spawns tracker items referencing it, and closing those items never touches the log.
 
 ### 7. Suite version stamp
 
@@ -116,6 +116,18 @@ The suite therefore collaborates on *expression*, not on *ideas*. This matters m
 
 This is a boundary the skills enforce *toward the user*, in the same spirit as the neutral-tone rule (convention 2): assistance stays on the writing side of the line the funder draws. Verify the policy against the current FOA and agency guide before relying on specifics — agency rules on AI are tightening. (NIH notice checked July 2026.)
 
+### 9. Work tracker
+
+`grant-setup` creates `00_admin/tracker.md` — **exactly one per grant**, never per skill and never per document — and registers it in `project-config.md` (`Tracker:` field), which is the only discovery a session needs. The tracker is the suite's shared TODO list: document status, open work items, deferred fixes, and cross-section ripples, organized under per-document headings with sequential IDs (`T-001`, …) that are never reused; resolved items move to a Resolved table rather than being deleted. One file, because ripple items are inherently cross-document — a budget cut touches the aims page, timeline, and abstract, and a single tracker gives one place to log it and one place to look. Per-skill or per-document trackers would fragment exactly the state that must be shared. (Template: `grant-setup/references/tracker-template.md`.)
+
+The tracker exists to fix two session-level failure modes: findings rehashed every session, and work lost at session boundaries. Its operating rules ride in the `project-config.md` template — the same pattern as convention 7, since every skill reads the config first, the rules execute without each skill restating them:
+
+- A session works only the section/document the user names. At session start it reads the tracker and presents the active document's open items as the working checklist.
+- An issue found *outside* the active section is logged, not discussed — after checking it isn't already there (an item already logged is never re-raised). Conceptual/ripple findings are logged silently, with at most a one-line acknowledgment; minor mechanical findings (spelling, acronym drift) are logged and the user asked once: fix now or later.
+- The tracker is updated at the moment an item is found, resolved, or changed — never batched to session end. An interrupted session then loses nothing, and the user never has to announce a handoff for state to be recorded.
+
+Division of labor: the decision log answers "why did this change?"; the tracker answers "what is still open?". Reports (mock review, audits, proofreads in `08_final_assembly/`) hold the full findings; the tracker holds only the open action items they generate, each pointing back to its origin.
+
 ## Agency reference facts — currency
 
 Agency rules change. Facts embedded in these skills were verified July 2026 where possible (NSF PAPPG 24-1 + Supplements NSF 26-200/26-202; NIH simplified review framework effective Jan 2025). Every skill instructs the model to verify limits and requirements against the specific FOA/NOFO and current agency guide before relying on them.
@@ -124,7 +136,7 @@ Agency rules change. Facts embedded in these skills were verified July 2026 wher
 
 - **Triggering is everything.** The agent sees only each skill's name and description when deciding whether to load it — the body loads afterward. Descriptions must name the phrases users actually type ("biosketch," "pink sheets," "poke holes in this"), not just describe the content. Slightly pushy phrasing ("use whenever the user mentions…") outperforms neutral, because agents under-trigger.
 - **Keep SKILL.md lean; push detail to references.** The body costs context every time the skill fires. Workflow belongs in the body; lookup material (agency criteria, checklists, variants) belongs in `references/` files read only when needed. Explain *why* rules exist rather than stacking MUSTs — models follow reasoning better than commandments.
-- **Shared state, not shared context.** Sessions don't remember each other; `project-config.md`, the decision log, and the notation registry are what carry decisions across sessions. When adding a skill, ask what durable state it should read and write.
+- **Shared state, not shared context.** Sessions don't remember each other; `project-config.md`, the decision log, the tracker, and the notation registry are what carry decisions across sessions. When adding a skill, ask what durable state it should read and write — and route any open work it discovers into the tracker rather than leaving it in conversation.
 - **Test with realistic prompts.** Run 2–3 prompts phrased the way researchers actually type (typos, shorthand included), compare against no-skill output, and fix what generalizes — not what is specific to one test.
 - **Fold repeated corrections into the skill.** If a user corrects the agent the same way twice, that correction belongs in SKILL.md, not in every future conversation.
 
