@@ -1,6 +1,6 @@
 ---
 name: grant-proofread-detail
-description: Detailed line-level proofread of grant documents — spelling, grammar, punctuation, figure/table reference integrity, letter-of-support reconciliation (every named collaborator, consultant, core, or site has a letter; every letter is referenced), abbreviation consistency, and numeric accuracy. Use for final polish after structural review, when the user asks to proofread, copyedit, check figures and tables, or check that the letters of support match the proposal, or in the last days before a deadline. Run AFTER grant-proofread-structure.
+description: Detailed line-level proofread of grant documents — spelling, grammar, punctuation, figure/table reference integrity, typographic consistency (figure-reference styling, heading hierarchy, emphasis), letter-of-support reconciliation (every named collaborator, consultant, core, or site has a letter; every letter is referenced), abbreviation consistency, and numeric accuracy. Use for final polish after structural review, when the user asks to proofread, copyedit, check figures and tables, check that headings or figure references are formatted consistently, or check that the letters of support match the proposal, or in the last days before a deadline. Run AFTER grant-proofread-structure.
 ---
 
 # Detailed Proofread
@@ -27,6 +27,12 @@ Career-award mentor and institutional-commitment letters have their own rules; c
 
 **Numbers.** Recompute simple arithmetic in the text (percentages, totals, fold-changes); check sample sizes and dollar figures against the budget spreadsheet; units present and consistent (SI usage per field convention).
 
+**Typographic consistency.** Sections drafted in separate sessions and pasted together arrive with different visual conventions, and reviewers read the seams as carelessness. Check that each document uses one scheme throughout:
+- Figure/table references styled one way — bold or not, color or not, "Fig." vs "Figure", parenthetical vs in-sentence. The style profile rarely pins this down; take the dominant form in the document as the reference and flag the minority.
+- Headings in one style per level — numbering scheme, case, weight, underline, font size, color, spacing before/after — with a consistent hierarchy (no level skipped, no two levels visually identical). Aim headings in the Approach match each other and repeat the aims-page wording verbatim (`grant-proofread-structure` checks the wording; this pass checks the look).
+- Emphasis (bold/italic/underline of key terms, hypotheses, deliverables) follows the style profile's stated convention and is not accumulated from different drafting sessions — a document that bolds hypotheses in Aim 1 and italicizes them in Aim 3 has two conventions.
+Treat the majority pattern as the convention unless the style profile says otherwise; report the minority instances by location.
+
 **Mechanics of the format.** Word: broken cross-references (grayed "Error! Reference source not found"), leftover tracked changes and comments. LaTeX: unresolved `??` references, missing citations `[?]`, overfull lines that push text into margins.
 
 ## Script what is scriptable
@@ -38,6 +44,7 @@ One extraction caveat: reference-manager citations (Zotero/EndNote/Mendeley) are
 - **Figure/table integrity**: extract in-text references (`(Fig(?:ure)?s?\.?|Table)\s*S?\d+[A-Za-z]?`) and caption openers (lines starting with the same pattern); diff the sets. Report references without captions, captions never cited, and numbering gaps/duplicates.
 - **Abbreviations**: collect candidate tokens (2–8 chars containing ≥2 capitals, e.g. `\b(?=\w*[A-Z]\w*[A-Z])[A-Za-z0-9-]{2,8}\b`), find each token's first occurrence per document, check for a nearby parenthetical definition, and count total uses. The <3-uses deletion candidates fall out of the counts.
 - **Letters of support**: extract capitalized multi-word names and organization tokens (`Dr\.|Prof\.|Core|Facility|Center|Institute|University|Hospital`) from the plain text of every assembled document, plus every signer/organization in the letter tracker and the letter PDFs (`pdftotext`); set-diff both ways and list matches whose surrounding numbers (hours, %, n, $) disagree. Name variants ("J. Smith" / "Jane Smith") are the main false-positive source — normalize before diffing.
+- **Typography**: for Word, parse `word/document.xml` — for every run matching the figure-reference regex, collect its run properties (`w:b`, `w:i`, `w:color`, `w:u`) and tabulate the combinations; for every paragraph with a heading `w:pStyle` (or direct formatting that makes it look like one — bold, larger `w:sz`, spacing), tabulate style-per-level and flag paragraphs formatted as headings without a heading style. For LaTeX, confirm every figure reference goes through the same macro (`\figref`, `\ref`, `\cref`) and grep for hand-made headings (a `\textbf{...}` line standing alone, `\noindent\textbf`) that bypass `\section`/`\subsection`. The minority combination in each table is the candidate list.
 - **Numbers**: extract `n\s*=\s*\d+`, percentages, and dollar amounts with surrounding context; compare against the budget spreadsheet and against each other. Recompute stated totals and percentages.
 - **Word mechanics**: a .docx is a zip — inspect `word/document.xml` for `w:ins`/`w:del` (leftover tracked changes) and `w:commentRangeStart` (comments); grep extracted text for `Error! Reference`.
 - **LaTeX mechanics**: grep the compile log for `Overfull \hbox`, `Citation .* undefined`, `Reference .* undefined`; grep output-adjacent text for `??`.

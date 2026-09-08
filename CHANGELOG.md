@@ -4,6 +4,11 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.16.2] — 2026-09-08
+
+### Changed
+- `grant-proofread-detail` gains a **typographic consistency** check. Nothing in the suite verified the *look* of assembled documents: `grant-format-check` is deliberately compliance-only (page limits, fonts, margins — the binary facts that cause rejection), `grant-setup` records "use of bold/italic emphasis" in the style profile but no skill checked documents against it, and the existing figure/table check covered reference integrity, not styling. The new block checks that each document uses one scheme throughout — figure/table references styled one way (bold, color, "Fig." vs "Figure", parenthetical vs in-sentence), headings in one style per level with an intact hierarchy and Aim headings visually matching each other, and emphasis of key terms following the style profile rather than accumulating from separate drafting sessions. The majority pattern is the convention unless the profile says otherwise; minority instances are reported by location. A scriptable line reads Word run/paragraph properties from `document.xml` and, for LaTeX, checks that figure references share one macro and that no heading is a hand-bolded line bypassing `\section`. Description updated so the skill fires on heading/figure-reference formatting questions.
+
 ## [0.16.1] — 2026-09-08
 
 ### Changed
