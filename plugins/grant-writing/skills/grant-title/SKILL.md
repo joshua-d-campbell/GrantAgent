@@ -5,7 +5,7 @@ description: Develop or refine the title of a research grant proposal. Use when 
 
 # Grant Title
 
-Write the title after the Specific Aims page exists — the title is a compression of the aims, not a starting point. Read `00_admin/project-config.md` and the current aims version first.
+Write the title after the Specific Aims page exists — the title is a compression of the aims, not a starting point. Read `00_admin/project-config.md` and the current aims version first. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## What a good title does
 

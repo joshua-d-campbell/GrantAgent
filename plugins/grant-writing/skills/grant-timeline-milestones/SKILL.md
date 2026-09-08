@@ -7,7 +7,7 @@ description: Develop project timelines, milestones, and Gantt charts for grant p
 
 A timeline converts the Approach into a feasibility argument: reviewers use it to judge whether the team can actually execute the plan in the project period. Build it from the Approach's per-aim designs, not aspirationally.
 
-Read `00_admin/project-config.md` (project period, mechanism) and the current Approach drafts. Output goes to `02_research_plan/timeline_v<NN>_<date>_draft.<ext>`; the figure is usually embedded near the end of the Approach.
+Read `00_admin/project-config.md` (project period, mechanism) and the current Approach drafts. Output goes to `02_research_plan/timeline_v<NN>_<date>_draft.<ext>`; the figure is usually embedded near the end of the Approach. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Step 1 — Decompose into scheduled units
 

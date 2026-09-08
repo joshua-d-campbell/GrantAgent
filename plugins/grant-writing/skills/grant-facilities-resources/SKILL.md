@@ -7,7 +7,7 @@ description: Write the Facilities & Other Resources and Equipment documents for 
 
 These documents establish that the environment can support the work — Factor 3 material at NIH. They are boilerplate-prone; the useful version is project-specific: every listed resource should map to something the Approach actually needs. This skill covers resources *available to perform* the work; novel resources the project *produces and will share* (model organisms, strains, reagents) belong to `grant-resource-sharing`. If a user says "resources" ambiguously, confirm which sense they mean.
 
-Read `00_admin/project-config.md` and the Approach drafts. Files go to `07_compliance/` (or a dedicated subfolder), versioned. Collect the institution's existing facilities boilerplate from the user — most departments maintain one — and treat it as raw material, not the answer.
+Read `00_admin/project-config.md` and the Approach drafts. Files go to `07_compliance/` (or a dedicated subfolder), versioned. Collect the institution's existing facilities boilerplate from the user — most departments maintain one — and treat it as raw material, not the answer. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Facilities & Other Resources
 

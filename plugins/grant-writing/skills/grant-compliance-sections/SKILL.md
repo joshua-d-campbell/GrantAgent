@@ -7,7 +7,7 @@ description: Draft regulatory and rigor compliance sections of a grant — Human
 
 These sections are graded against fixed regulatory criteria, not persuasive quality — a Vertebrate Animals Section that omits one of its required points is marked incomplete regardless of how well it reads. At NIH these are "additional review considerations": not folded into the impact score, but rated acceptable/unacceptable, and an unacceptable rating bars the award until resolved. Precision and completeness are the goal.
 
-Read `00_admin/project-config.md` and the Approach. Output to `07_compliance/`, versioned. Regulatory formats change; verify each against current agency instructions and the FOA, and route substantive compliance questions to the user's IRB/IACUC and grants office — the model drafts and checks completeness, it does not adjudicate compliance.
+Read `00_admin/project-config.md` and the Approach. Output to `07_compliance/`, versioned. Regulatory formats change; verify each against current agency instructions and the FOA, and route substantive compliance questions to the user's IRB/IACUC and grants office — the model drafts and checks completeness, it does not adjudicate compliance. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Human Subjects
 

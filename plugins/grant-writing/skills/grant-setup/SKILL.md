@@ -1,6 +1,6 @@
 ---
 name: grant-setup
-description: Initialize a new research grant proposal project — folder structure, funding announcement ingestion, submission checklist, versioning schema, writing-style profile from prior grants, and interaction ground rules. Use this whenever the user says they are starting a new grant, proposal, R01/R21/K-award, NSF proposal, DoD white paper, or foundation application, mentions a funding opportunity announcement (FOA/NOFO/PA/RFA/BAA), asks to "set up" anything grant-related, or wants a GitHub repo / LaTeX project created for a proposal. Also use when another grant skill finds no project-config.md.
+description: Initialize a new research grant proposal project — folder structure, funding announcement ingestion, submission checklist, versioning schema, writing-style profile from prior grants, a CLAUDE.md that orients every later session, and interaction ground rules. Use this whenever the user says they are starting a new grant, proposal, R01/R21/K-award, NSF proposal, DoD white paper, or foundation application, mentions a funding opportunity announcement (FOA/NOFO/PA/RFA/BAA), asks to "set up" anything grant-related, or wants a GitHub repo / LaTeX project created for a proposal. Also use when another grant skill finds no project-config.md, or when an existing grant folder lacks a CLAUDE.md or has a thin style profile that needs rebuilding.
 ---
 
 # Grant Project Setup
@@ -92,16 +92,9 @@ The profile needs the researcher's **writing voice**, not their unpublished idea
 - Regardless of the training setting, the content still leaves the user's machine and is processed by a third party — the relevant consideration for embargoed data, collaborator-confidential material, IP disclosures, or sponsor/institutional confidentiality. For those, prefer published sources or omit the sensitive passages.
 - These are current as of the setup date and change; point the user to Anthropic's privacy settings and privacy center to confirm, and record their chosen source and any constraint in the config. (Verified July 2026.)
 
-Read the chosen corpus and write `00_admin/style-profile.md` covering, with examples quoted from it:
+Read the chosen corpus and write `00_admin/style-profile.md` from `references/style-profile-template.md`. The profile is the only carrier of the PI's voice between sessions — the corpus is not re-read and the model remembers nothing between chats — so its quality decides whether later drafts sound like the PI or like the model. Two requirements, both from the template: **paragraph-scale exemplars quoted verbatim** (two to three full paragraphs per register the grant needs — technical narrative, lay summary, caption, and any FOA-specific registers), because models imitate prose far better than they follow descriptions; and a **closing directives checklist** of checkable rules that drafting skills verify output against. Cover, with quoted examples: sentence length and paragraph density; voice (active/passive ratio), person, tense boundary between completed and proposed work; hedging vs. assertion and where each applies; heading, transition, and emphasis conventions; punctuation constraints stated as countable rules with exemptions; terminology; lay register; caption style. Keep the portable core (voice) separate from the project layer (vocabulary, reviewer history, proofread sweep list) so the next grant can import the core.
 
-- Sentence length and paragraph density; use of topic sentences
-- Voice (active/passive ratio), person ("we" vs. impersonal), tense conventions
-- Hedging habits ("may," "suggests") vs. assertive claims
-- Transition and signposting style; use of bold/italic emphasis
-- Terminology preferences and field-specific phrasing
-- Figure caption style
-
-Drafting skills recapitulate this profile. If no samples are provided, note that the profile is absent and drafting will use standard scientific register until samples arrive.
+If the PI has a profile from a prior proposal, import its Part 1 and start a fresh Part 2 rather than rebuilding from the corpus. If no samples are provided, write the template skeleton with the exemplar sections empty, note in the tracker that drafting will use standard scientific register until samples arrive, and revisit when they do. A profile found later to be thin (descriptive lines, no full paragraphs) is rebuilt with this step, not patched.
 
 ## Step 5 — Write project-config.md
 
@@ -134,6 +127,7 @@ Create `00_admin/project-config.md`:
 - Checklist: 00_admin/<checklist file> (office-provided | auto-generated)
 - Style profile: 00_admin/style-profile.md (present | pending)
 - Style corpus source: published papers | public grant text | prior/unpublished grants | none yet   # note any confidentiality constraint the PI raised
+- Session orientation: CLAUDE.md at folder root   # read automatically at session start; points here, to the style profile, and to the tracker
 - Tracker: 00_admin/tracker.md   # the ONE shared TODO list for this grant; skills never create their own
 - Tracker rules (every session): work only the section/document the user names; at session start read the tracker and present the active document's open items as the working checklist; an issue found outside the active section is logged, not discussed — check it isn't already logged (never re-raise a logged item), then log conceptual/ripple findings silently (one-line acknowledgment at most) and log minor mechanical findings (spelling, acronyms) asking once, fix now or later; update the tracker the moment an item is found, resolved, or changed — never wait for session end or a handoff announcement; IDs are sequential (T-001, ...) and never reused; resolved items move to the Resolved table
 - Open items: tracked in 00_admin/tracker.md
@@ -141,11 +135,19 @@ Create `00_admin/project-config.md`:
 
 Also create an empty `00_admin/decision-log.md`, the tracker `00_admin/tracker.md` from `references/tracker-template.md` — seed its document-status table from the FOA's required documents and enter setup's own gaps (missing FOA details, unconfirmed checklist, empty style corpus) as its first items — and, in filename mode only, `00_admin/version-log.md`. The tracker is what lets later sessions pick up mid-proposal without rehashing: findings live there once, by ID, instead of being rediscovered every session. The decision log stays separate on purpose — it records *why* things changed (append-only); the tracker records *what is still open* (working state).
 
+## Step 5b — Write CLAUDE.md at the folder root
+
+Create `CLAUDE.md` at the grant folder root from `references/claude-md-template.md`, filling the bracketed fields from the config (for a GitHub repo, commit it). This is the one file Claude reads *before* the first message of a session, which makes it the only place where "read the config, the style profile, and the tracker first" runs without depending on a skill firing. Without it, a fresh chat opened in the folder has no skill loaded and nothing tells the session that this is a grant project — the observed result is documents edited directly, in default voice, with the config never read. The file orients (session-start reads, the task-to-skill routing table, the voice and tone rules) and points to `00_admin/` for everything that varies; it does not duplicate the config.
+
+Tell the user to open or connect *this grant's folder* as the project — a parent folder holding several grants will not reliably load a `CLAUDE.md` two levels down.
+
 ## Step 6 — Confirm and hand off
 
-Summarize what was created, point to the open items now seeded in `00_admin/tracker.md` (missing FOA details, unconfirmed checklist, empty style corpus), and state the natural next step: drafting the Specific Aims (`grant-specific-aims`) — or for NSF, the Project Summary skeleton. For career-development awards, `grant-career-plan` starts alongside the aims: mentors and referees need the most lead time of anything in the application.
+Summarize what was created (including `CLAUDE.md` and the style profile's exemplar coverage), point to the open items now seeded in `00_admin/tracker.md` (missing FOA details, unconfirmed checklist, empty style corpus), and state the natural next step: drafting the Specific Aims (`grant-specific-aims`) — or for NSF, the Project Summary skeleton. For career-development awards, `grant-career-plan` starts alongside the aims: mentors and referees need the most lead time of anything in the application.
 
 ## References
 
 - `references/agency-checklists.md` — default document checklists per funder (NIH, NSF, DoD, foundations). Read when auto-generating a checklist in Step 1.5.
 - `references/tracker-template.md` — the tracker file template. Read when creating `00_admin/tracker.md` in Step 5.
+- `references/style-profile-template.md` — the style profile template (portable core / project layer, exemplar requirements, directives checklist). Read when writing `00_admin/style-profile.md` in Step 4.
+- `references/claude-md-template.md` — the session-orientation file template. Read when creating the folder-root `CLAUDE.md` in Step 5b.

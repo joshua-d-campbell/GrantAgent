@@ -9,7 +9,7 @@ Required at NIH for essentially all research generating scientific data (policy 
 
 This skill covers **data, software, and code**. Sharing of physical and biological resources — model organisms, strains, reagents, cell lines, vectors — is a separate NIH regime (the Model Organism and Research Tools policies), described in the application's Resource Sharing section and owned by `grant-resource-sharing`. A project generating both data and novel organisms needs both plans; keep each resource in its own document. Genomic *data* stays here even when it comes from a shared organism.
 
-Read `00_admin/project-config.md` and the Approach (data types come from the design). Output to `07_compliance/dmsp_v<NN>_<date>_draft.<ext>`. Verify current format and length guidance (NIH recommends ≤2 pages; NSF 2 pages) and any institute-specific expectations in the FOA.
+Read `00_admin/project-config.md` and the Approach (data types come from the design). Output to `07_compliance/dmsp_v<NN>_<date>_draft.<ext>`. Verify current format and length guidance (NIH recommends ≤2 pages; NSF 2 pages) and any institute-specific expectations in the FOA. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Elicit from the Approach and the user
 

@@ -7,7 +7,7 @@ description: Draft letters of support, letters of collaboration, and consultant/
 
 Letters must be drafted early: collaborators revise slowly, travel, and miss deadlines. The practical workflow is that the PI's team drafts every letter and the signer edits and signs. Target having drafts out at least 4–6 weeks before the deadline.
 
-Read `00_admin/project-config.md` for the team list and deadline. Letters live in `05_support_letters/`, one file per signer, versioned; track status in `05_support_letters/letter-tracker.md` (signer, role, draft sent, received signed, format OK).
+Read `00_admin/project-config.md` for the team list and deadline. Letters live in `05_support_letters/`, one file per signer, versioned; track status in `05_support_letters/letter-tracker.md` (signer, role, draft sent, received signed, format OK). `00_admin/style-profile.md` does not apply to letters — they are in the signer's voice — and neither should the model's default register; the profile's *Directives* list is still useful in reverse, as a list of PI habits that must not leak into a letter (shared convention 5).
 
 ## Step 1 — Build the letter list
 

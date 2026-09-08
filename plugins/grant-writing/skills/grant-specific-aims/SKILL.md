@@ -7,7 +7,7 @@ description: Draft and refine the Specific Aims page (NIH) or project overview/o
 
 Produce a first-draft aims page that communicates scope clearly enough to circulate to colleagues. It does not need to be perfect — the study design gets refined during budgeting and the Approach. What it must do is state the problem, the gap, the proposal, and the payoff.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing). Apply the tone rules and the style profile.
+Read `00_admin/project-config.md` first (run `grant-setup` if missing). Apply the tone rules. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Continuing an existing discussion
 

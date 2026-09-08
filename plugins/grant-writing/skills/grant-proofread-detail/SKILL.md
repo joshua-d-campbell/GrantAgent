@@ -5,11 +5,13 @@ description: Detailed line-level proofread of grant documents — spelling, gram
 
 # Detailed Proofread
 
-Line-level pass on near-final text. Run only after `grant-proofread-structure` — copyediting text that may still move is wasted work. Read `00_admin/project-config.md`; work through every document headed for submission, one at a time, in reading order.
+Line-level pass on near-final text. Run only after `grant-proofread-structure` — copyediting text that may still move is wasted work. Read `00_admin/project-config.md` and `00_admin/style-profile.md`; work through every document headed for submission, one at a time, in reading order.
 
 ## Checks per document
 
 **Language.** Spelling (including field terms and gene/protein capitalization conventions), grammar, punctuation, subject-verb agreement in long sentences, dangling modifiers, tense consistency (proposed work in future/present per the style profile), singular/plural of data/criteria/spectra per the user's convention, and variant consistency — one spelling per term throughout ("healthcare/health care", "wildtype/wild-type", US vs UK spellings), resolved per the style profile.
+
+**Voice and punctuation against the style profile.** The profile's closing *Directives* list is a checklist; verify each document against it item by item and report departures with the directive number. Punctuation constraints the profile records (em-dash limits, colon positions, serial comma, hyphenation) are counted, not judged — they are the constraints that drift most in text drafted across sessions, and the ones a reviewer registers as "not written by one person."
 
 **Figures and tables.**
 - Every figure/table is cited in the text at least once, before or near its placement; every in-text citation ("Fig. 3B") points to a panel that exists and shows what the sentence claims.
@@ -41,6 +43,7 @@ Regex catches what tired eyes miss; write throwaway scripts rather than checking
 
 One extraction caveat: reference-manager citations (Zotero/EndNote/Mendeley) are field codes, and plain-text extraction shows only their cached display string — or drops them entirely. Never flag "missing citation" from extracted text alone; confirm against `word/document.xml` (citation audits belong to `grant-references`, which reads the fields directly).
 
+- **Punctuation constraints**: from the style profile's punctuation section, count each constrained mark in the narrative text — em dashes (U+2014, distinguishing en dashes U+2013 in ranges), colons outside the exempt structural positions the profile lists (aim titles, inline labels, figure-panel letters), and any other recorded rule — and report counts per document against the profile's limit, with each hit's sentence.
 - **Figure/table integrity**: extract in-text references (`(Fig(?:ure)?s?\.?|Table)\s*S?\d+[A-Za-z]?`) and caption openers (lines starting with the same pattern); diff the sets. Report references without captions, captions never cited, and numbering gaps/duplicates.
 - **Abbreviations**: collect candidate tokens (2–8 chars containing ≥2 capitals, e.g. `\b(?=\w*[A-Z]\w*[A-Z])[A-Za-z0-9-]{2,8}\b`), find each token's first occurrence per document, check for a nearby parenthetical definition, and count total uses. The <3-uses deletion candidates fall out of the counts.
 - **Letters of support**: extract capitalized multi-word names and organization tokens (`Dr\.|Prof\.|Core|Facility|Center|Institute|University|Hospital`) from the plain text of every assembled document, plus every signer/organization in the letter tracker and the letter PDFs (`pdftotext`); set-diff both ways and list matches whose surrounding numbers (hours, %, n, $) disagree. Name variants ("J. Smith" / "Jane Smith") are the main false-positive source — normalize before diffing.

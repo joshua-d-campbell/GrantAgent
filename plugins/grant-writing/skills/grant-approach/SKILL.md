@@ -7,7 +7,7 @@ description: Draft the Approach / Research Design section of a grant — the exp
 
 The Approach is where most proposals are won or lost — under the NIH simplified framework it alone constitutes Factor 2 (Rigor and Feasibility), scored 1–9. It is too large to draft in one pass. Work one subsection at a time, and **write the rationales first**: if the rationale for an aim is weak, no amount of methods detail rescues it, and discovering that early is cheap.
 
-Read `00_admin/project-config.md`, current aims, Significance/Innovation drafts, and the style profile. Files go to `02_research_plan/approach_<aim>_v<NN>_<date>_draft.<ext>` (per-aim files until assembly).
+Read `00_admin/project-config.md`, current aims, and Significance/Innovation drafts. Files go to `02_research_plan/approach_<aim>_v<NN>_<date>_draft.<ext>` (per-aim files until assembly). Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Your ideas, not mine (shared convention 8)
 

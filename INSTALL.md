@@ -84,7 +84,9 @@ A few habits make a large difference:
 
 **Set up with the real solicitation.** When you start a project, give Claude the actual FOA/NOFO (or a link to it). Page limits, required sections, and review criteria then come from *your* solicitation rather than general knowledge — agency rules change often.
 
-**Share a prior grant or two.** During setup, Claude builds a style profile from grants you've written before, so drafts come out in your voice instead of generic prose. Drop them in the project's prior-grants folder.
+**Share a prior grant or two.** During setup, Claude builds a style profile from grants you've written before, so drafts come out in your voice instead of generic prose. Drop them in the project's prior-grants folder. A good profile quotes whole paragraphs of your writing, not just a description of it — if drafts still don't sound like you, open `00_admin/style-profile.md` and check whether it does; if not, ask Claude to rebuild it.
+
+**Open the grant's own folder each time.** Setup writes a `CLAUDE.md` file at the top of the proposal folder. Claude reads it automatically at the start of every conversation opened in that folder, so each new chat already knows this is your grant, reads your settings, style profile, and to-do list first, and routes your request to the right skill. Open (or connect) *that* folder as the project — not a parent folder that holds several grants — or the file won't load and Claude will start from scratch.
 
 **One document per conversation.** Draft the Approach in one conversation, the budget in another. Long conversations that wander across several documents make Claude drift from the skill's instructions. Starting fresh is cheap — the project's settings file carries your deadline, format, and preferences over, so you never re-explain.
 

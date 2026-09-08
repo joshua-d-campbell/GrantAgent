@@ -7,7 +7,7 @@ description: Write the NIH Project Narrative — the 3-sentence public health re
 
 The Project Narrative is **not a condensed abstract** — that is the mistake that produces bad ones. It is a plain-language statement of why the work matters to public health, written for an intelligent non-scientist: a patient, an advocate, a journalist, a congressional staffer. If funded, it publishes verbatim on RePORTER, where those readers actually encounter it. Compressing technical text yields something short but still technical; this skill instead *transforms* — everyday words, one idea per sentence, relevance first.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing). Source material is the finished aims page and Research Strategy — the narrative is written near the end, after the science is settled. Files go to `06_abstracts_title/`, versioned per the shared schema. For the Project Summary/Abstract, lay abstracts, and the rest of the abstract family, use `grant-abstracts`.
+Read `00_admin/project-config.md` first (run `grant-setup` if missing). Source material is the finished aims page and Research Strategy — the narrative is written near the end, after the science is settled. Files go to `06_abstracts_title/`, versioned per the shared schema. For the Project Summary/Abstract, lay abstracts, and the rest of the abstract family, use `grant-abstracts`. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Targets — measured, not estimated
 
