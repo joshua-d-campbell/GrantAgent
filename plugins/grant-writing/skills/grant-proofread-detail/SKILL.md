@@ -1,6 +1,6 @@
 ---
 name: grant-proofread-detail
-description: Detailed line-level proofread of grant documents — spelling, grammar, punctuation, figure/table reference integrity, abbreviation consistency, and numeric accuracy. Use for final polish after structural review, when the user asks to proofread, copyedit, or check figures and tables, or in the last days before a deadline. Run AFTER grant-proofread-structure.
+description: Detailed line-level proofread of grant documents — spelling, grammar, punctuation, figure/table reference integrity, letter-of-support reconciliation (every named collaborator, consultant, core, or site has a letter; every letter is referenced), abbreviation consistency, and numeric accuracy. Use for final polish after structural review, when the user asks to proofread, copyedit, check figures and tables, or check that the letters of support match the proposal, or in the last days before a deadline. Run AFTER grant-proofread-structure.
 ---
 
 # Detailed Proofread
@@ -17,6 +17,12 @@ Line-level pass on near-final text. Run only after `grant-proofread-structure` �
 - Captions are self-contained: system, n, error bars defined, statistical test named where stats are shown.
 - Legibility at print size: font in figures ≥ roughly 8pt equivalent at final scale; flag suspect panels for the user to check visually.
 
+**Letters of support.** A cross-reference check with the same shape as the figure/table one, run across the assembled set rather than per document, because the two sides live in different files. Build two rosters: (a) every collaborator, consultant, core facility, shared instrument, subaward site, data provider, or partner organization named as contributing something in the narrative *and* the supporting documents — budget justification, facilities and resources, multi-PI plan, biosketch personal statements, timeline, human-subjects recruitment sites; (b) every signed letter filed in `08_final_assembly/`, with `05_support_letters/letter-tracker.md` as the index. Then diff in both directions:
+- Every entity in (a) has a letter in (b). A resource the budget pays for or the Approach relies on with no letter is a Factor 3 gap reviewers notice; a late edit that added a core or a site is the usual cause.
+- Every letter in (b) is anchored to a specific mention in (a) — a signer whose role was cut from the Approach after the letter came in is the most common late-edit casualty, and an orphan letter invites "why is this person not a collaborator?"
+- Where both exist, the details agree: name spelling, degree, title, affiliation; and every quantitative commitment (effort, hours, samples, access, meeting cadence) matches the budget and text. Also confirm the letter is signed, dated within the application period, and — for NSF — in the bare single-sentence collaboration format (check the solicitation).
+Career-award mentor and institutional-commitment letters have their own rules; check them for the same anchoring and consistency, but defer content questions to `grant-career-plan`.
+
 **Abbreviations.** Each abbreviation defined at first use in each *separately-read* document (abstract, aims, research strategy are read independently); defined once and used consistently thereafter; no two expansions of the same abbreviation; delete abbreviations used fewer than ~3 times.
 
 **Numbers.** Recompute simple arithmetic in the text (percentages, totals, fold-changes); check sample sizes and dollar figures against the budget spreadsheet; units present and consistent (SI usage per field convention).
@@ -31,6 +37,7 @@ One extraction caveat: reference-manager citations (Zotero/EndNote/Mendeley) are
 
 - **Figure/table integrity**: extract in-text references (`(Fig(?:ure)?s?\.?|Table)\s*S?\d+[A-Za-z]?`) and caption openers (lines starting with the same pattern); diff the sets. Report references without captions, captions never cited, and numbering gaps/duplicates.
 - **Abbreviations**: collect candidate tokens (2–8 chars containing ≥2 capitals, e.g. `\b(?=\w*[A-Z]\w*[A-Z])[A-Za-z0-9-]{2,8}\b`), find each token's first occurrence per document, check for a nearby parenthetical definition, and count total uses. The <3-uses deletion candidates fall out of the counts.
+- **Letters of support**: extract capitalized multi-word names and organization tokens (`Dr\.|Prof\.|Core|Facility|Center|Institute|University|Hospital`) from the plain text of every assembled document, plus every signer/organization in the letter tracker and the letter PDFs (`pdftotext`); set-diff both ways and list matches whose surrounding numbers (hours, %, n, $) disagree. Name variants ("J. Smith" / "Jane Smith") are the main false-positive source — normalize before diffing.
 - **Numbers**: extract `n\s*=\s*\d+`, percentages, and dollar amounts with surrounding context; compare against the budget spreadsheet and against each other. Recompute stated totals and percentages.
 - **Word mechanics**: a .docx is a zip — inspect `word/document.xml` for `w:ins`/`w:del` (leftover tracked changes) and `w:commentRangeStart` (comments); grep extracted text for `Error! Reference`.
 - **LaTeX mechanics**: grep the compile log for `Overfull \hbox`, `Citation .* undefined`, `Reference .* undefined`; grep output-adjacent text for `??`.

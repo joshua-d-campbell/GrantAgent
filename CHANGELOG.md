@@ -4,6 +4,11 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.16.1] — 2026-09-08
+
+### Changed
+- `grant-proofread-detail` gains a **letters-of-support reconciliation** check, closing a gap where no skill verified the letter set against the near-final proposal. `grant-letters-of-support` flags narrative/letter gaps at drafting time, `grant-proofread-structure` has a single one-directional bullet ("a collaborator with a letter but no role"), and `grant-format-check` only confirms letters are present and signed — none reconciled the assembled set after late edits. The new check builds two rosters (every collaborator, consultant, core, site, or data provider named as contributing in the narrative *and* the supporting documents — budget justification, facilities, multi-PI plan, biosketches, timeline, recruitment sites — versus every signed letter filed in `08_final_assembly/`, indexed by `05_support_letters/letter-tracker.md`) and diffs both ways: mentions without a letter, letters without an anchoring mention, and mismatched details where both exist (name/title/affiliation, and every quantitative commitment against the budget and text), plus signature, date, and NSF single-sentence format. A scriptable extraction line joins the existing figure/abbreviation/number scripts. Description updated so the skill fires on "check the letters of support match the proposal."
+
 ## [0.16.0] — 2026-08-10
 
 ### Added
