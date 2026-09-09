@@ -4,6 +4,11 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.17.1] — 2026-09-08
+
+### Changed
+- `grant-biosketch-support` now states what it produces and what it never produces. In real use a session, asked to edit an existing biosketch, tried to write out a Word document — the skill said "files go to `04_biosketches/`" without saying what kind, and only the NSF bullet mentioned SciENcv. New opening section: the deliverable is **content, not the document** — biosketches and support forms are generated in SciENcv (mandatory for NSF, accepted and converging to required for NIH, and the only place certifications and signatures can be applied), so the model drafts each field as a paste-ready block saved as `<person>_biosketch-content_*.md`, revises an existing biosketch from the SciENcv-downloaded PDF's text and delivers revised field blocks plus a change list, and never assembles a .docx/.pdf biosketch except for funders that accept free-form CVs outside SciENcv. Also documents what SciENcv text fields actually accept — a Markdown subset (`**bold**`, `*italic*`, headers, lists, two-trailing-space line breaks, `^sup^`/`~sub~`), with HTML tags explicitly unsupported per the SciENcv help — and the form's hard limits (Personal Statement 3,500 characters; each Contribution 2,000 characters excluding markdown; 5 contributions; 15 honors), with the instruction to draft to the limits, report each block's character count, and preview the PDF after pasting. Sources cited in the skill: SciENcv help manual (NBK154494) and markdown help page; checked September 2026. Description rewritten to lead with the paste-ready/never-a-document rule so it fires on "edit my biosketch."
+
 ## [0.17.0] — 2026-09-08
 
 ### Added
