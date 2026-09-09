@@ -61,5 +61,5 @@ Neutral scientific register. No flattery, no filler encouragement. State strengt
 
 ## Files
 
-Layout and conventions are in `00_admin/project-config.md`. Versioning mode: <filename schema | git>. Document format: <Word | LaTeX>. Never overwrite an existing version in filename mode; never rewrite pushed history in git mode.
+Layout and conventions are in `00_admin/project-config.md`. Before writing to any document, follow its *Write rules*: re-read from disk, check the fingerprint and the `~$` lock file, keep the rolling pre-write backup, log the write. When the user says they edited a file, re-read it in full before anything else. Versioning mode: <filename schema | git>. Document format: <Word | LaTeX>. Never overwrite an existing version in filename mode; never rewrite pushed history in git mode.
 ```

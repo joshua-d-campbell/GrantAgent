@@ -4,6 +4,14 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.19.0] — 2026-09-09
+
+### Added
+- Shared convention 11 — **single writer, read-before-write.** Born from a real failure: a session wrote a Word research narrative from its in-context picture of an earlier read while the user had since re-saved the file in Word and inserted Zotero citations; the package had gone from 45 to 55 parts, every citation number after the insertions had shifted, and the write overwrote the user's work — the session noticed only afterward ("I should not have written over it without re-checking first"). Nothing in the suite told a session to re-read before writing, to detect an out-of-band change, or to stay out of the reference manager's way; and 0.18.0's in-place editing raised the stakes of exactly this mistake. Rules, carried in the `project-config.md` template as *Write rules* so every skill obeys them: re-read from disk immediately before every write and derive edits from that read as anchored operations (stop if an anchor is missing); fingerprint every read (size, mtime, paragraph count; Word: package part count, citation-field count) and compare before writing — on mismatch stop, report, re-derive; never write while Word's `~$<name>.docx` lock file exists — deliver an anchored change list instead; keep a rolling `_archive/<document>.pre-write.bak` (one file, overwritten per write); log the post-write fingerprint in `version-log.md` (git mode: commit hash) so the next session detects between-session edits at first read; announce writes, and re-read in full when the user says they edited. `grant-setup` gains Step 1.8 (who edits, and how → `Editing protocol` config field) and tells the user the two habits: close the file in Word before asking for a write, and say when you have edited. The grant-folder `CLAUDE.md` template and INSTALL.md carry the same rules.
+
+### Changed
+- `grant-references` gains a **who-writes-what boundary** for Word with a reference manager: the model never writes `ADDIN` field codes or formatted citation text; it may insert the PI's recorded placeholder convention (e.g., `(PMID: …)`) under the write rules, and otherwise delivers a citation worklist (verbatim anchor sentence, resolved reference with PMID/DOI, action) the user executes in Zotero/EndNote, then verifies by re-reading the fields. It never refers to a citation by number across an edit boundary — numbers renumber on every insertion — anchoring to the sentence and the field's CSL item ID instead. Convention 3 gained a pointer that in-place edits are governed by convention 11.
+
 ## [0.18.0] — 2026-09-09
 
 ### Changed

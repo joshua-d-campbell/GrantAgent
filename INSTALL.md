@@ -92,6 +92,8 @@ A few habits make a large difference:
 
 **Expect one working file per document, not a new copy per edit.** Claude edits the current draft in place and saves a numbered checkpoint only at milestones — when a document's status changes, before it goes to a co-investigator or the grants office, before a big restructuring, or when you ask for one. If you'd rather keep every step, say so during setup and the project's checkpoint policy records it. Google Drive and OneDrive keep their own history of in-place edits, so nothing is lost either way.
 
+**Two habits when you and Claude both edit the same Word file.** Close the document in Word before asking Claude to write to it — Claude checks for Word's lock file and will hand you a change list instead of writing while the file is open. And when you've edited a document yourself, say so ("I added citations to the Approach"); Claude re-reads the file before doing anything else. Citations themselves stay with your reference manager: Claude will insert your placeholder convention or give you a worklist to run in Zotero or EndNote, but it won't type citations into the document.
+
 **Put lasting decisions in files, not in chat.** Conversations don't remember each other. Anything that must persist — a dropped aim, a tone preference, a scope change — belongs in the project folder, and the skills record these automatically (in the config file and decision log). If you notice yourself re-explaining the same thing each session, ask Claude to write it into the project config.
 
 **Name the skill when Claude guesses wrong.** Describing your task is usually enough, but you can always be explicit: *"Use grant-mock-review on the current draft."*
