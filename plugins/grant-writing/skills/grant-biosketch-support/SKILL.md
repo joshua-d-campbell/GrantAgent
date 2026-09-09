@@ -7,7 +7,7 @@ description: Draft the content of biosketches and support documents as paste-rea
 
 These documents answer review Factor 3 (NIH: Expertise and Resources) — whether this team can do this work. The high-leverage part is tailoring: a biosketch recycled from the last grant argues for the last grant. For multi-PI applications, coordinate the PIs' personal statements with `grant-multi-pi-plan` — the biosketches and the leadership plan must tell the same complementarity story.
 
-Read `00_admin/project-config.md` for the team list and mechanism. Collect current CVs or prior biosketches from the user as source material.
+Read `_agent/project-config.md` for the team list and mechanism. Collect current CVs or prior biosketches from the user as source material.
 
 ## What this skill produces — and what it never produces
 

@@ -9,7 +9,7 @@ you infer from the code, this file wins — or ask the maintainer.
 
 1. **This file (`/CLAUDE.md`)** governs the *repository* — how the skill suite is
    built, versioned, and kept consistent. It is meta-level: about developing GrantAgent.
-2. **`00_admin/project-config.md`** is a per-*grant* file that the skills themselves
+2. **`_agent/project-config.md`** (pre-0.20 grants: `00_admin/project-config.md`) is a per-*grant* file that the skills themselves
    create inside an individual proposal folder. It records that grant's funder,
    deadline, page limits, and document conventions. It has nothing to do with this repo;
    it lives in a researcher's grant directory, not here.

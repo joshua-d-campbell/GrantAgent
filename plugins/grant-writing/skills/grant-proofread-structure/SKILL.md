@@ -7,7 +7,7 @@ description: High-level structural proofread of a full grant proposal — overal
 
 This pass reads the proposal the way a reviewer does — beginning to end, once — and reports on architecture, not sentences. Fixing structure after copyediting wastes the copyedit, so this skill runs first.
 
-Read `00_admin/project-config.md`, the checklist, the decision log (drift recorded there predicts inconsistencies), and the tracker (`00_admin/tracker.md`) — its open `ripple` items are predicted inconsistencies to confirm here, and this pass is where they get closed. Assemble the current latest versions of every section in the order a reviewer encounters them (abstract → aims → research strategy → supporting documents). If two versions of a section have the same status, confirm with the user which is current before proofreading the wrong one.
+Read `_agent/project-config.md`, the checklist, the decision log (drift recorded there predicts inconsistencies), and the tracker (`_agent/tracker.md`) — its open `ripple` items are predicted inconsistencies to confirm here, and this pass is where they get closed. Assemble the current latest versions of every section in the order a reviewer encounters them (abstract → aims → research strategy → supporting documents). If two versions of a section have the same status, confirm with the user which is current before proofreading the wrong one.
 
 ## Pass 0 — Scripted extraction
 
@@ -24,7 +24,7 @@ Diff these across documents to seed Pass 2's consistency table. The scripts find
 
 ## Pass 1 — Completeness against the checklist
 
-Compare assembled documents against `00_admin/` checklist and the FOA's required elements. Report: missing documents, missing required subsections (e.g., NSF Broader Impacts heading, NIH rigor elements, Results from Prior NSF Support), and sections still at `draft` status this close to deadline.
+Compare assembled documents against the submission checklist (office file in `00_admin/`, or `_agent/submission-checklist.md`) and the FOA's required elements. Report: missing documents, missing required subsections (e.g., NSF Broader Impacts heading, NIH rigor elements, Results from Prior NSF Support), and sections still at `draft` status this close to deadline.
 
 ## Pass 2 — The through-line
 
@@ -43,11 +43,11 @@ At each major section boundary, check the first paragraph orients the reader and
 
 ## Reporting format
 
-Produce `08_final_assembly/structural-review_<date>.md`:
+Produce `_agent/reports/structural-review_<date>.md`:
 
 1. **Blocking issues** — missing elements, contradictions, broken through-line (each with location and specific fix)
 2. **Consistency table** — aims/numbers/terms across documents, discrepancies marked
 3. **Transition notes** — by section boundary
 4. **Observations** — weaknesses that are judgment calls, stated neutrally with the trade-off
 
-Every finding cites document, location, and a verbatim quote of the current text, so the user can act without re-searching ("Aim 3 headline on the aims page says 'validate'; Approach 3.0 says 'identify' — different scope claims"). Quote from the file, never from memory of it — a misquoted finding costs the user's trust in the rest of the report. No summary praise; the absence of a finding is the good news. Update `00_admin/tracker.md` as part of delivering the report: close ripple items this pass verified, and log each finding the user defers as a tracker item against its document (`Origin: proofread-structure`), so the next session starts from the tracker instead of re-deriving the report. After the user acts on the report, updated sections are edited in their working copies (a checkpoint only where the fix is structural), and `grant-proofread-detail` runs next.
+Every finding cites document, location, and a verbatim quote of the current text, so the user can act without re-searching ("Aim 3 headline on the aims page says 'validate'; Approach 3.0 says 'identify' — different scope claims"). Quote from the file, never from memory of it — a misquoted finding costs the user's trust in the rest of the report. No summary praise; the absence of a finding is the good news. Update `_agent/tracker.md` as part of delivering the report: close ripple items this pass verified, and log each finding the user defers as a tracker item against its document (`Origin: proofread-structure`), so the next session starts from the tracker instead of re-deriving the report. After the user acts on the report, updated sections are edited in their working copies (a checkpoint only where the fix is structural), and `grant-proofread-detail` runs next.

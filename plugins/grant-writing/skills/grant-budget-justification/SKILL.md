@@ -7,7 +7,7 @@ description: Build a research grant budget and budget justification — personne
 
 Budgeting is where the study design becomes concrete: you cannot price an experiment you have not specified. Expect this skill to force design decisions, and propagate those decisions back to the aims page.
 
-Read `00_admin/project-config.md` (budget cap, mechanism, team) first. If the award type is a fellowship (NIH F series, NSF GRFP), stop: stipends, tuition/fees, and institutional allowances are formulaic at published levels — verify the current figures and skip the justification workflow below, which would produce the wrong document. Budget files live in `03_budget/`, versioned per the schema. The budget folder may have restricted permissions — salary figures are sensitive; do not copy them into shared narrative folders. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md` (budget cap, mechanism, team) first. If the award type is a fellowship (NIH F series, NSF GRFP), stop: stipends, tuition/fees, and institutional allowances are formulaic at published levels — verify the current figures and skip the justification workflow below, which would produce the wrong document. Budget files live in `03_budget/`, versioned per the schema. The budget folder may have restricted permissions — salary figures are sensitive; do not copy them into shared narrative folders. Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Step 1 — Finalize the roster
 
@@ -39,4 +39,4 @@ For each line: what it is, why the project requires it, how the amount was calcu
 
 ## Step 5 — Sync the aims
 
-If costing forced design changes (reduced scope, dropped arm, different model), update the Specific Aims to match: edit the working copy in `01_aims/` (checkpoint first if an aim is dropped or restructured), entry in `00_admin/decision-log.md` stating what changed and why. An aims page that promises more than the budget can deliver is a rigor problem reviewers catch.
+If costing forced design changes (reduced scope, dropped arm, different model), update the Specific Aims to match: edit the working copy in `01_aims/` (checkpoint first if an aim is dropped or restructured), entry in `_agent/decision-log.md` stating what changed and why. An aims page that promises more than the budget can deliver is a rigor problem reviewers catch.

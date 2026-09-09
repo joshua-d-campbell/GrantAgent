@@ -7,7 +7,7 @@ description: Draft the NIH cover letter and PHS Assignment Request Form — inst
 
 Two documents PIs routinely conflate, with different audiences and rules. The **PHS Assignment Request Form** carries all assignment preferences — institute/center, study section, reviewer exclusions, needed expertise — and is read only by referral and scientific review staff, never by reviewers. The **cover letter** is for administrative matters only (late submission explanation, changed/corrected applications, prior-approval documentation for $500K+ direct costs in any year, and similar); assignment requests placed there instead of the form is the classic error. Both are optional, both are worth doing deliberately: assignment is where an application can land in front of the right audience or the wrong one, and it is decided before any reviewer reads a word.
 
-Read `00_admin/project-config.md` first. Files go to `08_final_assembly/`, versioned per the schema. This skill runs near the end — the expertise and exclusion content should be extracted from the *final* aims and Approach — but the study-section choice itself belongs early (see below). Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md` first. The cover letter is a submitted document with no other component folder: its working copy and checkpoints go to `08_final_assembly/`; the assignment-request worksheet goes to `_agent/notes/`. This skill runs near the end — the expertise and exclusion content should be extracted from the *final* aims and Approach — but the study-section choice itself belongs early (see below). Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Choose the study section early, finalize the request late
 
@@ -18,7 +18,7 @@ The target study section shapes how the proposal should be written — framing, 
 - **CSR's Assisted Referral Tool (ART)** suggests sections from abstract text — offer it to the user as a cross-check.
 - **The program officer**: encourage the user to ask — POs know where applications like this one get traction, and the conversation builds a relationship that matters later.
 
-When the config names a target section, check the roster too: CSR publishes standing-member rosters, and a membership profile (`00_admin/study-section-profile.md`, built by `grant-mock-review` or here — whichever runs first, dated because rosters change) sharpens two fields below: the panel's expertise gaps feed **needed expertise**, and roster members with directly competing work feed the exclusion conversation. `grant-mock-review` uses the same profile to ground its personas in the panel's real composition — note this handoff.
+When the config names a target section, check the roster too: CSR publishes standing-member rosters, and a membership profile (`_agent/notes/study-section-profile.md`, built by `grant-mock-review` or here — whichever runs first, dated because rosters change) sharpens two fields below: the panel's expertise gaps feed **needed expertise**, and roster members with directly competing work feed the exclusion conversation. `grant-mock-review` uses the same profile to ground its personas in the panel's real composition — note this handoff.
 
 ## The Assignment Request Form, field by field
 
@@ -29,7 +29,7 @@ Draft each from the final application, concise and factual (these are short stru
 3. **Individuals who should not review**: reviewer exclusions, sparingly used. Elicit from the user who has *directly competing* work — same question, same system, a race to publication — and help them reason about it from the literature (the user confirms; the skill does not assert conflicts on its own authority). Keep the list short (a handful at most — long lists read as paranoia and complicate panel assembly), state the competitive basis in a phrase, and set expectations: SROs honor reasonable exclusions but are not obligated to. Personal or scientific disagreement is not a basis reviewers will find credible; direct competition is.
 4. **Needed expertise**: extract from the final Approach — the 2–4 methodological and domain areas a fair review requires (e.g., "single-cell transcriptomics; Bayesian hierarchical models; mouse models of acute lung injury"). This field guards against the common failure mode of no panel member being equipped to judge the proposal's central method.
 
-Record the requests in `00_admin/decision-log.md` — on resubmission, `grant-resubmission` needs to know what was requested last time and whether the assignment worked out.
+Record the requests in `_agent/decision-log.md` — on resubmission, `grant-resubmission` needs to know what was requested last time and whether the assignment worked out.
 
 ## The cover letter (only when needed)
 

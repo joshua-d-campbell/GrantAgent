@@ -4,7 +4,7 @@ Copy the template below to `CLAUDE.md` at the root of the grant folder (the fold
 
 Why it exists: every skill says "read `project-config.md` first," but that instruction lives inside skill bodies and runs only after a skill loads. A fresh chat opened in the grant folder has no skill loaded, so nothing tells the session that the folder is a grant project, that a config and style profile exist, or that the grant-writing skills are how work happens here. In practice this produced sessions that edited documents directly, in the model's default voice, without the config. The file below fixes that by putting the orientation in context from turn one.
 
-Keep it short. It orients; it does not restate the skills or the config. Anything that changes per grant lives in `00_admin/`, and this file points there.
+Keep it short. It orients; it does not restate the skills or the config. Anything that changes per grant lives in `_agent/`, and this file points there. Human admin documents (FOA, office checklist) live in `00_admin/`.
 
 ---
 
@@ -15,9 +15,9 @@ This folder is a research grant proposal (<funder> <mechanism>, due <sponsor dat
 
 ## At the start of every session, before responding
 
-1. Read `00_admin/project-config.md` — the contract every skill depends on (funder, format, versioning mode, page limits, team, tone rules, tracker rules). Run its session-start rule (suite-version comparison).
-2. Read `00_admin/style-profile.md` — the PI's writing voice. Every sentence of proposal prose produced in this session matches it; see "Voice" below.
-3. Read `00_admin/tracker.md` — the one shared TODO list. Present the open items for the document the user names as the working checklist. Do not discuss items outside that document; log findings there instead (rules in the config).
+1. Read `_agent/project-config.md` — the contract every skill depends on (funder, format, versioning mode, page limits, team, tone rules, tracker rules). Run its session-start rule (suite-version comparison).
+2. Read `_agent/style-profile.md` — the PI's writing voice. Every sentence of proposal prose produced in this session matches it; see "Voice" below.
+3. Read `_agent/tracker.md` — the one shared TODO list. Present the open items for the document the user names as the working checklist. Do not discuss items outside that document; log findings there instead (rules in the config).
 4. If any of these files is missing, say so and run `grant-setup` before other work.
 
 ## Work through the skills, not around them
@@ -53,7 +53,7 @@ The grant-writing skills carry the method for each document. When the user's req
 
 ## Voice
 
-Proposal prose is the PI's, in the PI's voice. Before delivering any drafted or revised document text, check it against the *Directives* list at the end of `00_admin/style-profile.md`, item by item, and against any punctuation constraints recorded there (count them; do not estimate). Default model register — long em-dash asides, stacked adjectives, hedged-then-restated sentences — is a defect, not a style choice. The scientific ideas originate with the PI; the session collaborates on expression (see the config's authorship rule).
+Proposal prose is the PI's, in the PI's voice. Before delivering any drafted or revised document text, check it against the *Directives* list at the end of `_agent/style-profile.md`, item by item, and against any punctuation constraints recorded there (count them; do not estimate). Default model register — long em-dash asides, stacked adjectives, hedged-then-restated sentences — is a defect, not a style choice. The scientific ideas originate with the PI; the session collaborates on expression (see the config's authorship rule).
 
 ## Tone toward the user
 
@@ -61,5 +61,5 @@ Neutral scientific register. No flattery, no filler encouragement. State strengt
 
 ## Files
 
-Layout and conventions are in `00_admin/project-config.md`. Before writing to any document, follow its *Write rules*: re-read from disk, check the fingerprint and the `~$` lock file, keep the rolling pre-write backup, log the write. When the user says they edited a file, re-read it in full before anything else. Versioning mode: <filename schema | git>. Document format: <Word | LaTeX>. Never overwrite an existing version in filename mode; never rewrite pushed history in git mode.
+Layout and conventions are in `_agent/project-config.md`. Before writing to any document, follow its *Write rules*: re-read from disk, check the fingerprint and the `~$` lock file, keep the rolling pre-write backup, log the write. When the user says they edited a file, re-read it in full before anything else. Versioning mode: <filename schema | git>. Document format: <Word | LaTeX>. Never overwrite an existing version in filename mode; never rewrite pushed history in git mode.
 ```

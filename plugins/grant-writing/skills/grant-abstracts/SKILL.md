@@ -7,7 +7,7 @@ description: Write grant abstracts and summaries — NIH Project Summary/Abstrac
 
 Abstracts are written near the end, from the finished aims and approach — but they are read first, by every reviewer including those who read nothing else carefully, and they become the public record of funded work. A grant may need several distinct ones; identify which from the FOA before writing.
 
-Read `00_admin/project-config.md` and the final aims. Files go to `06_abstracts_title/`, versioned. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md` and the final aims. Files go to `06_abstracts_title/`, versioned. Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## The abstract family
 

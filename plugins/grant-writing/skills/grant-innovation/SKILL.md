@@ -7,7 +7,7 @@ description: Draft the Innovation section of a research grant — what is new an
 
 Innovation states what is new — in concept, approach, method, instrumentation, or application — and why that newness matters for the problem. It is the shortest major section (typically ½–1 page NIH) and the most commonly botched: most drafts either restate Significance or list features without an argument.
 
-Read `00_admin/project-config.md`, the aims, and the Significance draft first (to avoid overlap). If `grant-specific-aims` produced a novelty assessment, start from it. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md`, the aims, and the Significance draft first (to avoid overlap). If `grant-specific-aims` produced a novelty assessment, start from it. Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Your ideas, not mine (shared convention 8)
 

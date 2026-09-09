@@ -7,7 +7,7 @@ description: Draft and refine the Specific Aims page (NIH) or project overview/o
 
 Produce a first-draft aims page that communicates scope clearly enough to circulate to colleagues. It does not need to be perfect — the study design gets refined during budgeting and the Approach. What it must do is state the problem, the gap, the proposal, and the payoff.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing). Apply the tone rules. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md` first (run `grant-setup` if missing). Apply the tone rules. Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Continuing an existing discussion
 
@@ -72,6 +72,6 @@ After the draft exists, give the user a factual novelty assessment:
 
 ## Working method
 
-Refine text interactively in conversation. Iterate paragraph by paragraph; only user-approved text goes into the document (`01_aims/`, versioned per the schema in project-config: e.g., `specific-aims_v01_<date>_draft.docx` in filename mode, or a stable `specific-aims.tex` committed with a status tag in git mode). When aims change materially later (budget, approach development), this file is edited (a material aim change is a checkpoint under the policy) and the change is recorded in `00_admin/decision-log.md`.
+Refine text interactively in conversation. Iterate paragraph by paragraph; only user-approved text goes into the document (`01_aims/`, versioned per the schema in project-config: e.g., `specific-aims_v01_<date>_draft.docx` in filename mode, or a stable `specific-aims.tex` committed with a status tag in git mode). When aims change materially later (budget, approach development), this file is edited (a material aim change is a checkpoint under the policy) and the change is recorded in `_agent/decision-log.md`.
 
 Suggest circulating the `internal` version to colleagues once the user judges the scope stable, and remind them the title (`grant-title`) comes next.

@@ -7,7 +7,7 @@ description: Develop project timelines, milestones, and Gantt charts for grant p
 
 A timeline converts the Approach into a feasibility argument: reviewers use it to judge whether the team can actually execute the plan in the project period. Build it from the Approach's per-aim designs, not aspirationally.
 
-Read `00_admin/project-config.md` (project period, mechanism) and the current Approach drafts. Output goes to `02_research_plan/timeline_v<NN>_<date>_draft.<ext>`; the figure is usually embedded near the end of the Approach. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md` (project period, mechanism) and the current Approach drafts. The timeline is a figure: rendered file in `02_research_plan/figures/`, source in `figures/src/`, usually embedded near the end of the Approach; if the FOA requires a standalone milestone document, that document lives in `02_research_plan/` as `timeline_v<NN>_<date>_<status>.<ext>`. Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Step 1 — Decompose into scheduled units
 
@@ -23,7 +23,7 @@ Milestones are verifiable events, ideally quantitative: "Aim 1 cohort enrollment
 
 ## Step 4 — Render the Gantt
 
-Produce the chart in a format matching the document workflow: a table (rows = tasks grouped by aim; columns = quarters or half-years; milestones as symbols) renders reliably in both Word and LaTeX and survives PDF conversion. Offer a script-generated figure (e.g., matplotlib) when the user wants a graphical version; keep source in the folder so revisions are cheap. Keep it readable at final print size — 11pt page, likely half-page figure.
+Produce the chart in a format matching the document workflow: a table (rows = tasks grouped by aim; columns = quarters or half-years; milestones as symbols) renders reliably in both Word and LaTeX and survives PDF conversion. Offer a script-generated figure (e.g., matplotlib) when the user wants a graphical version; keep the rendered figure in `02_research_plan/figures/` and its script or drawing source in `02_research_plan/figures/src/` so revisions are cheap (convention 12). Keep it readable at final print size — 11pt page, likely half-page figure.
 
 ## Consistency duties
 

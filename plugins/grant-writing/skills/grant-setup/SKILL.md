@@ -22,11 +22,11 @@ Record these in the config so all future sessions honor them:
 
 Ask the user for (accept partial answers; record gaps as open items):
 
-1. **Funding announcement**: FOA/NOFO/PA/RFA/BAA number or URL, funder, mechanism (e.g., NIH R01, NSF CAREER, DoD CDMRP), due date. Fetch or copy the announcement text into `00_admin/foa/`. Extract into `00_admin/foa/foa-summary.md`: page limits, review criteria (quote them verbatim — later sections are drafted against them), budget cap, required documents, eligibility constraints, and any letter-of-intent or pre-application requirement with its own deadline (these often fall weeks before the full deadline and are the most commonly missed date; drafted with `grant-loi-preproposal`). The FOA overrides the agency's general guide wherever they differ; where the FOA is silent, verify against the current guide rather than memory.
+1. **Funding announcement**: FOA/NOFO/PA/RFA/BAA number or URL, funder, mechanism (e.g., NIH R01, NSF CAREER, DoD CDMRP), due date. Fetch or copy the announcement text into `00_admin/foa/`. Extract into `_agent/foa-summary.md`: page limits, review criteria (quote them verbatim — later sections are drafted against them), budget cap, required documents, eligibility constraints, and any letter-of-intent or pre-application requirement with its own deadline (these often fall weeks before the full deadline and are the most commonly missed date; drafted with `grant-loi-preproposal`). The FOA overrides the agency's general guide wherever they differ; where the FOA is silent, verify against the current guide rather than memory.
 2. **Eligibility and submission status**: confirm any career-stage, citizenship (common in DoD; required for NRSA fellowships and NSF GRFP), or institutional eligibility gates before drafting effort is spent — an eligibility miss voids everything else. Ask whether this is a new submission or a resubmission; if resubmission, put the prior reviews in `00_admin/foa/` and note that `grant-resubmission` runs alongside the drafting skills.
 3. **Deadline map**: work backward from the sponsor deadline. Ask for the internal grants-office deadline — institutions typically require the complete application days before the sponsor date, so the internal date is the real deadline. Flag long-lead items now: subaward documents (need the partner institution's grants office to sign off), letters of support, biosketches/Other Support from external collaborators, and — for career-development awards and fellowships — referee letters, which referees submit themselves and are the least controllable dependency in the application. These routinely take 2–4 weeks and cannot be compressed at the end.
 4. **Team**: PI(s), co-investigators, collaborators, institutions. Record who submits — an authorized institutional official via Grants.gov/ASSIST, Research.gov, eBRAP, or a foundation portal, almost never the PI personally — and confirm the PI has active credentials in that system (eRA Commons, SciENcv, etc.).
-5. **Grant administration checklist**: Ask whether their sponsored programs / grants office provided one. If yes, copy it into `00_admin/`. If not, generate one from the FOA's required-documents list plus the agency defaults in `references/agency-checklists.md`, and label it clearly as auto-generated pending office confirmation.
+5. **Grant administration checklist**: Ask whether their sponsored programs / grants office provided one. If yes, copy it into `00_admin/`. If not, generate one from the FOA's required-documents list plus the agency defaults in `references/agency-checklists.md` as `_agent/submission-checklist.md`, and label it clearly as auto-generated pending office confirmation.
 6. **Document format**: Microsoft Word or LaTeX. Record the choice; it determines file templates and how approved text is inserted. Also ask which reference manager the team uses (Zotero, EndNote, Mendeley, or hand-maintained BibTeX for LaTeX) — citations live inside the manuscripts via the manager, not in a separate folder, and `grant-references` needs to know the toolchain to audit them. For multi-author documents, recommend a shared library (Zotero group library, EndNote shared library, or the `.bib` in the repo) — citations inserted from co-authors' personal libraries fragment on merge and produce duplicate bibliography entries. Also ask how the PI marks citations still to be added — every investigator has a habit: `(ref)`, `(PMID: 123456)`, `[ref: 123455]`, highlighting, `TODO` — and record it; `grant-references` and `grant-format-check` sweep for exactly this convention so no placeholder reaches submission.
 7. **Storage location**: local folder, Google Drive, OneDrive, or a GitHub repository. Computational faculty writing NSF proposals commonly pair LaTeX with a GitHub repo as the shared home — if the user mentions either, ask about the other. For GitHub: record the repo URL, confirm it is **private**, and note how collaborators edit (direct commits, PRs, or Overleaf–GitHub sync). Storage choice determines the versioning mode in Step 3.
 8. **Who edits, and how**: which people edit the documents directly, and in what (Word desktop, Word online, Google Docs, Overleaf, a text editor with git). Record the editing protocol in the config. Tell the user the two habits that keep a file safe when both they and Claude write to it: close the document in Word before asking for a write to it (an open Word file leaves a `~$` lock file, and Claude will decline to write while it is there), and say "I edited X" when they have, so the session re-reads before doing anything else. Explain why in one sentence — Claude edits the file from what it last read, and a Word re-save or a Zotero insertion changes the file underneath that picture (shared convention 11).
@@ -35,20 +35,33 @@ Ask the user for (accept partial answers; record gaps as open items):
 
 ```
 <grant-short-name>/
-├── 00_admin/            # config, checklist, FOA, decision log, tracker, version log
+├── CLAUDE.md                # session orientation (Step 5b) — points into _agent/
+├── README.md                # human folder guide
+├── _agent/                  # everything the AI writes for itself — not a submission component
+│   ├── project-config.md    # the contract every skill reads first
+│   ├── style-profile.md · tracker.md · decision-log.md · version-log.md · foa-summary.md · submission-checklist.md (if auto-generated)
+│   ├── notes/               # skill working notes: aims strategy, overlap maps, prior-review analysis, notation tables, training map, letter tracker
+│   ├── drafts/<component>/  # section drafts before approval; archived or deleted once the text is in the document
+│   └── reports/             # mock-review, structural-review, detail-review, format-check, reference-audit, condense-review, notation-audit (dated)
+├── 00_admin/                # HUMAN admin documents only: FOA/PA PDFs (foa/), office checklist, submission forms, sponsor correspondence
 │   └── foa/
 ├── 01_aims/
-├── 02_research_plan/    # significance, innovation, approach
+├── 02_research_plan/        # significance, innovation, approach — working copy + checkpoints, _archive/ for superseded ones
+│   ├── figures/             # final figure/table files as inserted (Fig1…, Table1…), one file per figure
+│   │   └── src/             # figure sources (.ai .svg .tex .pptx) and the scripts that draw concept figures
+│   └── preliminary_data/    # analyses that produce figures: <aim>/{data,scripts,results,RUNBOOK.md}
 ├── 03_budget/
 ├── 04_biosketches/
 ├── 05_support_letters/
 ├── 06_abstracts_title/
-├── 07_compliance/       # DMSP, human subjects, facilities, etc.
-├── 08_final_assembly/   # assembled docs, audit reports, cover letter
-└── 99_prior_grants/     # researcher's previous proposals (style corpus)
+├── 07_compliance/           # DMSP, human subjects, facilities, etc.
+├── 08_final_assembly/       # ONLY the submission package: PDFs under the funder's required attachment names
+└── 99_prior_grants/         # researcher's previous proposals (style corpus)
 ```
 
-Adjust names to the mechanism (e.g., add `02_research_plan/broader_impacts/` for NSF), but keep the numbered ordering — it mirrors the workflow.
+Adjust names to the mechanism (e.g., add `02_research_plan/broader_impacts/` for NSF; `09_career/` for career awards), but keep the numbered ordering — it mirrors the workflow.
+
+**Placement rules and migration** are in `references/layout.md` (shared convention 12) — read it when creating the structure, and record `Layout: 0.20` in the config so every skill applies the rules. The one-sentence version: *a file goes where the person who needs it will look for it, and files only the AI needs go under `_agent/`.* If the folder has `00_admin/project-config.md` and no `_agent/`, it is a pre-0.20 layout: read the config where it is, write new AI files only under `_agent/`, and offer the migration described in `references/layout.md` — never migrate a folder the user has declared final.
 
 ### GitHub repositories
 
@@ -56,7 +69,7 @@ Use the same structure at the repo root. Additionally:
 
 - Add a `.gitignore` for LaTeX build artifacts (`*.aux`, `*.log`, `*.bbl`, `*.blg`, `*.out`, `*.synctex.gz`, `*.fls`, `*.fdb_latexmk`). Committing the compiled PDF is the user's choice — some teams commit it at status transitions so non-LaTeX collaborators can read without building; record the choice.
 - Git access is repo-wide — per-folder permissions are impossible. Sensitive material therefore stays out of the repo: detailed budgets with salary data (`03_budget/`) and `99_prior_grants/` live in a local or drive folder unless the user explicitly accepts that all repo collaborators see them. Record where each excluded folder actually lives in the config.
-- A `README.md` at repo root pointing to `00_admin/project-config.md` helps collaborators who arrive via GitHub rather than via these skills.
+- A `README.md` at repo root pointing to `_agent/project-config.md` helps collaborators who arrive via GitHub rather than via these skills.
 
 ### Permissions (shared drives)
 
@@ -66,6 +79,7 @@ If the folder lives on Google Drive or OneDrive, the model usually cannot set pe
 - Budget folder (`03_budget/`): PI + grants administrator only (salary data is sensitive)
 - `99_prior_grants/`: PI only unless stated otherwise
 - Grants office contact: access to `00_admin/` and `03_budget/`
+- `_agent/`: PI (and anyone who runs these skills); collaborators do not need it
 
 If a Drive/OneDrive connector is available, offer to set these directly.
 
@@ -75,7 +89,7 @@ For GitHub, translate the same access tiers into collaborator invitations: inves
 
 Record the versioning mode in the config and use it for every document. The mode follows the storage choice:
 
-**Filename mode** (local, Drive, OneDrive): `<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>` — status ∈ `draft`, `internal`, `shared`, `final`; `NN` never reused. **Versions are checkpoints, not edits**: the highest-numbered file is the working copy and is edited in place; a new `NN` is cut only at a milestone — a status transition, the file about to leave the team (snapshot what readers saw), a structural change the PI may want to roll back (aim dropped, section removed, restructuring), or the user asking for one. Routine edits do not create a version. Files at `internal`/`shared`/`final` status are immutable snapshots. Explain the reason to the user: a per-edit or per-session rule produced 26 copies of one 20 MB narrative on a real application, and Drive/OneDrive already keep file-level history for in-place edits (on a purely local folder without backup, recommend more frequent checkpoints or git). Log every editing session in `00_admin/version-log.md` (file, date, one-line summary, post-write fingerprint per the write rules) whether or not a checkpoint was cut. Record the `Checkpoint policy` in the config — `milestone` (default) | `per-session` | `per-edit` — so a PI who wants every step kept opts in explicitly. When documents carry embedded figures, keep figure sources in a `figures/` subfolder and move superseded checkpoints to `_archive/` so the working folder shows only the live copy and the last checkpoint.
+**Filename mode** (local, Drive, OneDrive): `<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>` — status ∈ `draft`, `internal`, `shared`, `final`; `NN` never reused. **Versions are checkpoints, not edits**: the highest-numbered file is the working copy and is edited in place; a new `NN` is cut only at a milestone — a status transition, the file about to leave the team (snapshot what readers saw), a structural change the PI may want to roll back (aim dropped, section removed, restructuring), or the user asking for one. Routine edits do not create a version. Files at `internal`/`shared`/`final` status are immutable snapshots. Explain the reason to the user: a per-edit or per-session rule produced 26 copies of one 20 MB narrative on a real application, and Drive/OneDrive already keep file-level history for in-place edits (on a purely local folder without backup, recommend more frequent checkpoints or git). Log every editing session in `_agent/version-log.md` (file, date, one-line summary, post-write fingerprint per the write rules) whether or not a checkpoint was cut. Record the `Checkpoint policy` in the config — `milestone` (default) | `per-session` | `per-edit` — so a PI who wants every step kept opts in explicitly. When documents carry embedded figures, keep figure sources in a `figures/` subfolder and move superseded checkpoints to `_archive/` so the working folder shows only the live copy and the last checkpoint.
 
 **Git mode** (GitHub repo): git history *is* the version log — do not duplicate it with versioned filenames. Use stable filenames (`01_aims/specific-aims.tex`), commit at the end of each editing session with a message summarizing the change, and mark status transitions (`draft` → `internal` → `shared` → `final`) with annotated tags (e.g., `aims-internal-2026-07-12`) or the team's existing branch/PR convention. Never rewrite pushed history. Skip `version-log.md`; the decision log is still kept — commit messages record *what* changed, the decision log records *why*. Wherever another skill says "new version per the schema," in git mode that means a commit (plus a tag if the status changed).
 
@@ -93,7 +107,7 @@ The profile needs the researcher's **writing voice**, not their unpublished idea
 - Regardless of the training setting, the content still leaves the user's machine and is processed by a third party — the relevant consideration for embargoed data, collaborator-confidential material, IP disclosures, or sponsor/institutional confidentiality. For those, prefer published sources or omit the sensitive passages.
 - These are current as of the setup date and change; point the user to Anthropic's privacy settings and privacy center to confirm, and record their chosen source and any constraint in the config. (Verified July 2026.)
 
-Read the chosen corpus and write `00_admin/style-profile.md` from `references/style-profile-template.md`. The profile is the only carrier of the PI's voice between sessions — the corpus is not re-read and the model remembers nothing between chats — so its quality decides whether later drafts sound like the PI or like the model. Two requirements, both from the template: **paragraph-scale exemplars quoted verbatim** (two to three full paragraphs per register the grant needs — technical narrative, lay summary, caption, and any FOA-specific registers), because models imitate prose far better than they follow descriptions; and a **closing directives checklist** of checkable rules that drafting skills verify output against. Cover, with quoted examples: sentence length and paragraph density; voice (active/passive ratio), person, tense boundary between completed and proposed work; hedging vs. assertion and where each applies; heading, transition, and emphasis conventions; punctuation constraints stated as countable rules with exemptions; terminology; lay register; caption style. Keep the portable core (voice) separate from the project layer (vocabulary, reviewer history, proofread sweep list) so the next grant can import the core.
+Read the chosen corpus and write `_agent/style-profile.md` from `references/style-profile-template.md`. The profile is the only carrier of the PI's voice between sessions — the corpus is not re-read and the model remembers nothing between chats — so its quality decides whether later drafts sound like the PI or like the model. Two requirements, both from the template: **paragraph-scale exemplars quoted verbatim** (two to three full paragraphs per register the grant needs — technical narrative, lay summary, caption, and any FOA-specific registers), because models imitate prose far better than they follow descriptions; and a **closing directives checklist** of checkable rules that drafting skills verify output against. Cover, with quoted examples: sentence length and paragraph density; voice (active/passive ratio), person, tense boundary between completed and proposed work; hedging vs. assertion and where each applies; heading, transition, and emphasis conventions; punctuation constraints stated as countable rules with exemptions; terminology; lay register; caption style. Keep the portable core (voice) separate from the project layer (vocabulary, reviewer history, proofread sweep list) so the next grant can import the core.
 
 If the PI has a profile from a prior proposal, import its Part 1 and start a fresh Part 2 rather than rebuilding from the corpus. If no samples are provided, write the template skeleton with the exemplar sections empty, note in the tracker that drafting will use standard scientific register until samples arrive, and revisit when they do. A profile found later to be thin (descriptive lines, no full paragraphs) is rebuilt with this step, not patched.
 
@@ -101,7 +115,7 @@ If the PI has a profile from a prior proposal, import its Part 1 and start a fre
 
 First, record which suite version is shaping this application: read `version` from the installed grant-writing plugin's `.claude-plugin/plugin.json` (the plugin directory two levels above this skill's folder). If it cannot be located, record `unknown` — never guess. This matters most long after submission: a revision a year later can check what methodology version the original was written under, and the repository's git tags let anyone retrieve that exact version.
 
-Create `00_admin/project-config.md`:
+Create `_agent/project-config.md`:
 
 ```markdown
 # Project Config — <short name>
@@ -128,30 +142,32 @@ Create `00_admin/project-config.md`:
 - Write rules (every session, every document write): re-read the file from disk immediately before writing and derive edits from that read as anchored operations (stop if an anchor is missing); fingerprint each read (size, mtime, paragraph count; Word: package part count, citation-field count) and compare before writing — on mismatch stop, report what changed, re-derive; do not write while a Word lock file (~$<name>.docx) exists — deliver an anchored change list instead; copy the current file to _archive/<document>.pre-write.bak before each in-place write (rolling, one file); log the post-write fingerprint in version-log.md (git mode: commit hash); after writing, tell the user, and when the user says they edited a file, re-read it in full first; never write reference-manager field codes or formatted citation text — placeholders in the PI's convention only, otherwise a citation worklist; never refer to a citation by number across an edit
 - Tone rules: neutral scientific register, no flattery, strengths/weaknesses stated factually
 - Text flow: refine interactively in conversation; only user-approved text enters documents
-- Checklist: 00_admin/<checklist file> (office-provided | auto-generated)
-- Style profile: 00_admin/style-profile.md (present | pending)
+- Checklist: 00_admin/<office file> (office-provided) | _agent/submission-checklist.md (auto-generated)
+- Layout: 0.20 (_agent/ for AI files; placement rules in effect)   # pre-0.20 folders record "legacy" until migrated
+- Style profile: _agent/style-profile.md (present | pending)
 - Style corpus source: published papers | public grant text | prior/unpublished grants | none yet   # note any confidentiality constraint the PI raised
 - Session orientation: CLAUDE.md at folder root   # read automatically at session start; points here, to the style profile, and to the tracker
-- Tracker: 00_admin/tracker.md   # the ONE shared TODO list for this grant; skills never create their own
+- Tracker: _agent/tracker.md   # the ONE shared TODO list for this grant; skills never create their own
 - Tracker rules (every session): work only the section/document the user names; at session start read the tracker and present the active document's open items as the working checklist; an issue found outside the active section is logged, not discussed — check it isn't already logged (never re-raise a logged item), then log conceptual/ripple findings silently (one-line acknowledgment at most) and log minor mechanical findings (spelling, acronyms) asking once, fix now or later; update the tracker the moment an item is found, resolved, or changed — never wait for session end or a handoff announcement; IDs are sequential (T-001, ...) and never reused; resolved items move to the Resolved table
-- Open items: tracked in 00_admin/tracker.md
+- Open items: tracked in _agent/tracker.md
 ```
 
-Also create an empty `00_admin/decision-log.md`, the tracker `00_admin/tracker.md` from `references/tracker-template.md` — seed its document-status table from the FOA's required documents and enter setup's own gaps (missing FOA details, unconfirmed checklist, empty style corpus) as its first items — and, in filename mode only, `00_admin/version-log.md`. The tracker is what lets later sessions pick up mid-proposal without rehashing: findings live there once, by ID, instead of being rediscovered every session. The decision log stays separate on purpose — it records *why* things changed (append-only); the tracker records *what is still open* (working state).
+Also create an empty `_agent/decision-log.md`, the tracker `_agent/tracker.md` from `references/tracker-template.md` — seed its document-status table from the FOA's required documents and enter setup's own gaps (missing FOA details, unconfirmed checklist, empty style corpus) as its first items — and, in filename mode only, `_agent/version-log.md`. The tracker is what lets later sessions pick up mid-proposal without rehashing: findings live there once, by ID, instead of being rediscovered every session. The decision log stays separate on purpose — it records *why* things changed (append-only); the tracker records *what is still open* (working state).
 
 ## Step 5b — Write CLAUDE.md at the folder root
 
-Create `CLAUDE.md` at the grant folder root from `references/claude-md-template.md`, filling the bracketed fields from the config (for a GitHub repo, commit it). This is the one file Claude reads *before* the first message of a session, which makes it the only place where "read the config, the style profile, and the tracker first" runs without depending on a skill firing. Without it, a fresh chat opened in the folder has no skill loaded and nothing tells the session that this is a grant project — the observed result is documents edited directly, in default voice, with the config never read. The file orients (session-start reads, the task-to-skill routing table, the voice and tone rules) and points to `00_admin/` for everything that varies; it does not duplicate the config.
+Create `CLAUDE.md` at the grant folder root from `references/claude-md-template.md`, filling the bracketed fields from the config (for a GitHub repo, commit it). This is the one file Claude reads *before* the first message of a session, which makes it the only place where "read the config, the style profile, and the tracker first" runs without depending on a skill firing. Without it, a fresh chat opened in the folder has no skill loaded and nothing tells the session that this is a grant project — the observed result is documents edited directly, in default voice, with the config never read. The file orients (session-start reads, the task-to-skill routing table, the voice and tone rules) and points to `_agent/` for everything that varies; it does not duplicate the config.
 
 Tell the user to open or connect *this grant's folder* as the project — a parent folder holding several grants will not reliably load a `CLAUDE.md` two levels down.
 
 ## Step 6 — Confirm and hand off
 
-Summarize what was created (including `CLAUDE.md` and the style profile's exemplar coverage), point to the open items now seeded in `00_admin/tracker.md` (missing FOA details, unconfirmed checklist, empty style corpus), and state the natural next step: drafting the Specific Aims (`grant-specific-aims`) — or for NSF, the Project Summary skeleton. For career-development awards, `grant-career-plan` starts alongside the aims: mentors and referees need the most lead time of anything in the application.
+Summarize what was created (including `CLAUDE.md`, the `_agent/` layout, and the style profile's exemplar coverage), point to the open items now seeded in `_agent/tracker.md` (missing FOA details, unconfirmed checklist, empty style corpus), and state the natural next step: drafting the Specific Aims (`grant-specific-aims`) — or for NSF, the Project Summary skeleton. For career-development awards, `grant-career-plan` starts alongside the aims: mentors and referees need the most lead time of anything in the application.
 
 ## References
 
 - `references/agency-checklists.md` — default document checklists per funder (NIH, NSF, DoD, foundations). Read when auto-generating a checklist in Step 1.5.
-- `references/tracker-template.md` — the tracker file template. Read when creating `00_admin/tracker.md` in Step 5.
-- `references/style-profile-template.md` — the style profile template (portable core / project layer, exemplar requirements, directives checklist). Read when writing `00_admin/style-profile.md` in Step 4.
+- `references/layout.md` — placement rules per file type (convention 12) and the pre-0.20 → 0.20 migration mapping. Read in Step 2, and whenever a folder without `_agent/` is encountered.
+- `references/tracker-template.md` — the tracker file template. Read when creating `_agent/tracker.md` in Step 5.
+- `references/style-profile-template.md` — the style profile template (portable core / project layer, exemplar requirements, directives checklist). Read when writing `_agent/style-profile.md` in Step 4.
 - `references/claude-md-template.md` — the session-orientation file template. Read when creating the folder-root `CLAUDE.md` in Step 5b.

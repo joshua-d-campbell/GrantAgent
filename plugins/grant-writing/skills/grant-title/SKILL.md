@@ -5,7 +5,7 @@ description: Develop or refine the title of a research grant proposal. Use when 
 
 # Grant Title
 
-Write the title after the Specific Aims page exists — the title is a compression of the aims, not a starting point. Read `00_admin/project-config.md` and the current aims version first. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Write the title after the Specific Aims page exists — the title is a compression of the aims, not a starting point. Read `_agent/project-config.md` and the current aims version first. Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## What a good title does
 
@@ -29,4 +29,4 @@ Reviewers and program officers see the title before anything else; assignment to
 2. Generate 6–10 candidate titles spanning styles: declarative ("X drives Y in Z"), mechanistic question framing, method-forward, impact-forward.
 3. For each candidate, state factually its strengths and weaknesses: character count, keyword coverage, audience readability, assignment implications. No ranking by enthusiasm — give the user the trade-offs.
 4. Check the chosen title against the character limit and any required prefixes.
-5. Record the final title in `00_admin/project-config.md` and save candidates considered to `06_abstracts_title/title-candidates.md` (versioned) — earlier candidates often become paper titles or resurface in resubmission. The config copy is authoritative: the title must appear verbatim on the application form and anywhere the narrative cites it, and mismatches are a routine format-check catch.
+5. Record the final title in `_agent/project-config.md` and save candidates considered to `_agent/drafts/06_abstracts_title/title-candidates.md` (versioned) — earlier candidates often become paper titles or resurface in resubmission. The config copy is authoritative: the title must appear verbatim on the application form and anywhere the narrative cites it, and mismatches are a routine format-check catch.

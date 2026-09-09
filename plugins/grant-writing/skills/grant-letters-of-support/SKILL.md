@@ -7,7 +7,7 @@ description: Draft letters of support, letters of collaboration, and consultant/
 
 Letters must be drafted early: collaborators revise slowly, travel, and miss deadlines. The practical workflow is that the PI's team drafts every letter and the signer edits and signs. Target having drafts out at least 4–6 weeks before the deadline.
 
-Read `00_admin/project-config.md` for the team list and deadline. Letters live in `05_support_letters/`, one file per signer, versioned; track status in `05_support_letters/letter-tracker.md` (signer, role, draft sent, received signed, format OK). `00_admin/style-profile.md` does not apply to letters — they are in the signer's voice — and neither should the model's default register; the profile's *Directives* list is still useful in reverse, as a list of PI habits that must not leak into a letter (shared convention 5).
+Read `_agent/project-config.md` for the team list and deadline. Letters live in `05_support_letters/`, one file per signer, versioned; track status in `_agent/notes/letter-tracker.md` (signer, role, draft sent, received signed, format OK). `_agent/style-profile.md` does not apply to letters — they are in the signer's voice — and neither should the model's default register; the profile's *Directives* list is still useful in reverse, as a list of PI habits that must not leak into a letter (shared convention 5).
 
 ## Step 1 — Build the letter list
 
@@ -45,4 +45,4 @@ Under the NIH simplified framework, letters feed Factor 3 (Expertise and Resourc
 
 ## Step 3 — Send, track, chase
 
-Produce a short request email per signer (what's attached, what to check, deadline for return — set it 2+ weeks before the real deadline). Update the tracker as letters return; verify each signed letter's date, letterhead, and signature before filing to `08_final_assembly/`.
+Produce a short request email per signer (what's attached, what to check, deadline for return — set it 2+ weeks before the real deadline). Update the tracker as letters return; verify each signed letter's date, letterhead, and signature before filing signed copies to `05_support_letters/signed/`; the combined letters PDF is assembled into `08_final_assembly/` under the FOA's attachment name at final assembly.

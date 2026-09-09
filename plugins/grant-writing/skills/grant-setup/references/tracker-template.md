@@ -1,6 +1,6 @@
 # Tracker template
 
-Copy the template below into `00_admin/tracker.md` at setup. Seed the document-status table from the FOA's required-documents list (or the submission checklist), and enter setup's own gaps — missing FOA details, unconfirmed checklist, empty style corpus — as the first tracker items with `Origin: setup`. The operating rules live in `project-config.md` under *Tracker rules*; this file is the state those rules act on. There is exactly one tracker per grant.
+Copy the template below into `_agent/tracker.md` at setup. Seed the document-status table from the FOA's required-documents list (or the submission checklist), and enter setup's own gaps — missing FOA details, unconfirmed checklist, empty style corpus — as the first tracker items with `Origin: setup`. The operating rules live in `project-config.md` under *Tracker rules*; this file is the state those rules act on. There is exactly one tracker per grant.
 
 What belongs here vs. elsewhere: the tracker holds *open work* — TODO items, deferred fixes, ripple items that must propagate. It does not hold rationale (that is `decision-log.md`) and it does not hold full findings (mock reviews and audit reports stay in `08_final_assembly/`; the tracker holds only the action items they generate, pointing back to the report). A decision-log entry that creates work spawns tracker items referencing it.
 

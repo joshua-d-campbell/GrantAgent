@@ -7,7 +7,7 @@ description: Final compliance/format check of a grant before submission — page
 
 Agencies reject non-compliant applications without review — a proposal one line over the page limit, or in the wrong font, does not reach a reviewer. This check is mechanical, absolute, and done last, against the specific FOA and current agency formatting rules.
 
-Read `00_admin/project-config.md` and the FOA summary; pull exact requirements from the FOA and current agency application guide (do not rely on remembered limits — they change and vary by mechanism). Assemble the final document set.
+Read `_agent/project-config.md` and the FOA summary; pull exact requirements from the FOA and current agency application guide (do not rely on remembered limits — they change and vary by mechanism). Assemble the final document set.
 
 ## Build the requirement table
 
@@ -32,8 +32,8 @@ Grep the extracted text of every final PDF for citation placeholders: the PI's r
 
 ## Attachment completeness
 
-Cross-check the assembled set against the `00_admin/` checklist and the FOA's required-documents list: every required attachment present, none prohibited included, signatures present where required (letters, Other Support flattened/signed per current policy), SciENcv-generated documents in the right format for NSF.
+Cross-check the assembled set against the submission checklist (office file in `00_admin/`, or `_agent/submission-checklist.md`) and the FOA's required-documents list: every required attachment present, none prohibited included, signatures present where required (letters, Other Support flattened/signed per current policy), SciENcv-generated documents in the right format for NSF.
 
 ## Deliverable
 
-`08_final_assembly/format-check_<date>.md`: a pass/fail table (requirement | measured | status) plus a blocking-issues list. Every failure not fixed in this session also becomes an item in `00_admin/tracker.md` against its document (`Origin: format-check`) — this close to a deadline, a blocking issue that lives only in a report a later session may not reread is how applications get rejected. Nothing here is a style opinion — every item is a binary compliance fact. Recommend the user's grants office run their own validation in the submission system (ASSIST/Workspace/Research.gov) as the final gate, since system-level validations catch registration and form errors this check cannot see. For NIH, remind the user to inspect the assembled application image in eRA Commons during the short post-submission viewing window (verify its current length) — the assembled image, not the uploaded files, is what reviewers receive, and assembly can garble figures or drop pages.
+`_agent/reports/format-check_<date>.md`: a pass/fail table (requirement | measured | status) plus a blocking-issues list. Every failure not fixed in this session also becomes an item in `_agent/tracker.md` against its document (`Origin: format-check`) — this close to a deadline, a blocking issue that lives only in a report a later session may not reread is how applications get rejected. Nothing here is a style opinion — every item is a binary compliance fact. Recommend the user's grants office run their own validation in the submission system (ASSIST/Workspace/Research.gov) as the final gate, since system-level validations catch registration and form errors this check cannot see. For NIH, remind the user to inspect the assembled application image in eRA Commons during the short post-submission viewing window (verify its current length) — the assembled image, not the uploaded files, is what reviewers receive, and assembly can garble figures or drop pages.

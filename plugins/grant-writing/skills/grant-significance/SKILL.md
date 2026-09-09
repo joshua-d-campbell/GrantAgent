@@ -7,7 +7,7 @@ description: Draft the Significance section of a research grant — the case tha
 
 Significance argues that the problem is important, the current state of the field is inadequate, and the proposed work will improve scientific knowledge, technical capability, or clinical practice. It is an argument, not a literature review — every cited fact must be load-bearing.
 
-Read `00_admin/project-config.md` and the current aims version first. Length is set by the grant type: within an NIH 12-page Research Strategy, Significance typically runs 1.5–3 pages; a 6-page R21 compresses it to ~1 page; NSF distributes the same content across the Project Description opening and Broader Impacts. Check the FOA and ask the user what allocation they want. Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md` and the current aims version first. Length is set by the grant type: within an NIH 12-page Research Strategy, Significance typically runs 1.5–3 pages; a 6-page R21 compresses it to ~1 page; NSF distributes the same content across the Project Description opening and Broader Impacts. Check the FOA and ask the user what allocation they want. Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Your ideas, not mine (shared convention 8)
 

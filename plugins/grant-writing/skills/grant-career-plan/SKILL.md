@@ -7,11 +7,11 @@ description: Develop the career-development and training components of a career 
 
 On a career award or fellowship the applicant *is* the project: reviewers fund a trajectory, not just a study, and they weight the candidate, the mentoring, and the training plan as heavily as the science. (Fellowships call the mentor the *sponsor* — the terms below map directly.) The document set stands or falls on one coherence chain: **stated training gaps → chosen development activities → mentor expertise covering each gap → research plan as the training vehicle → the five-year career goal**. Every classic career-award critique is a break in that chain — a named training area no mentor covers, an activity unconnected to the goal, a research plan sized for a funded lab rather than one trainee.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing) and confirm the award type is recorded as career-development. Career-award files live in `09_career/` (add the folder to the standard structure if absent), versioned per the schema. Agency differences are substantial — read `references/agency-variants.md` for the mechanism in play before drafting. The candidate's statements follow `00_admin/style-profile.md` and are checked against its *Directives* list before delivery; mentor, sponsor, and institutional statements are written in *their* authors' voices, not the candidate's (shared convention 5).
+Read `_agent/project-config.md` first (run `grant-setup` if missing) and confirm the award type is recorded as career-development. Career-award files live in `09_career/` (add the folder to the standard structure if absent), versioned per the schema. Agency differences are substantial — read `references/agency-variants.md` for the mechanism in play before drafting. The candidate's statements follow `_agent/style-profile.md` and are checked against its *Directives* list before delivery; mentor, sponsor, and institutional statements are written in *their* authors' voices, not the candidate's (shared convention 5).
 
 ## Maintain the training map
 
-Create `09_career/training-map.md` early: one row per training gap — the gap, the activity that closes it, the mentor or resource that covers it, the aim that exercises it, the year it happens. This table is the audit instrument for the whole document set; every section below reads from and writes to it, and the final coherence check walks it row by row.
+Create `_agent/notes/training-map.md` early: one row per training gap — the gap, the activity that closes it, the mentor or resource that covers it, the aim that exercises it, the year it happens. This table is the audit instrument for the whole document set; every section below reads from and writes to it, and the final coherence check walks it row by row.
 
 ## Step 1 — Candidate and career goals
 
@@ -47,7 +47,7 @@ The research plan is the training vehicle: scoped to what one trainee can execut
 
 ## Coherence audit before assembly
 
-Walk the training map row by row: every gap has an activity, a covering mentor, and an aim that uses it; every activity appears in the timeline and, where it costs money, in the budget; the mentor statement's commitments (cadence, resources, milestones) match the candidate's plan verbatim — reviewers cross-read these documents and inconsistencies read as a team that hasn't talked. Then run `grant-mock-review` with the career-award criteria (its references file has the instrument). Record scope or team changes in `00_admin/decision-log.md`.
+Walk the training map row by row: every gap has an activity, a covering mentor, and an aim that uses it; every activity appears in the timeline and, where it costs money, in the budget; the mentor statement's commitments (cadence, resources, milestones) match the candidate's plan verbatim — reviewers cross-read these documents and inconsistencies read as a team that hasn't talked. Then run `grant-mock-review` with the career-award criteria (its references file has the instrument). Record scope or team changes in `_agent/decision-log.md`.
 
 ## References
 

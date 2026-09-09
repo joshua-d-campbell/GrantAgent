@@ -7,7 +7,7 @@ description: Draft the Multiple PD/PI Leadership Plan for grants with more than 
 
 Reviewers read the leadership plan as a proxy for whether the team will actually function — and most plans give them nothing, because most are boilerplate ("the PIs will meet weekly and resolve disagreements collegially") that could be pasted into any application. The document has two jobs: the compliance job (governance mechanics the funder requires) and the strategic job (the argument that *this specific combination* of PIs is worth more than a single PI with co-investigators). The second job is where the plan earns points, and it is the one boilerplate forfeits.
 
-Read `00_admin/project-config.md` first (run `grant-setup` if missing). Files go to `07_compliance/`, versioned per the schema in project-config (`leadership-plan_v<NN>_<YYYY-MM-DD>_<status>.<ext>` in filename mode; a stable filename plus commit in git mode). NIH requires this attachment whenever multiple PD/PIs are designated; keep it concise (~1 page is conventional — verify any limit in the FOA). Apply `00_admin/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
+Read `_agent/project-config.md` first (run `grant-setup` if missing). Files go to `07_compliance/`, versioned per the schema in project-config (`leadership-plan_v<NN>_<YYYY-MM-DD>_<status>.<ext>` in filename mode; a stable filename plus commit in git mode). NIH requires this attachment whenever multiple PD/PIs are designated; keep it concise (~1 page is conventional — verify any limit in the FOA). Apply `_agent/style-profile.md` to every sentence of document text, and before delivering drafted or revised prose check it against the profile's *Directives* list item by item, counting any punctuation the profile constrains rather than estimating (shared convention 5).
 
 ## Step 1 — The case for this team
 
@@ -37,7 +37,7 @@ The budget split by PI and site must match the stated roles — a PI who leads t
 - Aims page: aim leadership here matches the aims and Approach exactly.
 - Biosketches: each PI's personal statement should reinforce the same complementarity story — this plan and the biosketches must read as one narrative (coordinate with `grant-biosketch-support`).
 - Budget: splits consistent, effort figures match the personnel plan.
-- Record structural decisions (contact PI, aim leadership, splits) in `00_admin/decision-log.md` — they surface again at just-in-time and award negotiation.
+- Record structural decisions (contact PI, aim leadership, splits) in `_agent/decision-log.md` — they surface again at just-in-time and award negotiation.
 
 ## Agency notes (verify against the FOA/solicitation)
 
