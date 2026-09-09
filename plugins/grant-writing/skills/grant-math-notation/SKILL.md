@@ -44,6 +44,6 @@ Check what is checkable without refereeing the mathematics: index consistency (f
 
 ## Reporting
 
-Deliver findings as a table per pass: location (file:line and section), finding, severity (collision/undefined = blocking; convention drift = should-fix; style = optional), proposed fix. Apply fixes only with user approval, as new versions per the schema. When a fix changes a symbol globally, regenerate the registry and re-run Pass 1 — global renames are exactly where new collisions sneak in.
+Deliver findings as a table per pass: location (file:line and section), finding, severity (collision/undefined = blocking; convention drift = should-fix; style = optional), proposed fix. Apply fixes only with user approval, in the working copy (a checkpoint only if a formulation is restructured). When a fix changes a symbol globally, regenerate the registry and re-run Pass 1 — global renames are exactly where new collisions sneak in.
 
 Run this audit before `grant-proofread-detail` (line-level proofreading assumes notation is stable) and whenever a new mathematical section is merged from a collaborator, since multi-author notation drift is the dominant source of collisions.

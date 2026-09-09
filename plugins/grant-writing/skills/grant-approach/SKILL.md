@@ -52,7 +52,7 @@ Flag scope problems factually as they emerge ("Aim 3 as designed requires ~18 mo
 
 ## Step 4 — Cross-checks before assembly
 
-- Aims page ↔ Approach consistency: same aims, same order, same headlines; update aims (new version + decision-log entry) if design drifted.
+- Aims page ↔ Approach consistency: same aims, same order, same headlines; update the aims page (edit the working copy — a checkpoint only if the aim structure changed — plus a decision-log entry) if design drifted.
 - Budget ↔ design: sample counts and personnel match `03_budget/`.
 - Figures/tables numbered and referenced; every method with a citation placeholder for `grant-references`.
 - Timeline: hand off milestone structure to `grant-timeline-milestones`.

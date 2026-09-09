@@ -90,6 +90,8 @@ A few habits make a large difference:
 
 **One document per conversation.** Draft the Approach in one conversation, the budget in another. Long conversations that wander across several documents make Claude drift from the skill's instructions. Starting fresh is cheap — the project's settings file carries your deadline, format, and preferences over, so you never re-explain.
 
+**Expect one working file per document, not a new copy per edit.** Claude edits the current draft in place and saves a numbered checkpoint only at milestones — when a document's status changes, before it goes to a co-investigator or the grants office, before a big restructuring, or when you ask for one. If you'd rather keep every step, say so during setup and the project's checkpoint policy records it. Google Drive and OneDrive keep their own history of in-place edits, so nothing is lost either way.
+
 **Put lasting decisions in files, not in chat.** Conversations don't remember each other. Anything that must persist — a dropped aim, a tone preference, a scope change — belongs in the project folder, and the skills record these automatically (in the config file and decision log). If you notice yourself re-explaining the same thing each session, ask Claude to write it into the project config.
 
 **Name the skill when Claude guesses wrong.** Describing your task is usually enough, but you can always be explicit: *"Use grant-mock-review on the current draft."*

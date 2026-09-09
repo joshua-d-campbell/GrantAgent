@@ -78,12 +78,15 @@ Two modes; `project-config.md` records which is in effect.
 
 **Filename mode** (local/Drive/OneDrive storage): `<document>_v<NN>_<YYYY-MM-DD>_<status>.<ext>`
 
-- `NN`: zero-padded integer, incremented per editing session, never reused
-- `status`: `draft` → `internal` (shared with team) → `shared` (external readers) → `final`
-- Never overwrite a version; each session writes a new file
-- Example: `specific-aims_v03_2026-07-12_internal.docx`
+- `NN`: zero-padded integer, never reused; `status`: `draft` → `internal` (shared with team) → `shared` (external readers) → `final`. Example: `specific-aims_v03_2026-07-12_internal.docx`.
+- **Versions are checkpoints, not edits.** The highest-numbered file is the *working copy* and is edited in place; a new `NN` is cut only at a **milestone**: a status transition; the file about to leave the team (sent to a co-I, a reader, the grants office — snapshot what they saw); a structural change the PI may want to roll back (an aim dropped, a section removed, a restructuring); or the user asking for a checkpoint. Routine edits — a paragraph revised, a figure swapped, a proofread applied — do not create a version. In real use the per-session rule produced 26 copies of one research narrative at 20 MB each, most differing by a paragraph; the checkpoint rule keeps the folder legible and the history meaningful.
+- Files at `internal`, `shared`, or `final` status are immutable snapshots — never edited. Only the working `draft` (or the working copy of the current status) is edited in place, and the date in its filename is updated to the last edit date when it is renamed at the next checkpoint.
+- Drive/OneDrive/SharePoint keep file-level version history automatically, so in-place edits there lose nothing; on a purely local folder without backup, recommend more frequent checkpoints or git.
+- `00_admin/version-log.md` records every editing session (file, date, one-line summary) whether or not a checkpoint was cut, so the history of in-place edits is still legible.
+- `project-config.md` records the `Checkpoint policy`: `milestone` (default, above) | `per-session` (the old behavior, for PIs who want it) | `per-edit` (never recommended; offered so the choice is explicit).
+- Large documents: when figures are embedded, each checkpoint copies them. Keep figure source files in a `figures/` subfolder beside the document and move superseded checkpoints to `_archive/` within the same folder so the working directory shows only the live copy and the last checkpoint.
 
-**Git mode** (GitHub repo storage — common for computational faculty writing NSF proposals in LaTeX): stable filenames, one commit per editing session with a descriptive message, status transitions marked with annotated tags (or the team's branch/PR convention). No `version-log.md` — git history serves that role; the decision log is still kept. Where any skill says "new version per the schema," read that as a commit (plus a tag on status change). Never rewrite pushed history.
+**Git mode** (GitHub repo storage — common for computational faculty writing NSF proposals in LaTeX): stable filenames, one commit per editing session with a descriptive message, status transitions marked with annotated tags (or the team's branch/PR convention). No `version-log.md` — git history serves that role; the decision log is still kept. Where any skill says "new version per the schema," read that as: in filename mode, edit the working copy and cut a checkpoint only if the change is a milestone under the checkpoint policy; in git mode, a commit (plus a tag on status change). Never rewrite pushed history.
 
 ### 4. Text refinement flow
 

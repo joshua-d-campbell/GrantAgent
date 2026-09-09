@@ -27,4 +27,4 @@ Produce the chart in a format matching the document workflow: a table (rows = ta
 
 ## Consistency duties
 
-Timeline ↔ Approach ↔ budget must agree on scope and pacing. When any of the three changes, update the others (new versions + decision-log entry). Recruit `grant-mock-review` late in drafting to test whether the timeline reads as feasible to a skeptic.
+Timeline ↔ Approach ↔ budget must agree on scope and pacing. When any of the three changes, update the others (edit their working copies; checkpoint only for a structural change; decision-log entry). Recruit `grant-mock-review` late in drafting to test whether the timeline reads as feasible to a skeptic.

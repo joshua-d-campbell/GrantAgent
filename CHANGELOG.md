@@ -4,6 +4,11 @@ All notable changes to the GrantAgent skill suite. Format follows [Keep a Change
 
 Versions 0.1.0–0.8.0 were assigned retroactively; initial development happened as an intensive sprint on 2026-07-06/07. Version 1.0.0 is reserved for completion of the first eval pass (realistic-prompt testing of the priority skills).
 
+## [0.18.0] — 2026-09-09
+
+### Changed
+- Shared convention 3 (versioning, filename mode) moves from **version-per-session to checkpoint-on-milestone.** Real use: 26 copies of one research narrative, ~20 MB each once figures were embedded, most differing by a paragraph. Cause: the schema said "increment `NN` each editing session," INSTALL.md says one document per conversation, so every request became a session and every session a full copy; and "never overwrite" — meant for snapshots — was applied to the working draft. New rule: the highest-numbered file is the working copy and is edited in place; a new `NN` is cut only at a milestone — status transition, the file about to leave the team (snapshot what readers saw), a structural change the PI may want to roll back, or on request. `internal`/`shared`/`final` files stay immutable. `version-log.md` still records every editing session so in-place edits remain legible; Drive/OneDrive file history covers rollback of in-place edits, with a note to checkpoint more often (or use git) on an unbacked local folder. `project-config.md` gains a `Checkpoint policy` field (`milestone` default | `per-session` | `per-edit`) so a PI who wants every step opts in explicitly. Guidance added for large documents: figure sources in a `figures/` subfolder, superseded checkpoints in `_archive/`. Git mode is unchanged (a commit was already the unit). Rippled into `grant-setup` Step 3 and the config template, the "new version per the schema" definition, and every skill that said "new version(s) per the schema": `grant-approach`, `grant-budget-justification`, `grant-timeline-milestones`, `grant-specific-aims`, `grant-condense` (which now checkpoints *before* cutting, the rollback case), `grant-proofread-structure`, `grant-proofread-detail`, and `grant-math-notation`; INSTALL.md gains a tip explaining what to expect. Minor bump because the convention changes how every skill writes files, though the filename format itself is unchanged.
+
 ## [0.17.1] — 2026-09-08
 
 ### Changed

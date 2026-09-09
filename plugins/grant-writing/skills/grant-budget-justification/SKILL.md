@@ -39,4 +39,4 @@ For each line: what it is, why the project requires it, how the amount was calcu
 
 ## Step 5 — Sync the aims
 
-If costing forced design changes (reduced scope, dropped arm, different model), update the Specific Aims to match: new version in `01_aims/`, entry in `00_admin/decision-log.md` stating what changed and why. An aims page that promises more than the budget can deliver is a rigor problem reviewers catch.
+If costing forced design changes (reduced scope, dropped arm, different model), update the Specific Aims to match: edit the working copy in `01_aims/` (checkpoint first if an aim is dropped or restructured), entry in `00_admin/decision-log.md` stating what changed and why. An aims page that promises more than the budget can deliver is a rigor problem reviewers catch.
